@@ -1,12 +1,12 @@
 # Validation record
 
-Validated against the local production build on September 26, 2026, after the design revision and GSAP scroll-animation implementation.
+Validated against the local production build on September 26, 2026, after the design revision, GSAP scroll-animation implementation, and footer redesign.
 
 ## Application checks
 
 - `npm run build`: passed; Next.js 16.3.6, React 19.3.0, Node 22.19.0. TypeScript passed in the build.
 - `npm run lint`: passed without warnings.
-- Browser acceptance suite: **40 passed in 30.3 seconds**, including eight automated WCAG A/AA scans. The final run includes seven additional motion checks: persistent photo reveals, live reduced-motion changes, no-JavaScript readability, keyboard focus, cross-page fragment links, gallery filtering/history, and FAQ expansion.
+- Browser acceptance suite: **40 passed in 35.0 seconds** after the footer redesign, including eight automated WCAG A/AA scans. The suite includes seven motion checks: persistent photo reveals, live reduced-motion changes, no-JavaScript readability, keyboard focus, cross-page fragment links, gallery filtering/history, and FAQ expansion.
 - Inquiry unit suite: **18 passed** after the Vercel readiness check added exact-origin support for `VERCEL_PROJECT_PRODUCTION_URL`. Delivery remains mocked; the regression check also rejects unrelated and lookalike origins.
 - Responsive homepage widths: 360, 390, 430, 768, 1440, and 1920 pixels. All seven principal pages were inspected and measured at 390 and 1440 pixels after fonts and images loaded; none had horizontal overflow.
 - Independent inner-page visual review covered Venue, Pricing, Story, Vendors, and Contact. Introductions, photo crops, spacing, pricing visibility, and contact/map access were checked.
@@ -16,17 +16,18 @@ Validated against the local production build on September 26, 2026, after the de
 - Source photos and videos remain unchanged. The original public photo collection and every owner-brief amenity remain represented.
 - See the [design review](../design-review.md) for benchmark sources, before/after heights, and visual comparisons.
 - GSAP motion uses intact text blocks with no stagger or splitting. A final visual scroll review at 1440 pixels and a touch-enabled 390-pixel viewport found no browser errors or horizontal overflow; visible photo frames completed their reveals. See [scroll motion](../scroll-motion.md) for behavior and implementation.
+- Footer redesign: visually reviewed at desktop, tablet, and phone sizes. Additional measurements at 320/360/390/768/1024/1440/1920px found no page or footer-content overflow or browser exceptions. Targeted footer accessibility scans at 320/390/1440px reported no violations of the checked WCAG A/AA rules, and the homepage footer directions link reached the contact map. See [footer design](../footer-design.md) and [measurements](footer-responsive.json).
 - GitHub/Vercel preparation: a clean export of the committed files passed `npm ci`, `npm run build` (including TypeScript), and `npm run lint`. Original source media, local dependencies, and real environment files were absent from that export; prepared public media and local fonts are included in the repository.
 
 ## Local Lighthouse results
 
 Lighthouse 13.5.0 against `next start`. Mobile uses the simulated mobile profile; desktop uses its desktop preset. The latest mobile check ran after the scroll-animation build and browser suite. Desktop was measured during the preceding design revision. These are local laboratory measurements, not field results or a complete accessibility certification.
 
-| Build / profile | Performance | Accessibility | Best practices | SEO | LCP | CLS |
-| --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| GSAP revision / mobile | 91 | 100 | 100 | 100 | 3.5 s | 0 |
-| Design revision / mobile | 92 | 100 | 100 | 100 | 3.4 s | 0 |
-| Design revision / desktop | 100 | 100 | 100 | 100 | 0.7 s | 0 |
+| Build / profile           | Performance | Accessibility | Best practices | SEO |   LCP | CLS |
+| ------------------------- | ----------: | ------------: | -------------: | --: | ----: | --: |
+| GSAP revision / mobile    |          91 |           100 |            100 | 100 | 3.5 s |   0 |
+| Design revision / mobile  |          92 |           100 |            100 | 100 | 3.4 s |   0 |
+| Design revision / desktop |         100 |           100 |            100 | 100 | 0.7 s |   0 |
 
 Latest report: [GSAP mobile JSON](scroll-lighthouse-mobile.json), with 30 ms total blocking time. Earlier design reports: [mobile JSON](design-lighthouse-mobile.json), [desktop JSON](design-lighthouse-desktop.json). The original `lighthouse-mobile.json` and `lighthouse-desktop.json` are retained as the initial-build baseline. Small score/timing differences between individual local runs should not be treated as a field-performance conclusion.
 
@@ -44,6 +45,7 @@ Mobile LCP remains above the 2.5-second target. The hero image is eager/high pri
 
 ## Visual previews
 
+- [Redesigned desktop footer](../previews/footer-desktop.png) / [phone footer](../previews/footer-mobile.png)
 - [Desktop homepage](../previews/home-desktop.png) / [phone homepage](../previews/home-mobile.png)
 - [Previous desktop homepage](../previews/before-home-desktop.png) / [previous phone homepage](../previews/before-home-mobile.png)
 - [Desktop gallery](../previews/gallery-desktop.png) / [phone gallery](../previews/gallery-mobile.png)

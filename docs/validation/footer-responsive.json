@@ -1,0 +1,69 @@
+[
+  {
+    "width": 320,
+    "height": 742.546875,
+    "overflow": false,
+    "contentOverflow": [],
+    "flags": 1,
+    "violations": [],
+    "errors": []
+  },
+  {
+    "width": 360,
+    "height": 575.375,
+    "overflow": false,
+    "contentOverflow": [],
+    "flags": 1,
+    "violations": [],
+    "errors": []
+  },
+  {
+    "directionsTarget": "http://127.0.0.1:3000/contact#directions",
+    "visible": true
+  },
+  {
+    "width": 390,
+    "height": 561.359375,
+    "overflow": false,
+    "contentOverflow": [],
+    "flags": 1,
+    "violations": [],
+    "errors": []
+  },
+  {
+    "width": 768,
+    "height": 571.6875,
+    "overflow": false,
+    "contentOverflow": [],
+    "flags": 1,
+    "violations": [],
+    "errors": []
+  },
+  {
+    "width": 1024,
+    "height": 383,
+    "overflow": false,
+    "contentOverflow": [],
+    "flags": 1,
+    "violations": [],
+    "errors": []
+  },
+  {
+    "width": 1440,
+    "height": 383,
+    "overflow": false,
+    "contentOverflow": [],
+    "flags": 1,
+    "violations": [],
+    "errors": []
+  },
+  {
+    "width": 1920,
+    "height": 383,
+    "overflow": false,
+    "contentOverflow": [],
+    "flags": 1,
+    "violations": [],
+    "errors": []
+  }
+]

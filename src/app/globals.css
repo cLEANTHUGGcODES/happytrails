@@ -547,64 +547,6 @@ p {
   gap: 8px;
   align-items: center;
 }
-.site-footer {
-  border-top: 1px solid var(--line);
-  background: #eee8dc;
-}
-.footer-main {
-  display: grid;
-  grid-template-columns: 1.3fr 1fr 1.1fr;
-  gap: 60px;
-  padding-block: 44px;
-}
-.footer-brand img {
-  width: 170px;
-  height: auto;
-}
-.footer-brand p {
-  margin-top: 20px;
-  font-size: 11px;
-  color: var(--muted);
-}
-.footer-main h2 {
-  margin-block: 9px 21px;
-  font-size: 9px;
-}
-.footer-links {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 9px 30px;
-  font-size: 11px;
-}
-.footer-links a:hover {
-  text-decoration: underline;
-}
-.footer-contact {
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  font-size: 11px;
-}
-.footer-contact > a {
-  margin-bottom: 6px;
-}
-.footer-contact .text-link {
-  margin-top: 10px;
-}
-.footer-bottom {
-  border-top: 1px solid #d8cfbf;
-  display: flex;
-  justify-content: space-between;
-  gap: 24px;
-  padding-block: 20px;
-  color: var(--muted);
-  font-size: 9px;
-}
-.footer-bottom p:nth-child(2) {
-  display: flex;
-  gap: 7px;
-  align-items: center;
-}
 .page-intro {
   padding-block: 44px 36px;
   max-width: 1328px;
@@ -953,13 +895,6 @@ p {
   .space-card h3 {
     font-size: 28px;
   }
-  .footer-main {
-    gap: 35px;
-    grid-template-columns: 1fr 0.9fr 1.2fr;
-  }
-  .footer-links {
-    grid-template-columns: 1fr;
-  }
   .pricing-card {
     padding: 35px;
   }
@@ -993,9 +928,6 @@ p {
   }
   .space-card:last-child > p:last-child {
     align-self: start;
-  }
-  .footer-contact > a {
-    overflow-wrap: anywhere;
   }
 }
 @media (max-width: 760px) {
@@ -1136,48 +1068,6 @@ p {
   .contact-cta p:not(.eyebrow) {
     max-width: 310px;
   }
-  .footer-main {
-    grid-template-columns: 1fr 1fr;
-    gap: 34px 18px;
-    padding-block: 38px;
-  }
-  .footer-brand {
-    grid-column: 1 / -1;
-    display: flex;
-    align-items: center;
-    gap: 30px;
-  }
-  .footer-brand img {
-    width: 138px;
-  }
-  .footer-brand p {
-    margin: 0;
-    font-size: 10px;
-  }
-  .footer-main h2 {
-    font-size: 8px;
-    margin-block: 0 17px;
-  }
-  .footer-contact {
-    font-size: 10px;
-  }
-  .footer-contact .text-link {
-    font-size: 10px;
-  }
-  .footer-links {
-    font-size: 11px;
-  }
-  .footer-bottom {
-    flex-wrap: wrap;
-    gap: 7px 20px;
-    font-size: 8px;
-  }
-  .footer-bottom p:first-child {
-    flex-basis: 100%;
-  }
-  .footer-bottom > a {
-    margin-left: auto;
-  }
   .page-intro {
     padding-block: 32px 28px;
     display: block;
@@ -1285,11 +1175,6 @@ p {
   .investment-inner p:not(.eyebrow),
   .contact-cta p:not(.eyebrow) {
     font-size: 13px;
-  }
-  .footer-contact,
-  .footer-contact .text-link,
-  .footer-brand p {
-    font-size: 11px;
   }
 }
 @media (max-width: 370px) {
