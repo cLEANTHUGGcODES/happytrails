@@ -47,14 +47,14 @@ export default function VenuePage() {
         <a href="#getting-ready">Bridal Suite</a>
         <a href="#the-bunkhouse">The Bunkhouse</a>
       </nav>
-      <div className="container wide-photo">
+      <div className="container wide-photo" data-motion="image">
         <ContentImage slot="grounds" fill sizes="100vw" priority className="cover" />
       </div>
       <section id="the-barn" className="section container venue-story">
-        <div className="venue-story-image">
+        <div className="venue-story-image" data-motion="image">
           <ContentImage slot="barn" fill sizes="(max-width:760px) 100vw, 50vw" className="cover" />
         </div>
-        <div className="venue-story-copy">
+        <div className="venue-story-copy" data-motion="reveal">
           <p className="eyebrow">01 / The heart of the celebration</p>
           <h2>
             The Barn.
@@ -80,7 +80,7 @@ export default function VenuePage() {
       </section>
       <div className="subtle-background">
         <section id="the-grounds" className="section container venue-story venue-story-reverse">
-          <div className="venue-story-copy">
+          <div className="venue-story-copy" data-motion="reveal">
             <p className="eyebrow">02 / Under a big Texas sky</p>
             <h2>
               Open air.
@@ -104,7 +104,7 @@ export default function VenuePage() {
               We’ll walk you through the spaces and talk about how they can work for your plans.
             </p>
           </div>
-          <div className="venue-story-image">
+          <div className="venue-story-image" data-motion="image">
             <ContentImage
               slot="hero"
               fill
@@ -115,7 +115,7 @@ export default function VenuePage() {
         </section>
       </div>
       <section id="getting-ready" className="section container venue-story">
-        <div className="venue-story-image">
+        <div className="venue-story-image" data-motion="image">
           <ContentImage
             slot="bridalSuite"
             fill
@@ -123,7 +123,7 @@ export default function VenuePage() {
             className="cover"
           />
         </div>
-        <div className="venue-story-copy">
+        <div className="venue-story-copy" data-motion="reveal">
           <p className="eyebrow">03 / The moments before</p>
           <h2>
             A little calm.
@@ -146,7 +146,7 @@ export default function VenuePage() {
       </section>
       <div className="subtle-background">
         <section id="the-bunkhouse" className="section container venue-story venue-story-reverse">
-          <div className="venue-story-copy">
+          <div className="venue-story-copy" data-motion="reveal">
             <p className="eyebrow">04 / Kick your boots off</p>
             <h2>
               The Bunkhouse.
@@ -162,7 +162,7 @@ export default function VenuePage() {
               items={["Air conditioning", "Mini kitchen", "Bathroom", "Large porch"]}
             />
           </div>
-          <div className="venue-story-image">
+          <div className="venue-story-image" data-motion="image">
             <ContentImage
               slot="bunkhouse"
               fill
@@ -173,7 +173,7 @@ export default function VenuePage() {
         </section>
       </div>
       <section className="section container welcome-section">
-        <div>
+        <div data-motion="reveal">
           <p className="eyebrow">Bring your plans. We’ll bring the welcome.</p>
           <h2>
             Every gathering
@@ -181,7 +181,7 @@ export default function VenuePage() {
             <em>starts somewhere.</em>
           </h2>
         </div>
-        <div className="welcome-copy">
+        <div className="welcome-copy" data-motion="reveal">
           <p>
             Planning a wedding, birthday, family reunion, or something else worth celebrating? Tell
             us what you have in mind. We can also help you find local vendors for your event’s

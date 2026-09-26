@@ -67,7 +67,7 @@ export default async function HomePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }}
       />
-      <section className="hero" aria-labelledby="hero-title">
+      <section className="hero" aria-labelledby="hero-title" data-motion-hero>
         <div className="hero-photo">
           <ContentImage
             slot="hero"
@@ -133,7 +133,7 @@ export default async function HomePage() {
       </dl>
       <section className="section spaces-section" aria-labelledby="spaces-heading">
         <div className="container">
-          <div className="section-heading spaces-heading">
+          <div className="section-heading spaces-heading" data-motion="reveal">
             <div>
               <p className="eyebrow">Welcome to Happy Trails</p>
               <h2 id="spaces-heading">
@@ -153,7 +153,7 @@ export default async function HomePage() {
           <div className="space-grid">
             {spaces.map((space) => (
               <Link href={space.href} key={space.n} className="space-card">
-                <div className="space-image">
+                <div className="space-image" data-motion="image">
                   <ContentImage
                     slot={space.slot}
                     fill
@@ -178,7 +178,7 @@ export default async function HomePage() {
         aria-labelledby="celebration-heading"
       >
         <div className="celebration-images">
-          <div className="celebration-main">
+          <div className="celebration-main" data-motion="image">
             <ContentImage
               slot="celebration"
               fill
@@ -186,7 +186,7 @@ export default async function HomePage() {
               className="cover"
             />
           </div>
-          <div className="celebration-inset">
+          <div className="celebration-inset" data-motion="image">
             <ContentImage
               slot="firstDance"
               fill
@@ -196,7 +196,7 @@ export default async function HomePage() {
           </div>
           <span className="photo-scribble">the good stuff.</span>
         </div>
-        <div className="celebration-copy">
+        <div className="celebration-copy" data-motion="reveal">
           <p className="eyebrow">Weddings. Reunions. Just-because gatherings.</p>
           <h2 id="celebration-heading">
             The best memories <br />
@@ -219,7 +219,7 @@ export default async function HomePage() {
       </section>
       <section className="investment-band">
         <div className="container investment-inner">
-          <div>
+          <div data-motion="reveal">
             <p className="eyebrow">Start planning your celebration</p>
             <h2>
               Weddings <em>from $3,000.</em>
@@ -255,7 +255,7 @@ export default async function HomePage() {
         </div>
       </section>
       <section className="section container story-preview">
-        <div className="story-intro">
+        <div className="story-intro" data-motion="reveal">
           <p className="eyebrow">The heart behind Happy Trails</p>
           <h2>
             A place built on
@@ -277,7 +277,7 @@ export default async function HomePage() {
       </section>
       {updates.length > 0 && (
         <section className="section container">
-          <div className="section-heading">
+          <div className="section-heading" data-motion="reveal">
             <div>
               <p className="eyebrow">A little news from Happy Trails</p>
               <h2>

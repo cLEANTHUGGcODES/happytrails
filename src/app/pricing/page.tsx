@@ -30,7 +30,7 @@ export default function PricingPage() {
         </p>
       </PageIntro>
       <section className="container pricing-section" aria-label="Event pricing">
-        <article className="pricing-card featured">
+        <article className="pricing-card featured" data-motion="reveal">
           <Flower2 size={37} strokeWidth={1} aria-hidden="true" />
           <p className="eyebrow">For your next chapter</p>
           <h2>Weddings</h2>
@@ -45,7 +45,7 @@ export default function PricingPage() {
             Tell Us About Your Day <span aria-hidden="true">↗</span>
           </Link>
         </article>
-        <article className="pricing-card">
+        <article className="pricing-card" data-motion="reveal">
           <Sun size={37} strokeWidth={1} aria-hidden="true" />
           <p className="eyebrow">For all the good things in life</p>
           <h2>Other celebrations</h2>
@@ -67,7 +67,7 @@ export default function PricingPage() {
       </section>
       <div className="subtle-background">
         <section className="section container faq-section" aria-labelledby="faq-title">
-          <div>
+          <div data-motion="reveal">
             <p className="eyebrow">A few things you might be wondering</p>
             <h2 id="faq-title">
               Good questions.

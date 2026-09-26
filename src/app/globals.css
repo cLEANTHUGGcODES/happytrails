@@ -374,6 +374,14 @@ p {
 .space-card:hover .space-image img {
   transform: scale(1.025);
 }
+/* Photos reveal inside their existing frames; server-rendered content is visible.
+   GSAP owns transforms only while a reveal runs, then releases the hover effect. */
+[data-motion="image"] {
+  overflow: hidden;
+}
+[data-motion="image"][style*="clip-path"] img {
+  transition: none;
+}
 .space-number {
   position: absolute;
   top: 16px;

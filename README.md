@@ -31,6 +31,7 @@ npm run start
 - The supplied address, 5281 FM 55, Blooming Grove, TX 76626, with an illustrated location map, downloadable map, and Google Maps, Apple Maps, and Waze driving directions on Contact.
 - An inquiry form and Resend delivery endpoint with server validation, idempotent retries, and honest failure handling.
 - Local fonts, responsive images, page metadata, social previews, structured venue data, robots.txt, and a sitemap.
+- GSAP photo reveals and whole-block section entrances with native scrolling, lighter phone motion, and reduced-motion support. Text is never split or staggered; see [scroll motion](docs/scroll-motion.md).
 - Typed media, featured-image slots, and news readers that can later be backed by Supabase.
 
 No placeholder news, invented reviews, unverified capacity claims, live availability calendar, or admin login are published in this release.

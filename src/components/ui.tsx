@@ -33,7 +33,7 @@ export function PageIntro({
   children?: ReactNode;
 }) {
   return (
-    <div className="page-intro container">
+    <div className="page-intro container" data-motion="reveal">
       <p className="eyebrow">
         <span className="tiny-line" />
         {eyebrow}
@@ -48,7 +48,7 @@ export function ContactCta() {
   return (
     <section className="contact-cta" aria-labelledby="cta-heading">
       <div className="container cta-inner">
-        <div className="cta-copy">
+        <div className="cta-copy" data-motion="reveal">
           <p className="eyebrow">See Happy Trails for yourself</p>
           <h2 id="cta-heading">
             Come for a tour.

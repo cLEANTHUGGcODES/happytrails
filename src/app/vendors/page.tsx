@@ -45,7 +45,7 @@ export default function VendorsPage() {
       </PageIntro>
       <section className={`container ${styles.localHelp}`} aria-labelledby="local-help-heading">
         <figure className={styles.figure}>
-          <div className={styles.photo}>
+          <div className={styles.photo} data-motion="image">
             <ContentImage
               slot="barn"
               fill
@@ -56,7 +56,7 @@ export default function VendorsPage() {
           </div>
           <figcaption>The barn, ready for a gathering.</figcaption>
         </figure>
-        <div className={styles.copy}>
+        <div className={styles.copy} data-motion="reveal">
           <p className="eyebrow">Start with what matters to you</p>
           <h2 id="local-help-heading">
             What would you

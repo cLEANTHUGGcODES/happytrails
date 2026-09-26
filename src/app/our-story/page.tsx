@@ -29,7 +29,7 @@ export default function StoryPage() {
       </PageIntro>
       <section className="container story-page-grid">
         <div>
-          <div className="story-page-photo">
+          <div className="story-page-photo" data-motion="image">
             <ContentImage
               slot="story"
               fill
@@ -42,7 +42,7 @@ export default function StoryPage() {
             Good company, happy memories, and a celebration in the barn.
           </p>
         </div>
-        <div className="story-prose">
+        <div className="story-prose" data-motion="reveal">
           <p className="lead">
             Happy Trails began with a simple thing: a love of making people feel welcome.
           </p>
