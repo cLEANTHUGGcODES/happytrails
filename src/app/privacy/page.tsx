@@ -1,0 +1,44 @@
+import type { Metadata } from "next";
+import { PageIntro } from "@/components/ui";
+
+export const metadata: Metadata = { title: "Privacy", alternates: { canonical: "/privacy" } };
+export default function PrivacyPage() {
+  return (
+    <>
+      <PageIntro
+        eyebrow="Your information"
+        title={
+          <>
+            A note on <em>privacy.</em>
+          </>
+        }
+      />
+      <div className="container legal-copy">
+        <p>
+          When you send an inquiry to Happy Trails Shindigs & Events, you share the contact and
+          event details you enter in the form. We use those details to respond to your request and
+          discuss your celebration.
+        </p>
+        <h2>Inquiry information</h2>
+        <p>
+          The form asks for your name, email address, and celebration type. You may also share a
+          phone number, preferred date, estimated guest count, and a message. Your inquiry is
+          delivered to our email inbox through our email delivery provider, Resend. It is not a
+          confirmed booking.
+        </p>
+        <h2>Website services</h2>
+        <p>
+          Our website is hosted on Vercel. Hosting and email services may process technical
+          information, such as request details and delivery status, to operate and protect the
+          website. This website does not have customer accounts or collect payment information.
+        </p>
+        <h2>Getting in touch</h2>
+        <p>
+          For questions about information you have shared, or to request its correction or deletion,
+          email <a href="mailto:admin@happytrailsshindigs.com">admin@happytrailsshindigs.com</a> or
+          call <a href="tel:+19035524248">903-552-4248</a>.
+        </p>
+      </div>
+    </>
+  );
+}

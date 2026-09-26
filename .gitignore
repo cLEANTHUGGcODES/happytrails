@@ -1,0 +1,25 @@
+node_modules/
+.next/
+out/
+.vercel/
+.env*
+!.env.example
+*.tsbuildinfo
+next-env.d.ts
+playwright-report/
+test-results/
+.DS_Store
+*.log
+
+# Original source assets and working briefs stay in the local workspace.
+# The optimized website assets in public/ are versioned.
+/*.HEIC
+/*.jpeg
+/*.PNG
+/*.png
+/*.jpg
+/*.mp4
+/*.docx
+/ideas.md
+/modernbuild.md
+/photogallery.md
