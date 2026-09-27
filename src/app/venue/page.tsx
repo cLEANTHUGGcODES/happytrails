@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { ContentImage } from "@/components/content-image";
 import { Check } from "lucide-react";
 import { PageIntro, ContactCta, ButtonLink } from "@/components/ui";
+import { site } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "The Venue",
@@ -37,8 +38,8 @@ export default function VenuePage() {
         }
       >
         <p>
-          Twenty-two acres, a barn full of character, and open countryside. Come see where your
-          celebration could take you.
+          Twenty-two acres, a barn full of character, and room for approximately{" "}
+          {site.guestCapacityEstimate} guests. Come see where your celebration could take you.
         </p>
       </PageIntro>
       <nav className="container venue-jumpnav" aria-label="Explore the venue spaces">
@@ -158,9 +159,7 @@ export default function VenuePage() {
               invites you to sit a while. It’s a comfortable place to gather before the celebration
               begins.
             </p>
-            <Amenities
-              items={["Air conditioning", "Mini kitchen", "Bathroom", "Large porch"]}
-            />
+            <Amenities items={["Air conditioning", "Mini kitchen", "Bathroom", "Large porch"]} />
           </div>
           <div className="venue-story-image" data-motion="image">
             <ContentImage

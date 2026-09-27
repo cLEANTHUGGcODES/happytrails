@@ -12,7 +12,7 @@ const subscribeToHydration = () => () => {};
 const clientSnapshot = () => true;
 const serverSnapshot = () => false;
 
-export function InquiryForm() {
+export function InquiryForm({ guestCapacityEstimate }: { guestCapacityEstimate: number }) {
   const hydrated = useSyncExternalStore(subscribeToHydration, clientSnapshot, serverSnapshot);
   const [status, setStatus] = useState<Status>("idle");
   const [errors, setErrors] = useState<InquiryFieldErrors>({});
@@ -246,8 +246,11 @@ export function InquiryForm() {
             step={1}
             placeholder="Your best guess"
             aria-invalid={!!errors.guestCount}
-            aria-describedby={describedBy("guestCount")}
+            aria-describedby={describedBy("guestCount", "guest-count-help")}
           />
+          <span className={styles.help} id="guest-count-help">
+            Our venue accommodates approximately {guestCapacityEstimate} guests.
+          </span>
           {fieldError("guestCount")}
         </div>
         <div className={`${styles.field} ${styles.fullWidth}`}>

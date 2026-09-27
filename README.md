@@ -25,7 +25,7 @@ npm run start
 ## What is included
 
 - Responsive Home, Venue, Gallery, Vendors, Pricing & FAQs, Our Story, News, Contact, and Privacy pages.
-- Fifteen curated photographs with category filters, captions, swipe/keyboard navigation, zoom, thumbnails, and fullscreen viewing.
+- Twenty-one gallery images: all 18 original venue/event photographs plus three property-tour stills, with category filters, captions, swipe/keyboard navigation, zoom, thumbnails, and fullscreen viewing.
 - Two optimized, on-demand property tours; originals remain untouched in the workspace root.
 - A dedicated Vendors page in desktop, mobile, and footer navigation, offering help finding local vendors.
 - The supplied address, 5281 FM 55, Blooming Grove, TX 76626, with an illustrated location map, downloadable map, and Google Maps, Apple Maps, and Waze driving directions on Contact.
@@ -60,7 +60,7 @@ The original root-level media and planning documents stay in the local workspace
 
 To add an approved update during this first phase, add a `NewsPost` to `newsSeed` and redeploy. The news index, article route, homepage teaser, metadata, and sitemap then populate from the same reader. The initial news collection is intentionally empty.
 
-See [the asset register](docs/assets.md) for source-to-output mappings, dimensions, media preparation, and photography limitations. See [the map provenance](docs/maps/README.md) for the illustrated location guide and reference data. Venue copy follows the Word brief and subsequent owner-supplied details, including the exact address. Capacity, alcohol/vendor policies, rental terms, and package inclusions still require owner-provided details.
+See [the asset register](docs/assets.md) for source-to-output mappings, dimensions, media preparation, and photography limitations. See [the map provenance](docs/maps/README.md) for the illustrated location guide and reference data. Venue copy follows the Word brief and subsequent owner-supplied details, including the exact address and an estimated capacity of approximately 75 guests. The estimate is published on the homepage, Venue page, Pricing FAQ, and inquiry form; it is not enforced as a booking limit. Alcohol/vendor policies, rental terms, and package inclusions still require owner-provided details.
 
 The [team brief audit](docs/team-brief-audit.md) records coverage of all six requested sections and the resolved map, Vendors-navigation, and bar-dimension gaps. This is content coverage, separate from deployment, real inquiry delivery, and owner acceptance.
 

@@ -12,7 +12,7 @@ const spaces = [
   {
     n: "01",
     title: "The Barn",
-    copy: "A restored horse barn with a lit dance floor, custom wet bar, and covered outdoor seating.",
+    copy: `A restored horse barn with a lit dance floor, custom wet bar, and covered outdoor seating. Happy Trails welcomes approximately ${site.guestCapacityEstimate} guests.`,
     slot: "barn" as MediaSlot,
     href: "/venue#the-barn",
     label: "1,800 square feet · The reception",
@@ -121,9 +121,9 @@ export default async function HomePage() {
           </dd>
         </div>
         <div>
-          <dt>Getting ready</dt>
+          <dt>Approximately</dt>
           <dd>
-            2 <span>dedicated spaces</span>
+            {site.guestCapacityEstimate} <span>guests</span>
           </dd>
         </div>
         <div>

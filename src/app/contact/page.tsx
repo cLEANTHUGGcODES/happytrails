@@ -62,7 +62,9 @@ export default function ContactPage() {
               <br />
               Blooming Grove, TX {site.postalCode}
             </p>
-            <a className="text-link" href="#directions">View Map & Directions ↗</a>
+            <a className="text-link" href="#directions">
+              View Map & Directions ↗
+            </a>
           </div>
           <div className="contact-photo">
             <ContentImage
@@ -73,7 +75,7 @@ export default function ContactPage() {
             />
           </div>
         </aside>
-        <InquiryForm />
+        <InquiryForm guestCapacityEstimate={site.guestCapacityEstimate} />
       </div>
       <VenueLocation />
     </>

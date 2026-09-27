@@ -4,7 +4,9 @@ Audited September 26, 2026 against `Happy Trails Web menue doc.docx`. Updated th
 
 **Verdict: all six requested public-site sections are represented, and the three identified content gaps are resolved.** Contact now includes a map and directions, Vendors has its own page and navigation links, and the bar/countertop dimension is restored. This requirement-by-requirement review establishes content coverage; deployment, real email delivery, final checks, and owner acceptance remain separate from that finding.
 
-The Word document and subsequent owner-supplied address are the authorities for this comparison. Suggestions in `ideas.md` are not treated as approved venue facts. “Covered” means the information is represented accurately in the site, not that the original paragraph appears verbatim.
+The Word document and subsequent owner-supplied details are the authorities for this comparison. Suggestions in `ideas.md` are not treated as approved venue facts. “Covered” means the information is represented accurately in the site, not that the original paragraph appears verbatim.
+
+Subsequent capacity confirmation: the owner reports room for approximately 75 guests. The homepage facts, Venue introduction, Pricing FAQ, and inquiry form now use this estimate from the shared content configuration. It is not described as a firm maximum or enforced as a guest-count validation limit. This supersedes the unapproved 125-guest suggestion in `ideas.md`; original source files remain unchanged.
 
 ## Requested menu and sections
 
@@ -12,7 +14,7 @@ The Word document and subsequent owner-supplied address are the authorities for 
 | --- | --- | --- |
 | About us | Covered with editorial changes | `/our-story`, called **Our Story** in desktop/mobile navigation. Core history and event types are preserved. |
 | Amenities | Covered | `/venue`, called **The Venue** in navigation. Individual specifications are checked below, including the restored bar/countertop length. |
-| Photo gallery: tour video and stills | Covered | `/gallery` has curated photographs, category filtering, a lightbox, and the full property tour. The shorter tour appears on the homepage. |
+| Photo gallery: tour video and stills | Covered | `/gallery` includes all 18 original venue/event photographs plus three property-tour stills, category filtering, a lightbox, and the full property tour. This complete coverage follows the owner's request to add six previously omitted photographs, including `IMG_6465.jpeg`. The shorter tour appears on the homepage. |
 | Vendors: assistance finding local vendors | Covered | `/vendors` offers help locating local vendors and links to Contact. It appears in desktop, mobile, and footer navigation and the sitemap. The offer also remains in Venue copy and a Pricing FAQ. A named vendor directory was not requested or supplied. |
 | Pricing | Covered | Weddings **starting at $3,000**; other parties/functions quoted according to needs, with contact links. |
 | Contact us | Covered in the public interface | Correct phone/email, exact address, inquiry form, illustrated location map, Google Maps, Apple Maps, and Waze directions, and a downloadable map. Desktop navigation uses **Request a Tour**, mobile also uses **Get in Touch**. Real form delivery remains a launch check. |

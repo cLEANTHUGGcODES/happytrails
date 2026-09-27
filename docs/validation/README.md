@@ -1,16 +1,18 @@
 # Validation record
 
-Validated against the local production build on September 26, 2026, after the design revision, GSAP scroll-animation implementation, and footer redesign.
+Validated against the local production build on September 26, 2026, after the design revision, GSAP scroll-animation implementation, footer redesign, capacity update, and complete venue-photo import.
 
 ## Application checks
 
 - `npm run build`: passed; Next.js 16.3.6, React 19.3.0, Node 22.19.0. TypeScript passed in the build.
 - `npm run lint`: passed without warnings.
-- Browser acceptance suite: **40 passed in 35.0 seconds** after the footer redesign, including eight automated WCAG A/AA scans. The suite includes seven motion checks: persistent photo reveals, live reduced-motion changes, no-JavaScript readability, keyboard focus, cross-page fragment links, gallery filtering/history, and FAQ expansion.
+- Browser acceptance suite: **40 passed in 1.1 minutes** after the capacity update and complete photo import, including eight automated WCAG A/AA scans. The suite includes seven motion checks: persistent photo reveals, live reduced-motion changes, no-JavaScript readability, keyboard focus, cross-page fragment links, gallery filtering/history, and FAQ expansion.
 - Inquiry unit suite: **18 passed** after the Vercel readiness check added exact-origin support for `VERCEL_PROJECT_PRODUCTION_URL`. Delivery remains mocked; the regression check also rejects unrelated and lookalike origins.
 - Responsive homepage widths: 360, 390, 430, 768, 1440, and 1920 pixels. All seven principal pages were inspected and measured at 390 and 1440 pixels after fonts and images loaded; none had horizontal overflow.
 - Independent inner-page visual review covered Venue, Pricing, Story, Vendors, and Contact. Introductions, photo crops, spacing, pricing visibility, and contact/map access were checked.
-- Gallery was independently checked at 360/390/768/1440: all 15 photos loaded, captions remained readable in the two-column phone grid, filtering narrowed the Barn category to four photos, and keyboard navigation, Escape, and focus restoration worked. The tour shortcut landed on the visible player section.
+- Gallery completion audit: all 18 original venue/event photographs now appear alongside three unique tour stills, for 21 images. Every source mapping resolves to a gallery entry; gallery dimensions match the files and EXIF metadata is absent. See [source coverage](gallery-coverage.json). The original logo and separately AI-labelled portrait remain outside the photo gallery.
+- The expanded gallery was checked at 360 and 1440px: all 21 images loaded, Barn and Celebrations each filtered to eight images, and the newly added `IMG_6465` photo opened in the lightbox. Escape closed it and restored focus. Updated screenshots were visually inspected; neither viewport had horizontal overflow or browser exceptions. The browser suite also verified filtering/history and the later tour section after the collection grew.
+- Capacity copy was checked at 360 and 1440px on the homepage (including the barn description beside the 1,800-square-foot detail), Venue introduction, expanded Pricing FAQ, and inquiry form. All say approximately 75 guests. The guest field links to its help text for assistive technology; 76 remains valid because this is an estimate rather than a new booking limit. No inquiry was sent by these additional checks.
 - The suite also covers menu keyboard behavior, deferred video loading, inquiry validation/error handling, JavaScript-disabled form fallback, public route/image loading, and the map download.
 - All three map-app links now use the owner's corrected coordinates, **32.068833597034164, -96.69761704124728**, while the venue address remains visible. The targeted directions/browser test passed after the correction; no physical-phone app handoff or driven route has been tested.
 - Source photos and videos remain unchanged. The original public photo collection and every owner-brief amenity remain represented.

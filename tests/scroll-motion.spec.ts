@@ -154,7 +154,7 @@ test("gallery filtering and route history leave later content visible on scroll"
   await page.goto("/gallery");
   await waitForMotion(page);
   await page.getByRole("button", { name: "The Barn", exact: true }).click();
-  await expect(page.getByRole("button", { name: /^Open photograph:/ })).toHaveCount(4);
+  await expect(page.getByRole("button", { name: /^Open photograph:/ })).toHaveCount(8);
   const tour = page.locator("#property-tour");
   await scrollTo(tour);
   await expectMotionComplete(tour);
@@ -168,7 +168,7 @@ test("gallery filtering and route history leave later content visible on scroll"
   await scrollTo(tour);
   await expectMotionComplete(tour);
   await page.getByRole("button", { name: "All photos", exact: true }).click();
-  await expect(page.getByRole("button", { name: /^Open photograph:/ })).toHaveCount(15);
+  await expect(page.getByRole("button", { name: /^Open photograph:/ })).toHaveCount(21);
   await scrollTo(tour);
   await expectMotionComplete(tour);
 });

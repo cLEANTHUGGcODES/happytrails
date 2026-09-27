@@ -31,6 +31,8 @@ export const site = {
   streetAddress: "5281 FM 55",
   postalCode: "76626",
   fullAddress: "5281 FM 55, Blooming Grove, TX 76626",
+  // Owner-provided estimate, not a strict booking or occupancy limit.
+  guestCapacityEstimate: 75,
   // Owner-confirmed destination; address lookup places the map pin incorrectly.
   coordinates: {
     latitude: 32.068833597034164,
@@ -39,14 +41,17 @@ export const site = {
   url: "https://happytrailsshindigs.com",
 } as const;
 
-const encodedCoordinates = encodeURIComponent(`${site.coordinates.latitude},${site.coordinates.longitude}`);
+const encodedCoordinates = encodeURIComponent(
+  `${site.coordinates.latitude},${site.coordinates.longitude}`,
+);
 export const directions = {
   google: `https://www.google.com/maps/dir/?api=1&destination=${encodedCoordinates}&travelmode=driving`,
   apple: `https://maps.apple.com/?daddr=${encodedCoordinates}&dirflg=d`,
   waze: `https://waze.com/ul?ll=${encodedCoordinates}&navigate=yes`,
 } as const;
 
-// Source: Happy Trails Web menue doc.docx. No capacities or package inclusions inferred.
+// Sources: Happy Trails Web menue doc.docx and subsequent owner confirmations.
+// Guest capacity is approximate; package inclusions are not inferred.
 export const faqs = [
   {
     question: "Where is Happy Trails?",
@@ -57,6 +62,10 @@ export const faqs = [
     question: "What does a wedding at Happy Trails cost?",
     answer:
       "Weddings start at $3,000. Contact Jennifer and Randy to talk through your plans and receive pricing for your celebration.",
+  },
+  {
+    question: "How many guests can Happy Trails accommodate?",
+    answer: `Happy Trails can accommodate approximately ${site.guestCapacityEstimate} guests. Tell Jennifer and Randy about your guest list and plans when you get in touch.`,
   },
   {
     question: "Can we host something other than a wedding?",
@@ -135,6 +144,15 @@ const gallerySeed: readonly MediaItem[] = [
     position: "50% 55%",
   },
   {
+    id: "wedding-dance-floor",
+    src: "/images/wedding-dance-floor.webp",
+    alt: "A bride and a man in a vest dancing on the checkered floor, with wedding guests nearby",
+    caption: "A dance to remember.",
+    category: "Celebrations",
+    width: 2400,
+    height: 1600,
+  },
+  {
     id: "exterior-wide",
     src: "/images/exterior-wide.webp",
     alt: "The barn, grain-bin suite, and bunkhouse around a green lawn and gravel drive",
@@ -199,6 +217,15 @@ const gallerySeed: readonly MediaItem[] = [
     height: 1600,
   },
   {
+    id: "reception-bar-guests",
+    src: "/images/reception-bar-guests.webp",
+    alt: "Two women posing with drinks behind the rustic wooden bar and its Western decorations",
+    caption: "Good company behind the bar.",
+    category: "Celebrations",
+    width: 2400,
+    height: 1600,
+  },
+  {
     id: "evening-dance",
     src: "/images/evening-dance.webp",
     alt: "A bride and wedding guests dancing in the barn under warm string lights",
@@ -215,6 +242,42 @@ const gallerySeed: readonly MediaItem[] = [
     category: "Celebrations",
     width: 2400,
     height: 1600,
+  },
+  {
+    id: "barn-dance-floor",
+    src: "/images/barn-dance-floor.webp",
+    alt: "The barn’s checkered dance floor beside reception tables and wooden walls",
+    caption: "Room for a little two-step.",
+    category: "The Barn",
+    width: 2400,
+    height: 1800,
+  },
+  {
+    id: "barn-reception-view",
+    src: "/images/barn-reception-view.webp",
+    alt: "Round reception tables set with white linens beneath exposed wooden beams",
+    caption: "A place for everyone to gather.",
+    category: "The Barn",
+    width: 2400,
+    height: 1800,
+  },
+  {
+    id: "barn-bar-view",
+    src: "/images/barn-bar-view.webp",
+    alt: "A view from behind the barn bar across the checkered dance floor and reception tables",
+    caption: "A look across the barn.",
+    category: "The Barn",
+    width: 2400,
+    height: 1800,
+  },
+  {
+    id: "barn-reception-tables",
+    src: "/images/barn-reception-tables.webp",
+    alt: "Rows of reception tables with white linens, place settings, and wooden chairs inside the barn",
+    caption: "The tables are set.",
+    category: "The Barn",
+    width: 2400,
+    height: 1800,
   },
   {
     id: "parking",

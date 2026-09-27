@@ -1,6 +1,6 @@
 # Happy Trails media and content inventory
 
-The original root assets are retained unchanged in the owner's local workspace and excluded from Git. The website publishes a curated selection of real event photographs plus clearly identified stills from the supplied property tours. The AI-labelled portrait is excluded.
+The original root assets are retained unchanged in the owner's local workspace and excluded from Git. The gallery publishes all 18 original venue/event photographs plus three clearly identified stills from the supplied property tours, for 21 images in total. The logo is used separately as branding; the AI-labelled portrait remains excluded.
 
 ## Rebuild derivatives
 
@@ -22,8 +22,14 @@ Use `--images-only` to skip video encoding. The script writes only to `public/im
 | `barn-wide.webp`          | `IMG_5660.HEIC`                | 2400 × 1800 | Wide barn interior                                            |
 | `barn-bar.webp`           | `IMG_5658.HEIC`                | 2400 × 1800 | Bar and dance floor                                           |
 | `barn-details.webp`       | `IMG_5656.HEIC`                | 2400 × 1800 | Barn seating detail                                           |
+| `barn-dance-floor.webp`   | `IMG_5657.HEIC`                | 2400 × 1800 | Dance floor and reception tables                              |
+| `barn-reception-view.webp` | `IMG_5661.HEIC`               | 2400 × 1800 | Reception tables beneath exposed beams                        |
+| `barn-bar-view.webp`      | `IMG_5662.HEIC`                | 2400 × 1800 | View across the barn from behind the bar                       |
+| `barn-reception-tables.webp` | `IMG_5663.HEIC`             | 2400 × 1800 | Another view of reception place settings                       |
 | `celebration.webp`        | `IMG_6415.jpeg`                | 2400 × 1600 | Guests dancing                                                |
 | `first-dance.webp`        | `IMG_6330.jpeg`                | 1892 × 2400 | Bride and groom dancing                                       |
+| `reception-bar-guests.webp` | `IMG_6307.jpeg`              | 2400 × 1600 | Two guests at the bar                                          |
+| `wedding-dance-floor.webp` | `IMG_6465.jpeg`               | 2400 × 1600 | Wedding dance-floor moment                                    |
 | `the-hosts.webp`          | `IMG_6447.jpeg`                | 2400 × 1600 | Four-person reception group; caption describes the group      |
 | `hospitality.webp`        | `IMG_6424.jpeg`                | 2400 × 1600 | Reception at the bar                                          |
 | `evening-dance.webp`      | `IMG_6502.jpeg`                | 2400 × 1600 | Dancing beneath string lights                                 |
@@ -36,7 +42,7 @@ Use `--images-only` to skip video encoding. The script writes only to `public/im
 
 The exterior frame retains the full 16:9 source image. It comes from the brief clean drone sequence after the opening logo and before the close-up of the owners; no title overlays or foreground people are present. Suite frames are limited by the source video’s motion and compression, and dedicated still photographs should replace them when available.
 
-The other four HEIC files (`IMG_5657`, `IMG_5661`, `IMG_5662`, `IMG_5663`) repeat similar barn views. `IMG_6307.jpeg` and `IMG_6465.jpeg` repeat reception subjects. Keep these as source alternatives instead of adding redundant gallery tiles. The 20 original still assets comprise eight HEIC photographs, eight reception JPEGs, a parking JPG, a sunset PNG, the transparent logo, and the AI-labelled PNG.
+The owner requested complete photo coverage after the initial curated gallery. The six previously omitted photographs (`IMG_5657`, `IMG_5661`, `IMG_5662`, `IMG_5663`, `IMG_6307`, and `IMG_6465`) are now included. The owner confirmed that the reference to “6545” meant `IMG_6465.jpeg`. The 20 original still assets comprise eight HEIC photographs, eight reception JPEGs, a parking JPG, a sunset PNG, the transparent logo, and the AI-labelled PNG. There are no exact SHA-256 duplicates among those originals. All 18 venue/event photo sources map to gallery entries; the three additional gallery items are the exterior, bunkhouse, and bridal-suite video stills. The identical exterior and tour-poster derivatives appear only once in the gallery.
 
 ## Videos
 
@@ -51,6 +57,8 @@ Combined video output is 24,046,399 bytes, below the 30 MB target; originals tot
 
 `Happy Trails Web menue doc.docx` is the initial source for the owner story, location, contact information, venue sizes, amenities, vendor assistance, and starting wedding price. `src/lib/content.ts` provides stable `MediaItem` and `NewsPost` interfaces, asynchronous read functions, descriptive alt text, and the initial site information and FAQs. News intentionally starts empty: there are no invented announcements or publish dates.
 
-Do not infer an exact street address, guest capacity, availability, booking terms, catering/alcohol rules, or package inclusions. The bridal and groomsmen quarters are described as preparation spaces; overnight accommodation is not established by the brief. Exact owner identities should not be inferred from a group photograph. The supplied filename `the-hosts.webp` is retained for the implementation contract, but its alt text and gallery caption identify only a reception group.
+Subsequent owner confirmations supply the exact address and an estimated capacity of approximately 75 guests. These details are stored in `site` in `src/lib/content.ts`; the capacity is an estimate, not an exact maximum. The owner's estimate supersedes the unapproved 125-guest suggestion in `ideas.md`.
+
+Do not infer availability, booking terms, catering/alcohol rules, or package inclusions. The bridal and groomsmen quarters are described as preparation spaces; overnight accommodation is not established by the brief. Exact owner identities should not be inferred from a group photograph. The supplied filename `the-hosts.webp` is retained for the implementation contract, but its alt text and gallery caption identify only a reception group.
 
 The remaining written inputs (`ideas.md`, `modernbuild.md`, and `photogallery.md`) establish visual and interaction direction. They are design references, not additional business facts.
