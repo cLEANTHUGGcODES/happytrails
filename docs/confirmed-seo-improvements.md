@@ -17,7 +17,7 @@ September 27, 2026. This is a cumulative record of completed work across the SEO
 | 11 | Improved contextual links and accessible navigation | Pricing FAQs link to directions, getting-ready spaces and vendor help. Venue-card names use their headings, and gallery button names now describe the photographs instead of repeating poetic captions. |
 | 12 | Linked the official business profiles from the website | Google and Yelp profiles are accessible from the footer and Contact. These are outbound identity/reference links, not earned backlinks. |
 | 13 | Corrected the public GitHub reference | Repository website field points to the canonical domain; description and README identify the real business and relevant visitor destinations. |
-| 14 | Implemented and used verified IndexNow notifications | Eight public pages submitted once; HTTP 202 acknowledged receipt with key validation pending. The reusable CLI checks ownership, live status, canonicals and indexing directives before posting. No confirmed indexing is claimed. |
+| 14 | Implemented and used verified IndexNow notifications | Initial eight-page submission received HTTP 202. After the fact sheet was published, the changed Venue and Pricing pages were submitted and accepted with HTTP 200 at 22:28 UTC. The reusable CLI checks ownership, live status, canonicals and indexing directives before posting. No confirmed indexing is claimed. |
 | 15 | Published a shareable venue fact sheet | A one-page branded PDF with a real venue photo, selectable text, clickable links and a tested directions QR code is linked from Venue and Pricing. It is a referral resource, not an independently earned backlink. |
 
 ## New referral resource
@@ -36,9 +36,9 @@ The PDF carries `X-Robots-Tag: noindex, follow` because it is a dated printable 
 
 ## Results that remain unconfirmed
 
-This record does not establish rankings, Google's indexing state, rich-result acceptance or fifteen referring domains. Blooming Grove and Visit Corsicana submissions remain subject to publisher review. Search Console still requires owner MFA access. The IndexNow acknowledgement means received/pending validation, as described in the [official FAQ](https://www.indexnow.org/faq).
+This record does not establish rankings, Google's indexing state, rich-result acceptance or fifteen referring domains. Blooming Grove and Visit Corsicana submissions remain subject to publisher review. Search Console still requires owner MFA access. IndexNow's HTTP 200 confirms acceptance of the latest submission, not indexing, as described in the [official FAQ](https://www.indexnow.org/faq).
 
-Directory status, including any later Eventective attempt, is recorded separately in `delivery/local-listings/`. Pending listing submissions are not counted as published backlinks.
+Directory status is recorded separately in `delivery/local-listings/`. Eventective's single free-profile request returned HTTP 204 but remained at Saving; one normal sign-in attempt then failed. No account, public listing or backlink was confirmed, and the attempt was stopped without resubmission. Pending or unconfirmed listing submissions are not counted as published backlinks.
 
 ## Verification for the new changes
 

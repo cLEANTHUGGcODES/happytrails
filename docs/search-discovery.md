@@ -37,7 +37,7 @@ Future Supabase publishing can integrate this notification at the successful pub
 | Visit Corsicana | Existing eligibility inquiry was accepted. No approved listing established. Await the publisher's response. |
 | City of Blooming Grove | Official Local Businesses page contains no listings or listing form. Eligibility and process are unpublished; no unsolicited general-contact request sent. |
 | Corsicana / Navarro County Chamber | Paid membership application, plus information not currently supplied. Skipped. |
-| Eventective / PartySlate | Relevant potential venue profiles. The inspected registration paths did not establish the publication flow: PartySlate's company search remained at Loading, and Eventective's body signup links exposed no destination. Email verification before publication was not confirmed, so account creation alone is not treated as an owner blocker. No profile was created or backlink claimed. |
+| Eventective / PartySlate | Follow-up found Eventective's working JavaScript signup modal. One free-profile request returned HTTP 204 but remained at Saving; one normal sign-in failed. No account/listing/backlink was confirmed, and no duplicate request was sent. PartySlate's company search remained at Loading. |
 | WeddingAvailability | Venue-domain email claim process; geographic eligibility not established. Skipped. |
 | Google Search Console / Bing Places / Apple Business | Owner account access or verification remains outstanding. No new sign-in prompt or MFA request was initiated. |
 | Vendor referrals / editorial features | Actual collaborators and permission to contact them have not been supplied. No invented partnerships, reviews or outreach messages. |
