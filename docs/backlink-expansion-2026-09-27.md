@@ -72,4 +72,12 @@ The work prioritizes useful visitor resources and accurate business citations. G
 
 ## Validation
 
-Production build, TypeScript, lint and automated browser checks are recorded with this change. The audit checks the expanded 11-page sitemap. Responsive and accessibility checks cover the new pages; mocked inquiry tests avoid sending guest emails. Gallery tests exercise direct photo links, reload, keyboard navigation, reduced motion and the manual copy-link fallback. Print checks cover the guest handout and planning guide. Live deployment and search notification results will be recorded after publication.
+- Published source commit `1820b8f` to `main`; [Vercel production deployment](https://vercel.com/cleanthuggcodes-projects/happytrails/FepR9Cs3bMJiLw9LtSZQyuvc1kLD) succeeded.
+- Production build, TypeScript and lint passed. All 69 unit/fixture checks passed. The 56 selected browser scenarios passed across the initial run and focused fix verification; five additional checks then passed against the live custom domain.
+- Live audit at 23:18 UTC: **11/11 sitemap pages, 390 internal link references, 24 unique fragments and 286 additional page/asset destinations; zero errors or redirect warnings**.
+- New pages passed the checked Axe accessibility rules at 390px and 1440px. Mocked inquiry tests avoided sending guest emails. Direct gallery links were checked for actual viewport placement with animations enabled, including the native-fragment/hydration timing fix.
+- Guest arrival guide prints on one white Letter page; the complete planning guide prints on five readable pages.
+- IndexNow accepted one batch of seven newly added or meaningfully updated URLs with **HTTP 200** at 23:18:54 UTC. This is notification acceptance, not proof of indexing. Receipt: `delivery/seo/expansion-30-review/indexnow.json`.
+- GitHub registered the weekly workflow as active. Its first manual run is [36358269277](https://github.com/cLEANTHUGGcODES/happytrails/actions/runs/36358269277); **completed successfully**, including report artifacts.
+
+Detailed browser, print, live-audit and submission evidence is retained locally in `delivery/seo/expansion-30-review/`.
