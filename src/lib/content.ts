@@ -70,7 +70,8 @@ export const faqs = [
   {
     question: "Where is Happy Trails?",
     answer:
-      "Find us at 5281 FM 55, Blooming Grove, TX 76626, on 22 acres in rural Navarro County. The property is south of Blooming Grove, between I-35E and I-45, near State Highways 22 and 31. Open the directions on our Contact page and get in touch to arrange a visit.",
+      "Find us at 5281 FM 55, Blooming Grove, TX 76626, on 22 acres in rural Navarro County. The property is south of Blooming Grove, between I-35E and I-45, near State Highways 22 and 31. Get in touch to arrange a visit.",
+    relatedLink: { href: "/contact#directions", label: "Map & driving directions" },
   },
   {
     question: "What does a wedding at Happy Trails cost?",
@@ -90,6 +91,10 @@ export const faqs = [
     question: "Are there places to get ready?",
     answer:
       "The property has a 400-square-foot, Western-inspired bunkhouse for groomsmen, with air conditioning, a mini kitchen, a bathroom, and a large porch. The 400-square-foot grain-bin bridal suite has air conditioning, a bathroom, and a loft with views.",
+    relatedLink: {
+      href: "/venue#getting-ready",
+      label: "Explore the bridal suite and bunkhouse",
+    },
   },
   {
     question: "What amenities are available?",
@@ -100,6 +105,7 @@ export const faqs = [
     question: "Can you help us find local vendors?",
     answer:
       "Depending on what your event needs, Jennifer and Randy can assist you with locating local vendors.",
+    relatedLink: { href: "/vendors", label: "Help finding local vendors" },
   },
 ] as const;
 

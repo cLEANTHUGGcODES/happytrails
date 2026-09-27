@@ -39,8 +39,9 @@ export default function VenuePage() {
         }
       >
         <p>
-          Twenty-two acres, a barn full of character, and room for approximately{" "}
-          {site.guestCapacityEstimate} guests. Come see where your celebration could take you.
+          Happy Trails is a barn wedding and event venue on 22 acres in Blooming Grove, Texas.
+          Explore our renovated barn, outdoor ceremony setting, and getting-ready spaces for
+          celebrations of approximately {site.guestCapacityEstimate} guests.
         </p>
       </PageIntro>
       <nav className="container venue-jumpnav" aria-label="Explore the venue spaces">

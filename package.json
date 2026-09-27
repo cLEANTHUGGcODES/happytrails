@@ -12,6 +12,7 @@
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
     "test": "tsx --test tests/*.test.ts",
+    "seo:notify": "tsx scripts/submit-indexnow.ts",
     "test:e2e": "playwright test"
   },
   "dependencies": {

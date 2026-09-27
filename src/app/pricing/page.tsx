@@ -89,6 +89,11 @@ export default function PricingPage() {
                   <Plus size={17} aria-hidden="true" />
                 </summary>
                 <p>{faq.answer}</p>
+                {"relatedLink" in faq && (
+                  <Link className="text-link" href={faq.relatedLink.href} prefetch={false}>
+                    {faq.relatedLink.label}
+                  </Link>
+                )}
               </details>
             ))}
           </div>

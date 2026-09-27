@@ -2,6 +2,8 @@
 
 A Next.js website for the Happy Trails wedding and event venue in Blooming Grove, Texas. This is the public-website release: the Supabase owner dashboard is the planned second phase.
 
+Official website: [Happy Trails Shindigs & Events](https://www.happytrailsshindigs.com/) · [Venue details](https://www.happytrailsshindigs.com/venue) · [Pricing & FAQs](https://www.happytrailsshindigs.com/pricing) · [Contact & directions](https://www.happytrailsshindigs.com/contact).
+
 Repository: [cLEANTHUGGcODES/happytrails](https://github.com/cLEANTHUGGcODES/happytrails). Production branch: `main`.
 
 [Desktop preview](docs/previews/home-desktop.png) · [Phone preview](docs/previews/home-mobile.png) · [Team brief audit](docs/team-brief-audit.md) · [Validation record](docs/validation/README.md) · [Design review and comparison](docs/design-review.md)
@@ -59,6 +61,8 @@ The original root-level media and planning documents stay in the local workspace
 `src/lib/content.ts` is the content boundary. `getGallery()`, `getSiteMedia()`, `getUpdates()`, and `getUpdate()` isolate the local data source. Featured page images refer to named slots, so those selections can later be managed without editing page components.
 
 To add an approved update during this first phase, add a `NewsPost` to `newsSeed` and redeploy. The news index, article route, homepage teaser, metadata, and sitemap then populate from the same reader. The initial news collection is intentionally empty, so `/news` is excluded from indexing and the sitemap until an update is published. See the [SEO review](docs/seo-review.md) for search configuration and remaining Search Console verification.
+
+After meaningful content changes are live, `npm run seo:notify -- /venue /pricing` previews an IndexNow notification for the named pages; add `--submit` to send it. See [search discovery](docs/search-discovery.md) for validation, initial submission and local-listing status. This is an explicit maintenance command, not an automatic deployment hook.
 
 See [the asset register](docs/assets.md) for source-to-output mappings, dimensions, media preparation, and photography limitations. See [the map provenance](docs/maps/README.md) for the illustrated location guide and reference data. Venue copy follows the Word brief and subsequent owner-supplied details, including the exact address and an estimated capacity of approximately 75 guests. The estimate is published on the homepage, Venue page, Pricing FAQ, and inquiry form; it is not enforced as a booking limit. Alcohol/vendor policies, rental terms, and package inclusions still require owner-provided details.
 
