@@ -126,6 +126,23 @@
     background-color 180ms ease;
 }
 
+.profiles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 18px;
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.profiles a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 .bottom {
   display: flex;
   align-items: center;
@@ -162,6 +179,7 @@
   .directions:hover,
   .phone:hover,
   .email:hover,
+  .profiles a:hover,
   .bottom > a:hover {
     color: var(--wine);
     text-decoration: underline;

@@ -131,7 +131,12 @@ export default async function HomePage() {
           </div>
           <div className="space-grid">
             {spaces.map((space) => (
-              <Link href={space.href} key={space.n} className="space-card">
+              <Link
+                href={space.href}
+                key={space.n}
+                className="space-card"
+                aria-labelledby={`space-title-${space.n}`}
+              >
                 <div className="space-image" data-motion="image">
                   <ContentImage
                     slot={space.slot}
@@ -139,13 +144,13 @@ export default async function HomePage() {
                     sizes="(max-width: 760px) 100vw, (max-width: 1100px) 50vw, 33vw"
                     className="cover"
                   />
-                  <span className="space-number">{space.n}</span>
+                  <span className="space-number" aria-hidden="true">{space.n}</span>
                   <span className="space-arrow">
                     <ArrowUpRight size={22} aria-hidden="true" />
                   </span>
                 </div>
                 <p className="eyebrow">{space.label}</p>
-                <h3>{space.title}</h3>
+                <h3 id={`space-title-${space.n}`}>{space.title}</h3>
                 <p>{space.copy}</p>
               </Link>
             ))}
@@ -183,8 +188,9 @@ export default async function HomePage() {
             <em>you feel.</em>
           </h2>
           <p>
-            A wedding reception in the barn, a milestone birthday, or a long-awaited family reunion.
-            Bring your people together in a setting that feels personal.
+            Gather beneath big Texas skies, celebrate in the barn, and head home with full hearts.
+            Happy Trails welcomes wedding receptions, milestone birthdays, and long-awaited family
+            reunions.
           </p>
           <ul className="celebration-types" aria-label="Celebrations at Happy Trails">
             <li>Weddings</li>

@@ -29,6 +29,10 @@ export const metadata: Metadata = {
     path: "/",
   }),
   metadataBase: new URL(SITE_URL),
+  icons: {
+    icon: [{ url: "/favicon.png", type: "image/png", sizes: "96x96" }],
+    apple: [{ url: "/apple-touch-icon.png", type: "image/png", sizes: "180x180" }],
+  },
   // Individual routes supply their own canonical; never inherit the homepage canonical on a 404.
   alternates: undefined,
   robots: process.env.VERCEL_ENV && process.env.VERCEL_ENV !== "production"

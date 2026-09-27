@@ -88,6 +88,10 @@ export async function SiteFooter() {
           <Link className={styles.tour} href="/contact" prefetch={false}>
             Request a tour <ArrowUpRight size={18} aria-hidden="true" />
           </Link>
+          <nav className={styles.profiles} aria-label="Happy Trails business profiles">
+            <a href={site.profiles.google}>Google profile</a>
+            <a href={site.profiles.yelp}>Yelp</a>
+          </nav>
         </div>
       </div>
       <div className={`container ${styles.bottom}`}>
