@@ -64,6 +64,8 @@ To add an approved update during this first phase, add a `NewsPost` to `newsSeed
 
 After meaningful content changes are live, `npm run seo:notify -- /venue /pricing` previews an IndexNow notification for the named pages; add `--submit` to send it. See [search discovery](docs/search-discovery.md) for validation, initial submission and local-listing status. This is an explicit maintenance command, not an automatic deployment hook.
 
+The [confirmed improvements record](docs/confirmed-seo-improvements.md) includes the printable venue fact sheet and its regeneration instructions. Update that dated PDF when its business facts or pricing change; it is linked from Venue and Pricing for saving and sharing.
+
 See [the asset register](docs/assets.md) for source-to-output mappings, dimensions, media preparation, and photography limitations. See [the map provenance](docs/maps/README.md) for the illustrated location guide and reference data. Venue copy follows the Word brief and subsequent owner-supplied details, including the exact address and an estimated capacity of approximately 75 guests. The estimate is published on the homepage, Venue page, Pricing FAQ, and inquiry form; it is not enforced as a booking limit. Alcohol/vendor policies, rental terms, and package inclusions still require owner-provided details.
 
 The [team brief audit](docs/team-brief-audit.md) records coverage of all six requested sections and the resolved map, Vendors-navigation, and bar-dimension gaps. This is content coverage, separate from deployment, real inquiry delivery, and owner acceptance.

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Flower2, Plus } from "lucide-react";
+import { Download, Flower2, Plus } from "lucide-react";
 import { ButtonLink, PageIntro, ContactCta } from "@/components/ui";
 import { Horseshoe } from "@/components/horseshoe";
 import { faqs } from "@/lib/content";
@@ -30,6 +30,9 @@ export default function PricingPage() {
           Whether you’re planning your wedding or gathering your favorite people for another
           milestone, we’d love to hear your ideas.
         </p>
+        <a className="text-link" href="/downloads/happy-trails-venue-fact-sheet.pdf" download>
+          Download the venue fact sheet (PDF) <Download size={16} aria-hidden="true" />
+        </a>
       </PageIntro>
       <section className="container pricing-section" aria-label="Event pricing">
         <article className="pricing-card featured" data-motion="reveal">

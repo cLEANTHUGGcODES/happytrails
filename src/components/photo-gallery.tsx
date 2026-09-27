@@ -326,7 +326,7 @@ export function PhotoGallery({ items }: { items: MediaItem[] }) {
                 }}
                 type="button"
                 className={styles.photoButton}
-                aria-label={`${view === "grid" ? "Open" : "Enlarge"} photograph: ${item.caption}`}
+                aria-label={`${view === "grid" ? "Open" : "Enlarge"} photograph: ${item.alt}`}
                 aria-haspopup={view === "slideshow" ? "dialog" : undefined}
                 disabled={!hydrated}
                 onClick={(event) => {
@@ -406,7 +406,7 @@ export function PhotoGallery({ items }: { items: MediaItem[] }) {
                   else thumbnailButtons.current.delete(item.id);
                 }}
                 className={styles.thumbnail}
-                aria-label={`Show photograph ${index + 1}: ${item.caption}`}
+                aria-label={`Show photograph ${index + 1}: ${item.alt}`}
                 aria-current={index === selectedIndex ? "true" : undefined}
                 onClick={() => showSlide(index)}
               >

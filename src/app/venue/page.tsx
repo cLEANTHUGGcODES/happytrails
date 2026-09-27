@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { ContentImage } from "@/components/content-image";
-import { Check } from "lucide-react";
+import { Check, Download } from "lucide-react";
 import { PageIntro, ContactCta, ButtonLink } from "@/components/ui";
 import { site } from "@/lib/content";
 import { createPageMetadata } from "@/lib/seo";
@@ -43,6 +43,9 @@ export default function VenuePage() {
           Explore our renovated barn, outdoor ceremony setting, and getting-ready spaces for
           celebrations of approximately {site.guestCapacityEstimate} guests.
         </p>
+        <a className="text-link" href="/downloads/happy-trails-venue-fact-sheet.pdf" download>
+          Download the venue fact sheet (PDF) <Download size={16} aria-hidden="true" />
+        </a>
       </PageIntro>
       <nav className="container venue-jumpnav" aria-label="Explore the venue spaces">
         <a href="#the-barn">The Barn</a>

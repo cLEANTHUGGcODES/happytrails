@@ -2,7 +2,12 @@ import { expect, test, type Locator, type Page } from "@playwright/test";
 import AxeBuilder from "@axe-core/playwright";
 
 const slideshowName = "Happy Trails photo slideshow";
-const danceCaption = "A dance to remember."; // Owner-requested IMG_6465.jpeg.
+const danceDescription =
+  "A bride and a man in a vest dancing on the checkered floor, with wedding guests nearby"; // Owner-requested IMG_6465.jpeg.
+const bunkhouseDescription =
+  "The Western-inspired bunkhouse and its covered porch, with two people seated outside";
+const bridalSuiteDescription =
+  "The grain-bin bridal suite with corrugated metal walls, vintage furnishings, and a decorative folding screen";
 
 function modeButton(page: Page, name: "Grid" | "Slideshow") {
   return page
@@ -22,14 +27,14 @@ async function expectSettled(page: Page) {
   await expect(page.locator("[data-gallery-transition]")).toHaveCount(0);
 }
 
-async function expectSelected(page: Page, position: number, caption?: string) {
+async function expectSelected(page: Page, position: number, description?: string) {
   const selected = slideshow(page).getByRole("button", {
     name: new RegExp(`^Show photograph ${position}:`),
   });
   await expect(selected).toHaveAttribute("aria-current", "true");
   await expect(slideshow(page).locator('button[aria-current="true"]')).toHaveCount(1);
-  if (caption) {
-    await expect(enlargeButton(page)).toHaveAccessibleName(`Enlarge photograph: ${caption}`);
+  if (description) {
+    await expect(enlargeButton(page)).toHaveAccessibleName(`Enlarge photograph: ${description}`);
   }
 }
 
@@ -77,11 +82,11 @@ test("grid and slideshow preserve the requested dance photograph and restore foc
   await expect(photographs).toHaveCount(21);
   await expect(modeButton(page, "Grid")).toHaveAttribute("aria-pressed", "true");
 
-  const dance = page.getByRole("button", { name: `Open photograph: ${danceCaption}` });
+  const dance = page.getByRole("button", { name: `Open photograph: ${danceDescription}` });
   await dance.click();
   await expect(modeButton(page, "Slideshow")).toHaveAttribute("aria-pressed", "true");
   await expect(slideshow(page)).toBeVisible();
-  await expectSelected(page, 6, danceCaption);
+  await expectSelected(page, 6, danceDescription);
   await expect(enlargeButton(page).locator("img")).toHaveAttribute("src", /wedding-dance-floor/);
   await expect(enlargeButton(page)).toBeFocused();
   await expectSettled(page);
@@ -91,7 +96,7 @@ test("grid and slideshow preserve the requested dance photograph and restore foc
   await expect(dance).toBeFocused();
   await expectSettled(page);
   await modeButton(page, "Slideshow").click();
-  await expectSelected(page, 6, danceCaption);
+  await expectSelected(page, 6, danceDescription);
   await enlargeButton(page).focus();
   await page.keyboard.press("Escape");
   await expect(modeButton(page, "Grid")).toHaveAttribute("aria-pressed", "true");
@@ -116,18 +121,18 @@ test("slideshow controls and local keyboard navigation expose one selected photo
   await slideshow(page)
     .getByRole("button", { name: /^Show photograph 6:/ })
     .click();
-  await expectSelected(page, 6, danceCaption);
+  await expectSelected(page, 6, danceDescription);
   await enlargeButton(page).focus();
   await page.keyboard.press("ArrowRight");
   await expectSelected(page, 7);
   await page.keyboard.press("ArrowLeft");
-  await expectSelected(page, 6, danceCaption);
+  await expectSelected(page, 6, danceDescription);
   await expectSettled(page);
 
   // Arrow keys elsewhere on the page must not silently change the collection.
   await modeButton(page, "Slideshow").focus();
   await page.keyboard.press("ArrowRight");
-  await expectSelected(page, 6, danceCaption);
+  await expectSelected(page, 6, danceDescription);
 
   const accessibility = await new AxeBuilder({ page })
     .withTags(["wcag2a", "wcag2aa", "wcag21a", "wcag21aa"])
@@ -149,22 +154,26 @@ test("changing to a shorter collection keeps slideshow mode and a valid selectio
     .getByRole("button", { name: /^Open photograph:/ })
     .last()
     .click();
-  await expectSelected(page, 21, "Arrive, settle in, and enjoy the day.");
+  await expectSelected(
+    page,
+    21,
+    "An aerial view of the gravel parking area beside the barn and grain-bin suite",
+  );
   await page.getByRole("button", { name: "Getting Ready", exact: true }).click();
   await expect(modeButton(page, "Slideshow")).toHaveAttribute("aria-pressed", "true");
   await expect(slideshow(page).getByRole("button", { name: /^Show photograph \d+:/ })).toHaveCount(
     2,
   );
-  await expectSelected(page, 1, "The bunkhouse porch. Still from our property tour.");
+  await expectSelected(page, 1, bunkhouseDescription);
   await slideshow(page).getByRole("button", { name: "Next photograph", exact: true }).click();
-  await expectSelected(page, 2, "Something a little unexpected. Still from our property tour.");
+  await expectSelected(page, 2, bridalSuiteDescription);
   await page.getByRole("button", { name: "All photos", exact: true }).click();
-  await expectSelected(page, 11, "Something a little unexpected. Still from our property tour.");
+  await expectSelected(page, 11, bridalSuiteDescription);
   await modeButton(page, "Grid").click();
   await expect(page.getByRole("button", { name: /^Open photograph:/ })).toHaveCount(21);
   await expect(
     page.getByRole("button", {
-      name: "Open photograph: Something a little unexpected. Still from our property tour.",
+      name: `Open photograph: ${bridalSuiteDescription}`,
     }),
   ).toBeFocused();
   await expectSettled(page);
@@ -208,18 +217,18 @@ test("reduced motion skips gallery transitions at load and clears an animation w
 }) => {
   await page.emulateMedia({ reducedMotion: "reduce" });
   await page.goto("/gallery");
-  await page.getByRole("button", { name: `Open photograph: ${danceCaption}` }).click();
-  await expectSelected(page, 6, danceCaption);
+  await page.getByRole("button", { name: `Open photograph: ${danceDescription}` }).click();
+  await expectSelected(page, 6, danceDescription);
   expect(await page.locator("[data-gallery-transition]").count()).toBe(0);
   await modeButton(page, "Grid").click();
   expect(await page.locator("[data-gallery-transition]").count()).toBe(0);
 
   await page.emulateMedia({ reducedMotion: "no-preference" });
-  await page.getByRole("button", { name: `Open photograph: ${danceCaption}` }).click();
+  await page.getByRole("button", { name: `Open photograph: ${danceDescription}` }).click();
   await expect(slideshow(page)).toBeVisible();
   await page.emulateMedia({ reducedMotion: "reduce" });
   await expectSettled(page);
-  await expectSelected(page, 6, danceCaption);
+  await expectSelected(page, 6, danceDescription);
   await slideshow(page).getByRole("button", { name: "Next photograph", exact: true }).click();
   await expectSelected(page, 7);
   await expectSettled(page);
@@ -234,14 +243,14 @@ test("rapid view changes, resize, and browser history leave an operable gallery"
   const errors: string[] = [];
   page.on("pageerror", (error) => errors.push(error.message));
   await page.goto("/gallery");
-  await page.getByRole("button", { name: `Open photograph: ${danceCaption}` }).click();
+  await page.getByRole("button", { name: `Open photograph: ${danceDescription}` }).click();
   for (let attempt = 0; attempt < 3; attempt++) {
     await modeButton(page, "Grid").click();
     await modeButton(page, "Slideshow").click();
   }
   await page.setViewportSize({ width: 390, height: 844 });
   await expectSettled(page);
-  await expectSelected(page, 6, danceCaption);
+  await expectSelected(page, 6, danceDescription);
   await expectNoOverflow(page);
   await modeButton(page, "Grid").click();
   await page.setViewportSize({ width: 1440, height: 1000 });
@@ -267,7 +276,7 @@ test("scrolling during a grid-to-slideshow transition restores the real photogra
   await page.emulateMedia({ reducedMotion: "no-preference" });
   await page.goto("/gallery");
   await page.evaluate(() => document.fonts.ready);
-  const dance = page.getByRole("button", { name: `Open photograph: ${danceCaption}` });
+  const dance = page.getByRole("button", { name: `Open photograph: ${danceDescription}` });
   await expect(dance).toBeEnabled();
   await dance.scrollIntoViewIfNeeded();
   await dance.locator("img").evaluate((image: HTMLImageElement) => image.decode());
@@ -305,6 +314,6 @@ test("scrolling during a grid-to-slideshow transition restores the real photogra
     layerRemains: false,
     finalVisibility: "visible",
   });
-  await expectSelected(page, 6, danceCaption);
+  await expectSelected(page, 6, danceDescription);
   await expect(enlargeButton(page)).toBeVisible();
 });

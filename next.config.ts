@@ -7,6 +7,13 @@ const nextConfig: NextConfig = {
   async headers() {
     return [
       {
+        source: "/downloads/happy-trails-venue-fact-sheet.pdf",
+        headers: [
+          // The printable snapshot is for sharing; current details live on the website.
+          { key: "X-Robots-Tag", value: "noindex, follow" },
+        ],
+      },
+      {
         source: "/:path*",
         has: [{ type: "host", value: ".*\\.vercel\\.app" }],
         headers: [{ key: "X-Robots-Tag", value: "noindex, nofollow" }],
