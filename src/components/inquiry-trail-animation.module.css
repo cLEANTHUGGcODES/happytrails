@@ -56,88 +56,67 @@
   animation-delay: 140ms;
 }
 
-.traveler {
-  transform-box: view-box;
-  transform-origin: 64px 115px;
-  animation: follow-trail 3.6s linear infinite;
+/* Each leg is redrawn through a complete walk, rather than swung as a rod. */
+.poseViewport {
+  overflow: hidden;
 }
-
+.poseStrip {
+  /* One timeline, one clipped frame: no overlapping poses at the loop seam. */
+  animation: walk-poses 1.5s steps(25, end) infinite;
+}
+.farLeg {
+  fill: #b08b70;
+  stroke: #b08b70;
+  stroke-width: 1.65;
+}
+.nearLeg {
+  fill: #834639;
+  stroke: #834639;
+  stroke-width: 1.8;
+}
 .shadow {
   fill: #967c61;
-  opacity: 0.1;
-  animation: breathe-shadow 1.2s ease-in-out infinite;
-  transform-origin: 64px 115px;
+  opacity: 0.09;
 }
-
-.horse {
-  fill: #f7f2e8;
-  stroke: #8e302c;
-  stroke-width: 1.4;
-  animation: walking-bob 1.2s ease-in-out infinite;
+.bodyFill {
+  fill: #834639;
 }
-
-.farLegs {
-  fill: #eee4d6;
-  stroke: #aa7461;
+.contour {
+  stroke: #834639;
+  stroke-width: 1.85;
 }
-
-.farHindLeg,
-.nearHindLeg,
-.farFrontLeg,
-.nearFrontLeg,
-.tail,
-.head {
-  transform-box: view-box;
-}
-
-.farHindLeg {
-  transform-origin: 24px 62px;
-  animation: hind-step 1.2s ease-in-out -600ms infinite;
-}
-
-.nearHindLeg {
-  transform-origin: 29px 64px;
-  animation: hind-step 1.2s ease-in-out infinite;
-}
-
-.farFrontLeg {
-  transform-origin: 91px 64px;
-  animation: front-step 1.2s ease-in-out infinite;
-}
-
-.nearFrontLeg {
-  transform-origin: 87px 66px;
-  animation: front-step 1.2s ease-in-out -600ms infinite;
-}
-
 .tail {
-  transform-origin: 21px 43px;
-  animation: tail-swish 2.4s ease-in-out infinite;
+  fill: #653d33;
+  stroke: #653d33;
+  stroke-width: 1.6;
+  transform-origin: 61px 57px;
+  animation: tail-swish 2.88s ease-in-out infinite;
 }
-
-.head {
-  transform-origin: 101px 24px;
-  animation: head-nod 1.2s ease-in-out infinite;
-}
-
-.headShape {
-  stroke-linecap: round;
-}
-
-.eye {
-  fill: #8e302c;
-  stroke: none;
-}
-
-.mane {
-  fill: #e5d1be;
-  stroke-width: 0.85;
-}
-
-.etching {
+.tailLines {
   fill: none;
-  stroke-width: 0.75;
-  opacity: 0.65;
+  stroke: #b08b70;
+  stroke-width: 1.15;
+}
+.mane {
+  fill: #653d33;
+  stroke: #653d33;
+  stroke-width: 0.9;
+}
+.detail {
+  fill: none;
+  stroke: #eedbc7;
+  stroke-width: 1.1;
+}
+.eye {
+  fill: #eedbc7;
+}
+@keyframes walk-poses {
+  from { transform: translateY(0); }
+  to { transform: translateY(-5250px); }
+}
+@keyframes tail-swish {
+  0%, 100% { transform: rotate(-1deg); }
+  50% { transform: rotate(2deg); }
 }
 
 @keyframes trace-trail {
@@ -156,95 +135,6 @@
   100% {
     stroke-dashoffset: 0;
     opacity: 0;
-  }
-}
-
-@keyframes follow-trail {
-  0% {
-    transform: translate(0, 0) scale(1);
-    opacity: 1;
-  }
-  76% {
-    transform: translate(30px, -6px) scale(0.97);
-    opacity: 1;
-  }
-  87% {
-    transform: translate(34px, -8px) scale(0.965);
-    opacity: 0;
-  }
-  88% {
-    transform: translate(0, 0) scale(1);
-    opacity: 0;
-  }
-  100% {
-    transform: translate(0, 0) scale(1);
-    opacity: 1;
-  }
-}
-
-@keyframes walking-bob {
-  0%,
-  50%,
-  100% {
-    transform: translateY(0);
-  }
-  25%,
-  75% {
-    transform: translateY(-1.5px);
-  }
-}
-
-@keyframes front-step {
-  0%,
-  100% {
-    transform: rotate(-11deg);
-  }
-  50% {
-    transform: rotate(11deg);
-  }
-}
-
-@keyframes hind-step {
-  0%,
-  100% {
-    transform: rotate(10deg);
-  }
-  50% {
-    transform: rotate(-10deg);
-  }
-}
-
-@keyframes tail-swish {
-  0%,
-  100% {
-    transform: rotate(-3deg);
-  }
-  50% {
-    transform: rotate(6deg);
-  }
-}
-
-@keyframes head-nod {
-  0%,
-  100% {
-    transform: rotate(-1deg);
-  }
-  50% {
-    transform: rotate(2deg);
-  }
-}
-
-@keyframes breathe-shadow {
-  0%,
-  50%,
-  100% {
-    transform: scaleX(1);
-    opacity: 0.1;
-  }
-  25%,
-  75% {
-    transform: scaleX(0.97);
-    opacity: 0.07;
   }
 }
 
