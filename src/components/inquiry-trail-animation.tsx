@@ -1,7 +1,6 @@
-import { horsePoses } from "./inquiry-horse-poses";
 import styles from "./inquiry-trail-animation.module.css";
 
-/** Original equestrian linework; the form owns the accessible sending status. */
+/** A countryside ink drawing. The form owns the accessible sending status. */
 export function InquiryTrailAnimation() {
   return (
     <svg
@@ -27,12 +26,24 @@ export function InquiryTrailAnimation() {
           <path d="M28 60c3-3 6-3 8-1m11-8c4 1 5 4 4 7" />
         </g>
 
+        <g className={styles.grainBin}>
+          <path d="M246 61h40v25c-11 6-29 6-40 0V61Z" />
+          <path className={styles.corrugation} d="M246 65q20 7 40 0m-40 5q20 7 40 0m-40 5q20 7 40 0m-40 5q20 7 40 0m-40 5q20 7 40 0" />
+          <path d="m243 61 23-20 23 20q-23 9-46 0Z" />
+          <path className={styles.corrugation} d="m266 42-13 21m13-21v23m0-23 13 21" />
+          <path d="M264 41v-3h4v3M260 89V78h12v11M262 69v-5h8v5Z" />
+        </g>
+
         <g className={styles.barn}>
-          <path d="m318 67 18-20 23 18v23h-41V67Z" />
-          <path d="m315 68 21-24 26 20m-26-17v14m-5-5h10" />
-          <path d="M331 88V70h16v18m-16-18 16 18m0-18-16 18m8-18v18" />
-          <path d="M323 68v16m31-15v15m-26-21 8-9 12 9" />
-          <path d="m359 67 15 5v16h-15m15-16 3 1" />
+          <path d="m307 53 29-29 27 29v35h-56V53Z" />
+          <path d="m363 53 34 6v28l-34 1V53Z" />
+          <path className={styles.barnRoof} d="m336 24 36 6 30 28-39-5-27-29Z" />
+          <path d="m303 55 33-34 30 32m-30-32 38 6 29 30" />
+          <path className={styles.barnDetail} d="m347 27 28 28m-16-26 28 28m-16-26 28 28" />
+          <path d="M320 88V62h30v26m-15-26v26m-15-26 15 26m0-26-15 26m15-26 15 26m0-26-15 26" />
+          <path d="M331 48v-9h9v9Zm4-9v9m-4-4h9" />
+          <path className={styles.barnDetail} d="M312 57v27m5-27v27m37-27v27m5-27v27M368 63v19m9-18v18m9-16v16m7-15v15" />
+          <path className={styles.barnDetail} d="M310 54q26 13 51 0m-42 3v3m10-1v3m11-3v3m11-5v3" />
         </g>
 
         <circle className={styles.sun} cx="302" cy="35" r="9" />
@@ -48,42 +59,6 @@ export function InquiryTrailAnimation() {
         <path pathLength="1" d="M66 146c34-16 73-12 107-12 47 0 77-16 89-27 18-17 35-13 48-13 15 0 23-4 28-7" />
       </g>
 
-      <g transform="translate(98 5) scale(.59)">
-        <ellipse className={styles.shadow} cx="157" cy="202" rx="101" ry="4" />
-        <svg
-          width="320"
-          height="210"
-          viewBox="0 0 320 210"
-          className={styles.poseViewport}
-          data-horse-viewport=""
-          aria-hidden="true"
-          focusable="false"
-        >
-          <g className={styles.poseStrip}>
-            {horsePoses.map((pose, frame) => (
-              <g key={frame} data-horse-pose={frame} transform={`translate(0 ${frame * 210})`}>
-                <path className={styles.farLeg} d={pose.farHind} />
-                <path className={styles.farLeg} d={pose.farFront} />
-                <path className={styles.nearLeg} d={pose.nearHind} />
-                <path className={styles.nearLeg} d={pose.nearFront} />
-              </g>
-            ))}
-          </g>
-        </svg>
-
-        <g className={styles.tail}>
-          <path d="M65 55C40 49 33 67 31 92c-1 19-4 38-15 53 14-5 28-23 30-45 2-17 5-30 20-35Z" />
-          <path className={styles.tailLines} d="M55 61C36 79 44 111 24 135M49 68c-9 22-4 34-15 51" />
-        </g>
-
-        <g className={styles.body}>
-          <path className={styles.bodyFill} d="M59 57C75 43 97 47 120 52c24 5 43 3 62-5 21-9 34-23 62-25l10-1 4-9 2 12 8-7-3 13c7 8 12 19 15 30l15 20c4 6 1 11-5 12-6 1-10-3-14-9l-17-17c-7-6-13-7-17-6-3 12-7 17-14 22 1 19-6 36-22 41-11 4-22 3-35 1-26 0-44-3-62-9-12-3-17-7-21-12-7 12-17 18-31 11-21-10-23-39-1-55Z" />
-          <path className={styles.contour} d="M59 57C75 43 97 47 120 52c24 5 43 3 62-5 21-9 34-23 62-25l10-1 4-9 2 12 8-7-3 13c7 8 12 19 15 30l15 20c4 6 1 11-5 12-6 1-10-3-14-9l-17-17c-7-6-13-7-17-6-3 12-7 17-14 22 1 11-1 20-5 27M108 110c24 9 49 12 79 11M59 57C45 66 44 88 51 99" />
-          <path className={styles.mane} d="M250 24c-26 3-43 15-66 25l-9 9q10-2 16-7-8 9-5 13 9-4 14-12-6 10-2 13 10-6 16-16-4 8-2 10 10-8 17-17-5 8-1 7l15-15 8-2Z" />
-          <path className={styles.detail} d="M249 28l7 4m8-6 2 8M287 75l4 3m-3 8 6 1M246 60c-12 10-19 22-23 35M215 70c-9 12-11 23-8 36M77 60c14 6 23 19 23 36m-24-29c8 7 13 14 14 23M123 108c18 4 34 6 52 5" />
-          <ellipse className={styles.eye} cx="268" cy="45" rx="2.1" ry="1.7" />
-        </g>
-      </g>
     </svg>
   );
 }

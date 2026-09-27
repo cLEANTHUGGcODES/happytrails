@@ -23,7 +23,7 @@ export function InquiryAnimationPreview() {
         <p className={styles.eyebrow}>Animation preview</p>
         <h1 id="preview-title">A little walk down the trail.</h1>
         <p>
-          Take your time with our little traveler. This is the same animation used on the
+          Watch the trail lead to the barn. This is the same animation used on the
           contact form, with room to pause, replay, and try the finishing touch.
         </p>
         <span className={styles.badge}>Preview only · No inquiries or emails are sent</span>

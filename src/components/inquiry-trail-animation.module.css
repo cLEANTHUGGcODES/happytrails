@@ -27,6 +27,27 @@
   stroke-width: 1.15;
 }
 
+.barnRoof {
+  fill: #eee7db;
+}
+
+.barnDetail {
+  fill: none;
+  stroke-width: 0.75;
+}
+
+.grainBin {
+  fill: #f7f2e8;
+  stroke: #858873;
+  stroke-width: 1.05;
+}
+
+.corrugation {
+  fill: none;
+  stroke-width: 0.65;
+  opacity: 0.8;
+}
+
 .sun {
   stroke: #b7a27e;
   opacity: 0.65;
@@ -54,69 +75,6 @@
 
 .trailInk path + path {
   animation-delay: 140ms;
-}
-
-/* Each leg is redrawn through a complete walk, rather than swung as a rod. */
-.poseViewport {
-  overflow: hidden;
-}
-.poseStrip {
-  /* One timeline, one clipped frame: no overlapping poses at the loop seam. */
-  animation: walk-poses 1.5s steps(25, end) infinite;
-}
-.farLeg {
-  fill: #b08b70;
-  stroke: #b08b70;
-  stroke-width: 1.65;
-}
-.nearLeg {
-  fill: #834639;
-  stroke: #834639;
-  stroke-width: 1.8;
-}
-.shadow {
-  fill: #967c61;
-  opacity: 0.09;
-}
-.bodyFill {
-  fill: #834639;
-}
-.contour {
-  stroke: #834639;
-  stroke-width: 1.85;
-}
-.tail {
-  fill: #653d33;
-  stroke: #653d33;
-  stroke-width: 1.6;
-  transform-origin: 61px 57px;
-  animation: tail-swish 2.88s ease-in-out infinite;
-}
-.tailLines {
-  fill: none;
-  stroke: #b08b70;
-  stroke-width: 1.15;
-}
-.mane {
-  fill: #653d33;
-  stroke: #653d33;
-  stroke-width: 0.9;
-}
-.detail {
-  fill: none;
-  stroke: #eedbc7;
-  stroke-width: 1.1;
-}
-.eye {
-  fill: #eedbc7;
-}
-@keyframes walk-poses {
-  from { transform: translateY(0); }
-  to { transform: translateY(-5250px); }
-}
-@keyframes tail-swish {
-  0%, 100% { transform: rotate(-1deg); }
-  50% { transform: rotate(2deg); }
 }
 
 @keyframes trace-trail {
