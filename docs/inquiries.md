@@ -33,4 +33,6 @@ Field errors return HTTP 400 with `fieldErrors`; invalid origin returns 403; ove
 
 ## Validation
 
+Visit `/preview/horse` to review the exact shared loading illustration and confirmation panel without submitting the contact form. The page loops the animation and offers pause/play, restart, desktop/mobile widths, and a success-screen toggle. It contains no form or delivery calls; its confirmation explicitly says no inquiry was sent. It respects reduced motion, is marked `noindex`, and is omitted from navigation and the sitemap.
+
 Run `npm test` for validation, field-injection, body-limit, origin, timing, credential, idempotency-forwarding, and delivery-error tests. Every provider response is a local stub; these tests never send an email. Test browser submission with mocked API responses for validation focus, pending-state locking, success, and failed delivery. Production delivery verification and the WAF rule require the actual service accounts and remain launch checks.

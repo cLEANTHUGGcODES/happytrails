@@ -1,0 +1,113 @@
+.preview {
+  width: min(100% - 3rem, 64rem);
+  margin-inline: auto;
+  padding-block: clamp(2.5rem, 5vw, 4rem) 3rem;
+}
+.header {
+  max-width: 42rem;
+  margin-bottom: 2.5rem;
+}
+.eyebrow {
+  color: var(--wine);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+.header h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  margin-bottom: 1.1rem;
+  text-wrap: initial;
+}
+.header > p:not(.eyebrow) {
+  color: var(--muted);
+  max-width: 35rem;
+  font-size: 0.85rem;
+}
+.badge {
+  display: inline-block;
+  margin-top: 1.25rem;
+  padding: 0.4rem 0.7rem;
+  background: #e8e9df;
+  color: #424b39;
+  font-size: 0.68rem;
+  line-height: 1.6;
+}
+.controls,
+.playback,
+.sizes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.controls {
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+.controls button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  min-height: 44px;
+  padding: 0.7rem 0.85rem;
+  border: 1px solid #cbbfaf;
+  color: var(--ink);
+  background: var(--paper);
+  font-size: 0.7rem;
+  line-height: 1.4;
+}
+.controls button:hover {
+  border-color: var(--wine);
+}
+.controls button[aria-pressed="true"] {
+  border-color: var(--wine);
+  color: #fffaf3;
+  background: var(--wine);
+}
+.controls button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+.canvas {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  place-items: center;
+  min-height: 27rem;
+  padding: 2rem;
+  border: 1px solid var(--line);
+  background: #eee7da;
+}
+.stage {
+  width: 736px;
+  max-width: 100%;
+  min-width: 0;
+}
+.stage[data-mobile="true"] {
+  width: 360px;
+}
+.stage > * {
+  margin-top: 0;
+}
+.stage[data-paused="true"] * {
+  animation-play-state: paused !important;
+}
+.note {
+  margin-top: 1rem;
+  font-size: 0.68rem;
+  color: var(--muted);
+}
+@media (max-width: 600px) {
+  .preview {
+    width: min(100% - 2rem, 64rem);
+  }
+  .header {
+    margin-bottom: 1.75rem;
+  }
+  .canvas {
+    padding: 0.5rem;
+    min-height: 24rem;
+  }
+}

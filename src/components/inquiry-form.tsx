@@ -2,10 +2,10 @@
 
 import { useEffect, useRef, useState, useSyncExternalStore } from "react";
 import type { FormEvent } from "react";
-import { ArrowUpRight, Check } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { eventTypes, fieldErrorsFromIssues, inquiryFieldsSchema } from "@/lib/inquiries";
 import type { InquiryFieldErrors, InquiryResponse } from "@/lib/inquiries";
-import { InquiryTrailAnimation } from "./inquiry-trail-animation";
+import { InquirySending, InquirySuccess } from "./inquiry-feedback";
 import styles from "./inquiry-form.module.css";
 
 type Status = "idle" | "submitting" | "error" | "success";
@@ -135,17 +135,7 @@ export function InquiryForm({ guestCapacityEstimate }: { guestCapacityEstimate: 
   }
 
   if (status === "success") {
-    return (
-      <div className={styles.success} ref={noticeRef} tabIndex={-1} role="status">
-        <span className={styles.successIcon}>
-          <Check aria-hidden="true" size={26} strokeWidth={1.5} />
-        </span>
-        <p className={styles.eyebrow}>A good beginning</p>
-        <h2>We’re glad you found us.</h2>
-        <p>{notice}</p>
-        <p className={styles.small}>Your date and tour will be confirmed directly with you.</p>
-      </div>
-    );
+    return <InquirySuccess message={notice} focusRef={noticeRef} />;
   }
 
   const fieldError = (field: keyof InquiryFieldErrors) =>
@@ -327,21 +317,7 @@ export function InquiryForm({ guestCapacityEstimate }: { guestCapacityEstimate: 
         </div>
       </fieldset>
 
-      {status === "submitting" && (
-        <div
-          className={styles.sending}
-          ref={sendingRef}
-          tabIndex={-1}
-          role="status"
-          aria-live="polite"
-          aria-atomic="true"
-          data-testid="inquiry-sending"
-        >
-          <InquiryTrailAnimation />
-          <p className={styles.sendingTitle}>Sending your note…</p>
-          <p className={styles.sendingDetail}>A little hello, headed to Jennifer and Randy.</p>
-        </div>
-      )}
+      {status === "submitting" && <InquirySending focusRef={sendingRef} />}
 
       <div className={styles.formFooter}>
         <p>
