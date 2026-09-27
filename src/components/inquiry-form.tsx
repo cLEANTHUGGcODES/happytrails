@@ -5,12 +5,36 @@ import type { FormEvent } from "react";
 import { ArrowUpRight, Check } from "lucide-react";
 import { eventTypes, fieldErrorsFromIssues, inquiryFieldsSchema } from "@/lib/inquiries";
 import type { InquiryFieldErrors, InquiryResponse } from "@/lib/inquiries";
+import { InquiryTrailAnimation } from "./inquiry-trail-animation";
 import styles from "./inquiry-form.module.css";
 
 type Status = "idle" | "submitting" | "error" | "success";
 const subscribeToHydration = () => () => {};
 const clientSnapshot = () => true;
 const serverSnapshot = () => false;
+
+// Let a fast successful request finish its small illustration, without delaying
+// errors or making visitors who prefer reduced motion wait for an animation.
+function finishSendingAnimation(started: number, signal: AbortSignal) {
+  const preference = window.matchMedia("(prefers-reduced-motion: reduce)");
+  const remaining = 1_600 - (performance.now() - started);
+  if (preference.matches || remaining <= 0 || signal.aborted) return Promise.resolve();
+
+  return new Promise<void>((resolve) => {
+    const finish = () => {
+      window.clearTimeout(timer);
+      preference.removeEventListener("change", onPreferenceChange);
+      signal.removeEventListener("abort", finish);
+      resolve();
+    };
+    const onPreferenceChange = () => {
+      if (preference.matches) finish();
+    };
+    const timer = window.setTimeout(finish, remaining);
+    preference.addEventListener("change", onPreferenceChange);
+    signal.addEventListener("abort", finish, { once: true });
+  });
+}
 
 export function InquiryForm({ guestCapacityEstimate }: { guestCapacityEstimate: number }) {
   const hydrated = useSyncExternalStore(subscribeToHydration, clientSnapshot, serverSnapshot);
@@ -20,14 +44,24 @@ export function InquiryForm({ guestCapacityEstimate }: { guestCapacityEstimate: 
   const startedAt = useRef(0);
   const submitting = useRef(false);
   const lastRequest = useRef<{ signature: string; id: string } | null>(null);
+  const pendingRequest = useRef<AbortController | null>(null);
   const noticeRef = useRef<HTMLDivElement>(null);
+  const sendingRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     startedAt.current = Date.now();
+    return () => {
+      pendingRequest.current?.abort();
+      pendingRequest.current = null;
+    };
   }, []);
 
   useEffect(() => {
     if (status === "error" || status === "success") noticeRef.current?.focus();
+    if (status === "submitting") {
+      sendingRef.current?.focus({ preventScroll: true });
+      sendingRef.current?.scrollIntoView({ block: "nearest", behavior: "instant" });
+    }
   }, [status, notice]);
 
   async function submit(event: FormEvent<HTMLFormElement>) {
@@ -45,6 +79,10 @@ export function InquiryForm({ guestCapacityEstimate }: { guestCapacityEstimate: 
     }
 
     submitting.current = true;
+    const controller = new AbortController();
+    pendingRequest.current = controller;
+    const animationStarted = performance.now();
+    const timeout = window.setTimeout(() => controller.abort(), 30_000);
     setStatus("submitting");
     setErrors({});
     setNotice("");
@@ -63,10 +101,14 @@ export function InquiryForm({ guestCapacityEstimate }: { guestCapacityEstimate: 
           website: form.get("website") || "",
           startedAt: startedAt.current,
         }),
-        signal: AbortSignal.timeout(30_000),
+        signal: controller.signal,
       });
       const result = (await response.json()) as InquiryResponse;
+      window.clearTimeout(timeout);
+      if (pendingRequest.current !== controller) return;
       if (response.ok && result.ok) {
+        await finishSendingAnimation(animationStarted, controller.signal);
+        if (pendingRequest.current !== controller) return;
         setNotice(result.message);
         setStatus("success");
       } else {
@@ -78,12 +120,17 @@ export function InquiryForm({ guestCapacityEstimate }: { guestCapacityEstimate: 
         setStatus("error");
       }
     } catch {
+      if (pendingRequest.current !== controller) return;
       setNotice(
         "We couldn’t confirm your inquiry was sent. Please try again, or email admin@happytrailsshindigs.com.",
       );
       setStatus("error");
     } finally {
-      submitting.current = false;
+      window.clearTimeout(timeout);
+      if (pendingRequest.current === controller) {
+        pendingRequest.current = null;
+        submitting.current = false;
+      }
     }
   }
 
@@ -279,6 +326,22 @@ export function InquiryForm({ guestCapacityEstimate }: { guestCapacityEstimate: 
           />
         </div>
       </fieldset>
+
+      {status === "submitting" && (
+        <div
+          className={styles.sending}
+          ref={sendingRef}
+          tabIndex={-1}
+          role="status"
+          aria-live="polite"
+          aria-atomic="true"
+          data-testid="inquiry-sending"
+        >
+          <InquiryTrailAnimation />
+          <p className={styles.sendingTitle}>Sending your note…</p>
+          <p className={styles.sendingDetail}>A little hello, headed to Jennifer and Randy.</p>
+        </div>
+      )}
 
       <div className={styles.formFooter}>
         <p>

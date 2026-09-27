@@ -27,6 +27,8 @@ The route also requires a trusted Origin, JSON content, a matching UUID request 
 
 The browser disables duplicate submission while a request is pending. Retrying unchanged content reuses its UUID. The server passes that UUID to Resend as `happy-trails-inquiry/<uuid>`. Resend retains [idempotency keys for 24 hours](https://resend.com/docs/dashboard/emails/idempotency-keys), preventing duplicate sends across instances during that window. Editing the inquiry creates a new UUID. Reloading the page also begins a new inquiry; contact the team directly if uncertain about an earlier send.
 
+While sending, an original SVG horse walks along a drawn trail in an accessible status panel. A fast successful request keeps the illustration visible for a total of 1.6 seconds before confirmation; slower requests add no decorative delay. Errors appear immediately and retain the form details. Reduced-motion settings show a still illustration and skip the minimum display time, including when the preference changes mid-request. The request times out after 30 seconds, and leaving the page cancels the client request and animation wait. Confirmation still requires a successful API response.
+
 Field errors return HTTP 400 with `fieldErrors`; invalid origin returns 403; oversize body returns 413; wrong content type returns 415; rate limits return 429; provider idempotency conflicts return 409; missing credentials and delivery failures return 503. Responses use `Cache-Control: no-store` and never reveal credentials or provider internals. The client preserves field values after failure, focuses an accessible summary, and keeps a direct email alternative visible.
 
 ## Validation

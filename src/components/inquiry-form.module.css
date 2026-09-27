@@ -116,6 +116,35 @@
   font-size: 0.73rem;
   line-height: 1.5;
 }
+.sending {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1.75rem;
+  padding: 1rem clamp(0.75rem, 2vw, 1.5rem) 1.4rem;
+  border: 1px solid #d8cfc1;
+  background: #fdfaf5;
+  text-align: center;
+  scroll-margin-block: 7rem 2rem;
+}
+.sending:focus {
+  outline: none;
+}
+.sendingTitle {
+  margin: 0.35rem 0 0;
+  color: #682c28;
+  font-family: var(--font-display), Georgia, serif;
+  font-size: clamp(1.5rem, 3vw, 1.85rem);
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+}
+.sendingDetail {
+  margin: 0.5rem 0 0;
+  color: #6c5d50;
+  font-size: 0.73rem;
+  line-height: 1.6;
+}
 .formFooter {
   display: flex;
   align-items: center;
