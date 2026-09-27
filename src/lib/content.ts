@@ -1,3 +1,5 @@
+import { SITE_URL } from "./site-url";
+
 /** Stable public content contract. Replace the local reads with Supabase in phase two. */
 export type MediaItem = {
   id: string;
@@ -38,7 +40,19 @@ export const site = {
     latitude: 32.068833597034164,
     longitude: -96.69761704124728,
   },
-  url: "https://happytrailsshindigs.com",
+  url: SITE_URL,
+  // Owner-confirmed September 27, 2026. Sunday has not been supplied.
+  businessHours: {
+    label: "Monday–Saturday, 10 a.m.–10 p.m.",
+    days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+    opens: "10:00",
+    closes: "22:00",
+  },
+  // Public profiles supplied by the owner; directory applications are not published profiles.
+  profiles: {
+    google: "https://share.google/9rQF96KgYlFHWrYcA",
+    yelp: "https://www.yelp.com/biz/happy-trails-shindigs-and-events-blooming-grove",
+  },
 } as const;
 
 const encodedCoordinates = encodeURIComponent(

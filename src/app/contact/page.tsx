@@ -1,21 +1,23 @@
-import type { Metadata } from "next";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { ContentImage } from "@/components/content-image";
 import { PageIntro } from "@/components/ui";
 import { InquiryForm } from "@/components/inquiry-form";
 import { VenueLocation } from "@/components/venue-location";
 import { site } from "@/lib/content";
+import { createPageMetadata, getBusinessStructuredData } from "@/lib/seo";
+import { JsonLd } from "@/components/json-ld";
 
-export const metadata: Metadata = {
-  title: "Request a Tour",
+export const metadata = createPageMetadata({
+  title: "Contact & Venue Tours in Blooming Grove",
   description:
     "Visit Happy Trails in Blooming Grove, Texas. Request a venue tour or tell Jennifer and Randy about your wedding, party, or family gathering.",
-  alternates: { canonical: "/contact" },
-};
+  path: "/contact",
+});
 
 export default function ContactPage() {
   return (
     <>
+      <JsonLd data={{ "@context": "https://schema.org", ...getBusinessStructuredData() }} />
       <PageIntro
         eyebrow="Every good day starts with hello"
         title={
@@ -49,11 +51,11 @@ export default function ContactPage() {
         <aside className="contact-aside" aria-label="Venue contact details">
           <div className="contact-detail">
             <p className="eyebrow">Give us a call</p>
-            <a href="tel:+19035524248">903-552-4248</a>
+            <a href={site.phoneHref}>{site.phone}</a>
           </div>
           <div className="contact-detail">
             <p className="eyebrow">Drop us a note</p>
-            <a href="mailto:admin@happytrailsshindigs.com">admin@happytrailsshindigs.com</a>
+            <a href={`mailto:${site.email}`}>{site.email}</a>
           </div>
           <div className="contact-detail">
             <p className="eyebrow">Our little corner of Texas</p>
@@ -65,6 +67,16 @@ export default function ContactPage() {
             <a className="text-link" href="#directions">
               View Map & Directions ↗
             </a>
+          </div>
+          <div className="contact-detail">
+            <p className="eyebrow">Business hours</p>
+            <p>{site.businessHours.label}</p>
+            <p>Contact us to arrange your visit.</p>
+          </div>
+          <div className="contact-detail">
+            <p className="eyebrow">Find us online</p>
+            <p><a href={site.profiles.google}>Google Business Profile</a></p>
+            <p><a href={site.profiles.yelp}>Happy Trails on Yelp</a></p>
           </div>
           <div className="contact-photo">
             <ContentImage

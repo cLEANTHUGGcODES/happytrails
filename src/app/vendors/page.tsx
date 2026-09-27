@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
 import { ContentImage } from "@/components/content-image";
 import { ButtonLink, ContactCta, PageIntro } from "@/components/ui";
+import { createPageMetadata } from "@/lib/seo";
 import styles from "./vendors.module.css";
 
-export const metadata: Metadata = {
-  title: "Local Vendors",
+export const metadata: Metadata = createPageMetadata({
+  title: "Help Finding Local Event Vendors",
   description:
-    "Planning your celebration at Happy Trails? Depending on your needs, Jennifer and Randy can help you locate local vendors in the Blooming Grove area.",
-  alternates: { canonical: "/vendors" },
-};
+    "Planning a celebration at Happy Trails? Jennifer and Randy can help you find local vendors in the Blooming Grove area based on your event’s needs.",
+  path: "/vendors",
+});
 
 const conversationStarters = [
   {

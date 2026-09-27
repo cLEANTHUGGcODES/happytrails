@@ -1,12 +1,18 @@
-import type { Metadata } from "next";
 import { ContentImage } from "@/components/content-image";
 import Link from "next/link";
 import { ArrowUpRight, MapPin } from "lucide-react";
 import { ButtonLink, ContactCta } from "@/components/ui";
 import { VideoTour } from "@/components/video-tour";
 import { getUpdates, site, type MediaSlot } from "@/lib/content";
+import { createPageMetadata, getSiteStructuredData } from "@/lib/seo";
+import { JsonLd } from "@/components/json-ld";
 
-export const metadata: Metadata = { alternates: { canonical: "/" } };
+export const metadata = createPageMetadata({
+  title: "Wedding & Event Venue in Blooming Grove, TX",
+  description:
+    "Celebrate at Happy Trails, a barn wedding and event venue on 22 acres in Blooming Grove, Texas. Space for approximately 75 guests. Request a tour.",
+  path: "/",
+});
 
 const spaces = [
   {
@@ -37,36 +43,9 @@ const spaces = [
 
 export default async function HomePage() {
   const updates = await getUpdates();
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "EventVenue",
-    name: "Happy Trails Shindigs & Events",
-    url: "https://happytrailsshindigs.com",
-    description:
-      "A 22-acre wedding and event venue with a renovated barn in Blooming Grove, Texas.",
-    telephone: "+1-903-552-4248",
-    email: "admin@happytrailsshindigs.com",
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: site.streetAddress,
-      addressLocality: "Blooming Grove",
-      addressRegion: "TX",
-      postalCode: site.postalCode,
-      addressCountry: "US",
-    },
-    geo: {
-      "@type": "GeoCoordinates",
-      latitude: site.coordinates.latitude,
-      longitude: site.coordinates.longitude,
-    },
-    image: "https://happytrailsshindigs.com/images/ceremony-sunset.webp",
-  };
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }}
-      />
+      <JsonLd data={getSiteStructuredData()} />
       <section className="hero" aria-labelledby="hero-title" data-motion-hero>
         <div className="hero-photo">
           <ContentImage

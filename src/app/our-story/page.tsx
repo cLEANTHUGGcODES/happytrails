@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
 import { ContentImage } from "@/components/content-image";
 import { PageIntro, ContactCta } from "@/components/ui";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Our Story",
+export const metadata: Metadata = createPageMetadata({
+  title: "Jennifer & Randy’s Story",
   description:
-    "Meet Jennifer and Randy, the heart behind Happy Trails. A love story, a family property, and a shared joy in bringing people together.",
-  alternates: { canonical: "/our-story" },
-};
+    "Meet Jennifer and Randy, the hosts behind Happy Trails, and discover how their family property in Blooming Grove became a place for celebrations.",
+  path: "/our-story",
+});
 
 export default function StoryPage() {
   return (

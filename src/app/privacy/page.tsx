@@ -1,7 +1,14 @@
 import type { Metadata } from "next";
 import { PageIntro } from "@/components/ui";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = { title: "Privacy", alternates: { canonical: "/privacy" } };
+export const metadata: Metadata = createPageMetadata({
+  title: "Privacy & Inquiry Information",
+  description:
+    "Learn how Happy Trails uses your contact and event inquiry details, which services support the website, and how to ask about your information.",
+  path: "/privacy",
+});
+
 export default function PrivacyPage() {
   return (
     <>

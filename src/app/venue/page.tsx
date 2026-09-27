@@ -3,13 +3,14 @@ import { ContentImage } from "@/components/content-image";
 import { Check } from "lucide-react";
 import { PageIntro, ContactCta, ButtonLink } from "@/components/ui";
 import { site } from "@/lib/content";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "The Venue",
+export const metadata: Metadata = createPageMetadata({
+  title: "Barn Wedding & Event Venue in Blooming Grove",
   description:
-    "Explore our 1,800-square-foot rustic barn, open grounds, bunkhouse, and grain-bin bridal suite on 22 acres in Blooming Grove, Texas.",
-  alternates: { canonical: "/venue" },
-};
+    "Explore our 1,800-square-foot barn, grain-bin bridal suite, and 22 acres in Blooming Grove, Texas, for celebrations with approximately 75 guests.",
+  path: "/venue",
+});
 
 function Amenities({ items }: { items: string[] }) {
   return (

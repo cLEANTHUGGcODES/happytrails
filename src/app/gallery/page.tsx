@@ -4,13 +4,14 @@ import { PageIntro, ContactCta } from "@/components/ui";
 import { PhotoGallery } from "@/components/photo-gallery";
 import { VideoTour } from "@/components/video-tour";
 import { getGallery } from "@/lib/content";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Gallery",
+export const metadata: Metadata = createPageMetadata({
+  title: "Venue Photos & Video Tour",
   description:
-    "Take a look around Happy Trails. Explore our rustic barn, sunset ceremony setting, getting-ready spaces, and real celebrations.",
-  alternates: { canonical: "/gallery" },
-};
+    "Browse photos and a video tour of Happy Trails in Blooming Grove, Texas: the rustic barn, sunset ceremony setting, bridal suite, and real celebrations.",
+  path: "/gallery",
+});
 
 export default async function GalleryPage() {
   const items = await getGallery();

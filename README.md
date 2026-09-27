@@ -48,7 +48,7 @@ See [the inquiry guide](docs/inquiries.md) for domain verification, preview envi
 
 1. Import `cLEANTHUGGcODES/happytrails` into a Vercel Pro project, using `main` as the production branch. Select the Next.js framework, repository root (`./`), and Node.js 22.x. Keep the default output directory; use `npm ci` to install and `npm run build` to build.
 2. Set the email variables from `.env.example` in production. Use separate test email credentials or leave delivery unconfigured in preview environments.
-3. Set `NEXT_PUBLIC_SITE_URL` to the production HTTPS origin; it defaults to `https://happytrailsshindigs.com`. Vercel supplies the allowed deployment URL variables automatically.
+3. Set `NEXT_PUBLIC_SITE_URL` to `https://www.happytrailsshindigs.com` for inquiry-origin validation. Public canonical, sitemap, social, and structured-data URLs use `src/lib/site-url.ts`. Vercel supplies the allowed deployment URL variables automatically.
 4. Configure the Vercel WAF rule described in `docs/inquiries.md`. Configure Deployment Protection for preview deployments.
 5. Review a preview, connect the custom domain, and verify DNS and HTTPS. Send a deliberate test inquiry and confirm receipt in the actual owner mailbox before directing visitors to the form.
 
@@ -58,7 +58,7 @@ The original root-level media and planning documents stay in the local workspace
 
 `src/lib/content.ts` is the content boundary. `getGallery()`, `getSiteMedia()`, `getUpdates()`, and `getUpdate()` isolate the local data source. Featured page images refer to named slots, so those selections can later be managed without editing page components.
 
-To add an approved update during this first phase, add a `NewsPost` to `newsSeed` and redeploy. The news index, article route, homepage teaser, metadata, and sitemap then populate from the same reader. The initial news collection is intentionally empty.
+To add an approved update during this first phase, add a `NewsPost` to `newsSeed` and redeploy. The news index, article route, homepage teaser, metadata, and sitemap then populate from the same reader. The initial news collection is intentionally empty, so `/news` is excluded from indexing and the sitemap until an update is published. See the [SEO review](docs/seo-review.md) for search configuration and remaining Search Console verification.
 
 See [the asset register](docs/assets.md) for source-to-output mappings, dimensions, media preparation, and photography limitations. See [the map provenance](docs/maps/README.md) for the illustrated location guide and reference data. Venue copy follows the Word brief and subsequent owner-supplied details, including the exact address and an estimated capacity of approximately 75 guests. The estimate is published on the homepage, Venue page, Pricing FAQ, and inquiry form; it is not enforced as a booking limit. Alcohol/vendor policies, rental terms, and package inclusions still require owner-provided details.
 

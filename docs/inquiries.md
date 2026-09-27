@@ -8,7 +8,7 @@ Copy `.env.example` to `.env.local` for local configuration. Configure matching 
 
 | Variable               | Purpose                                                                                                                                          |
 | ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `NEXT_PUBLIC_SITE_URL` | Canonical HTTPS origin; defaults to `https://happytrailsshindigs.com`.                                                                           |
+| `NEXT_PUBLIC_SITE_URL` | Trusted inquiry origin; set to `https://www.happytrailsshindigs.com`. The fallback accepts the apex and `www` origins. Public SEO URLs are defined separately in `src/lib/site-url.ts`. |
 | `RESEND_API_KEY`       | Server-only Resend API credential with email send access.                                                                                        |
 | `INQUIRY_FROM_EMAIL`   | A bare sender address on a domain verified in Resend, for example `website@happytrailsshindigs.com`. Display names are added by the application. |
 | `INQUIRY_TO_EMAIL`     | Destination mailbox; defaults to `admin@happytrailsshindigs.com`.                                                                                |

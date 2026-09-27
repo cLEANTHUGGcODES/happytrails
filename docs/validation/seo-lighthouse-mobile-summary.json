@@ -1,0 +1,117 @@
+{
+  "lighthouseVersion": "13.5.0",
+  "fetchTime": "2026-09-27T18:47:07.911Z",
+  "url": "http://127.0.0.1:3001/",
+  "profile": "simulated mobile, local production server",
+  "scores": {
+    "performance": 0.92,
+    "accessibility": 1,
+    "best-practices": 1,
+    "seo": 1,
+    "agentic-browsing": 1
+  },
+  "metrics": {
+    "first-contentful-paint": {
+      "value": 944.0627,
+      "display": "0.9\u00a0s"
+    },
+    "largest-contentful-paint": {
+      "value": 3268.09405,
+      "display": "3.3\u00a0s"
+    },
+    "cumulative-layout-shift": {
+      "value": 0,
+      "display": "0"
+    },
+    "total-blocking-time": {
+      "value": 103.49999999999955,
+      "display": "100\u00a0ms"
+    },
+    "speed-index": {
+      "value": 1631.3871921266568,
+      "display": "1.6\u00a0s"
+    }
+  },
+  "imageDelivery": {
+    "id": "image-delivery-insight",
+    "title": "Improve image delivery",
+    "description": "Reducing the download time of images can improve the perceived load time of the page and LCP. [Learn more about optimizing image size](https://developer.chrome.com/docs/performance/insights/image-delivery)",
+    "score": 0,
+    "scoreDisplayMode": "metricSavings",
+    "displayValue": "Est savings of 16\u00a0KiB",
+    "metricSavings": {
+      "FCP": 0,
+      "LCP": 150
+    },
+    "details": {
+      "type": "table",
+      "headings": [
+        {
+          "key": "node",
+          "valueType": "node",
+          "label": ""
+        },
+        {
+          "key": "url",
+          "valueType": "url",
+          "label": "URL",
+          "subItemsHeading": {
+            "key": "reason",
+            "valueType": "text"
+          }
+        },
+        {
+          "key": "totalBytes",
+          "valueType": "bytes",
+          "label": "Resource Size"
+        },
+        {
+          "key": "wastedBytes",
+          "valueType": "bytes",
+          "label": "Est Savings",
+          "subItemsHeading": {
+            "key": "wastedBytes",
+            "valueType": "bytes"
+          }
+        }
+      ],
+      "items": [
+        {
+          "node": {
+            "type": "node",
+            "lhId": "page-1-VIDEO",
+            "path": "1,HTML,1,BODY,3,MAIN,6,SECTION,1,DIV,0,FIGURE,0,DIV,0,VIDEO",
+            "selector": "div.story-tour > figure.video-tour-module__Y9OGfa__tour > div.video-tour-module__Y9OGfa__frame > video.video-tour-module__Y9OGfa__video",
+            "boundingRect": {
+              "top": 4033,
+              "bottom": 4243,
+              "left": 20,
+              "right": 392,
+              "width": 372,
+              "height": 209
+            },
+            "snippet": "<video class=\"video-tour-module__Y9OGfa__video\" playsinline=\"\" preload=\"none\" poster=\"/_next/image?url=%2Fimages%2Ftour-poster.webp&amp;w=1080&amp;q=75\" aria-label=\"Happy Trails property tour\" aria-hidden=\"true\" tabindex=\"-1\" src=\"/videos/property-tour.mp4\">",
+            "nodeLabel": "Happy Trails property tour"
+          },
+          "url": "http://127.0.0.1:3001/_next/image?url=%2Fimages%2Ftour-poster.webp&w=1080&q=75",
+          "totalBytes": 25399,
+          "wastedBytes": 16186,
+          "subItems": {
+            "type": "subitems",
+            "items": [
+              {
+                "reason": "This image file is larger than it needs to be (1080x608) for its displayed dimensions (650x366). Use responsive images to reduce the image download size.",
+                "wastedBytes": 16186
+              }
+            ]
+          }
+        }
+      ],
+      "debugData": {
+        "type": "debugdata",
+        "wastedBytes": 16186
+      }
+    },
+    "guidanceLevel": 3
+  }
+}

@@ -3,12 +3,21 @@ import Link from "next/link";
 import { Flower2 } from "lucide-react";
 import { ButtonLink, PageIntro } from "@/components/ui";
 import { getUpdates } from "@/lib/content";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "News & Updates",
-  description: "The latest from Happy Trails Shindigs & Events in Blooming Grove, Texas.",
-  alternates: { canonical: "/news" },
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const posts = await getUpdates();
+
+  return {
+    ...createPageMetadata({
+      title: "Venue News & Updates",
+      description:
+        "News, upcoming happenings, and updates from Happy Trails Shindigs & Events, a wedding and event venue in Blooming Grove, Texas.",
+      path: "/news",
+    }),
+    robots: { index: posts.length > 0, follow: true },
+  };
+}
 
 export default async function NewsPage() {
   const posts = await getUpdates();

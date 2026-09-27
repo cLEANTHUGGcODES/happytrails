@@ -3,13 +3,14 @@ import Link from "next/link";
 import { Flower2, Plus, Sun } from "lucide-react";
 import { ButtonLink, PageIntro, ContactCta } from "@/components/ui";
 import { faqs } from "@/lib/content";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Pricing & FAQs",
+export const metadata: Metadata = createPageMetadata({
+  title: "Wedding Venue Pricing & FAQs",
   description:
-    "Weddings at Happy Trails start at $3,000. Explore venue details and get in touch for birthday, family reunion, and special-event pricing.",
-  alternates: { canonical: "/pricing" },
-};
+    "Weddings at Happy Trails in Blooming Grove, Texas, start at $3,000. Find venue answers and ask about pricing for birthdays, reunions, and other events.",
+  path: "/pricing",
+});
 
 export default function PricingPage() {
   return (

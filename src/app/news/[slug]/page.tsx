@@ -4,6 +4,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getUpdate, getUpdates } from "@/lib/content";
 import { PageIntro } from "@/components/ui";
+import { JsonLd } from "@/components/json-ld";
+import { createPageMetadata, getArticleStructuredData } from "@/lib/seo";
 
 type Props = { params: Promise<{ slug: string }> };
 export async function generateStaticParams() {
@@ -12,21 +14,15 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const post = await getUpdate(slug);
-  if (!post) return {};
-  return {
+  if (!post) notFound();
+  return createPageMetadata({
     title: post.title,
     description: post.summary,
-    alternates: { canonical: `/news/${post.slug}` },
-    openGraph: {
-      type: "article",
-      title: post.title,
-      description: post.summary,
-      publishedTime: post.publishedAt,
-      ...(post.coverImage
-        ? { images: [{ url: post.coverImage.src, alt: post.coverImage.alt }] }
-        : {}),
-    },
-  };
+    path: `/news/${post.slug}`,
+    type: "article",
+    publishedTime: post.publishedAt,
+    image: post.coverImage ?? undefined,
+  });
 }
 export default async function NewsArticle({ params }: Props) {
   const { slug } = await params;
@@ -34,6 +30,7 @@ export default async function NewsArticle({ params }: Props) {
   if (!post) notFound();
   return (
     <>
+      <JsonLd data={getArticleStructuredData(post)} />
       <PageIntro
         eyebrow={new Date(post.publishedAt).toLocaleDateString("en-US", {
           month: "long",

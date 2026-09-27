@@ -3,6 +3,8 @@ import localFont from "next/font/local";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { ScrollAnimations } from "@/components/scroll-animations";
+import { SITE_URL } from "@/lib/site-url";
+import { createPageMetadata } from "@/lib/seo";
 import "./globals.css";
 
 const display = localFont({
@@ -19,30 +21,19 @@ const body = localFont({
   variable: "--font-body",
   display: "swap",
 });
-const url = process.env.NEXT_PUBLIC_SITE_URL || "https://happytrailsshindigs.com";
-
 export const metadata: Metadata = {
-  metadataBase: new URL(url),
-  title: {
-    default: "Happy Trails | Weddings & Celebrations in Blooming Grove, TX",
-    template: "%s | Happy Trails",
-  },
-  description:
-    "A rustic barn, open Texas skies, and room to make memories. Discover Happy Trails Shindigs & Events, a 22-acre wedding and event venue in Blooming Grove, Texas.",
-  openGraph: {
-    type: "website",
-    locale: "en_US",
-    siteName: "Happy Trails Shindigs & Events",
-    images: [
-      {
-        url: "/images/ceremony-sunset.webp",
-        width: 1448,
-        height: 1086,
-        alt: "An outdoor ceremony arbor and benches beneath a Texas sunset at Happy Trails",
-      },
-    ],
-  },
-  twitter: { card: "summary_large_image" },
+  ...createPageMetadata({
+    title: "Wedding & Event Venue in Blooming Grove, TX",
+    description:
+      "Celebrate at Happy Trails, a barn wedding and event venue on 22 acres in Blooming Grove, Texas. Space for approximately 75 guests. Request a tour.",
+    path: "/",
+  }),
+  metadataBase: new URL(SITE_URL),
+  // Individual routes supply their own canonical; never inherit the homepage canonical on a 404.
+  alternates: undefined,
+  robots: process.env.VERCEL_ENV && process.env.VERCEL_ENV !== "production"
+    ? { index: false, follow: false }
+    : { index: true, follow: true, "max-image-preview": "large" },
 };
 export const viewport: Viewport = { themeColor: "#f7f2e8" };
 

@@ -1,8 +1,9 @@
 import type { MetadataRoute } from "next";
-import { getUpdates } from "@/lib/content";
+import { getGallery, getUpdates } from "@/lib/content";
+import { absoluteUrl } from "@/lib/site-url";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const base = process.env.NEXT_PUBLIC_SITE_URL || "https://happytrailsshindigs.com";
+  const [posts, images] = await Promise.all([getUpdates(), getGallery()]);
   const pages = [
     "",
     "/venue",
@@ -11,19 +12,18 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     "/pricing",
     "/our-story",
     "/contact",
-    "/news",
+    ...(posts.length ? ["/news"] : []),
     "/privacy",
   ];
   return [
     ...pages.map((path) => ({
-      url: `${base}${path}`,
-      changeFrequency: "monthly" as const,
-      priority: path === "" ? 1 : 0.7,
+      url: absoluteUrl(path || "/"),
+      ...(path === "/gallery" ? { images: images.map((image) => absoluteUrl(image.src)) } : {}),
     })),
-    ...(await getUpdates()).map((post) => ({
-      url: `${base}/news/${post.slug}`,
+    ...posts.map((post) => ({
+      url: absoluteUrl(`/news/${post.slug}`),
       lastModified: post.publishedAt,
-      priority: 0.6,
+      ...(post.coverImage ? { images: [absoluteUrl(post.coverImage.src)] } : {}),
     })),
   ];
 }

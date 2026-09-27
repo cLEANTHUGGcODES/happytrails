@@ -163,29 +163,61 @@ test.describe("Gallery and property tour", () => {
     await expect(photographs).toHaveCount(allCount);
   });
 
-  test("never downloads video before the visitor requests playback", async ({ page }) => {
+  test("exposes video to crawlers, loads only on playback, and supports retry", async ({ page }) => {
     const videoRequests: string[] = [];
     page.on("request", (request) => {
       if (/\/videos\/.*\.mp4(?:\?|$)/.test(request.url())) videoRequests.push(request.url());
     });
-    await page.goto("/gallery");
+    const response = await page.goto("/gallery");
+    const serverVideo = (await response!.text()).match(/<video\b[^>]*>/)?.[0];
+    expect(serverVideo).toBeDefined();
+    expect(serverVideo).toContain('src="/videos/full-property-tour.mp4"');
+    expect(serverVideo).toContain('poster="/_next/image?url=%2Fimages%2Ftour-poster.webp');
+    expect(serverVideo).toContain('preload="none"');
+    expect(serverVideo).not.toContain("autoplay");
     const play = page.getByRole("button", {
       name: "Watch the full tour: play the Happy Trails property tour",
       exact: true,
     });
     await play.scrollIntoViewIfNeeded();
     await expect(play).toBeVisible();
-    await expect(page.locator("video")).toHaveCount(0);
-    expect(videoRequests).toEqual([]);
-    await play.click();
     const video = page.locator("video");
+    await expect(video).toHaveCount(1);
     await expect(video).toBeVisible();
+    await expect(video).toHaveAttribute("src", "/videos/full-property-tour.mp4");
+    await expect(video).toHaveAttribute("preload", "none");
+    await expect(video).toHaveAttribute("aria-hidden", "true");
+    await expect(video).toHaveAttribute("tabindex", "-1");
+    await expect(video).not.toHaveAttribute("controls");
+    expect(videoRequests).toEqual([]);
+
+    // An interrupted play attempt must restore the accessible button for retry.
+    await video.evaluate((element: HTMLVideoElement) => {
+      const originalPlay = element.play;
+      element.play = () => {
+        element.play = originalPlay;
+        return Promise.reject(new DOMException("Playback interrupted", "AbortError"));
+      };
+    });
+    await play.click();
+    const playbackAlert = page.getByRole("alert").filter({ hasText: "This video could not play." });
+    await expect(playbackAlert).toBeVisible();
+    await expect(play).toBeVisible();
+    await expect(play).toBeFocused();
+    await expect(video).toHaveAttribute("aria-hidden", "true");
+    expect(videoRequests).toEqual([]);
+
+    await play.click();
+    await expect(video).toBeVisible();
+    await expect(video).toBeFocused();
+    await expect(video).toHaveAttribute("aria-hidden", "false");
     await expect(video).toHaveAttribute("controls", "");
     await expect(video).toHaveAttribute("playsinline", "");
     await expect(video).toHaveAttribute("preload", "none");
     await expect
       .poll(() => videoRequests.some((url) => url.includes("/videos/full-property-tour.mp4")))
       .toBe(true);
+    await expect(playbackAlert).toHaveCount(0);
     await video.evaluate((element: HTMLVideoElement) => element.pause());
   });
 });
