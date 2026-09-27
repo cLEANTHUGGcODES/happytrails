@@ -12,7 +12,7 @@ export const metadata: Metadata = createPageMetadata({
 export default function PrivacyPage() {
   return (
     <>
-      <PageIntro
+      <PageIntro breadcrumb={{ label: "Privacy", path: "/privacy" }}
         eyebrow="Your information"
         title={
           <>
@@ -29,7 +29,8 @@ export default function PrivacyPage() {
         <h2>Inquiry information</h2>
         <p>
           The form asks for your name, email address, and celebration type. You may also share a
-          phone number, preferred date, estimated guest count, and a message. Your inquiry is
+          phone number, preferred date, estimated guest count, a message, and how you heard about us.
+          That optional referral answer helps us understand which listings and recommendations are useful. Your inquiry is
           delivered to our email inbox through our email delivery provider, Resend. It is not a
           confirmed booking.
         </p>

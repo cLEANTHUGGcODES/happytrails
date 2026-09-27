@@ -28,7 +28,7 @@ function Amenities({ items }: { items: string[] }) {
 export default function VenuePage() {
   return (
     <>
-      <PageIntro
+      <PageIntro breadcrumb={{ label: "The Venue", path: "/venue" }}
         eyebrow="Welcome to our little corner of Texas"
         title={
           <>

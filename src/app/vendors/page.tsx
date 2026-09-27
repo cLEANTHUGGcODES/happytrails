@@ -29,7 +29,7 @@ const conversationStarters = [
 export default function VendorsPage() {
   return (
     <>
-      <PageIntro
+      <PageIntro breadcrumb={{ label: "Vendors", path: "/vendors" }}
         eyebrow="Local vendors"
         title={
           <>

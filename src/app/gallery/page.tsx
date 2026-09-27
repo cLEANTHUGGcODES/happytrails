@@ -4,7 +4,8 @@ import { PageIntro, ContactCta } from "@/components/ui";
 import { PhotoGallery } from "@/components/photo-gallery";
 import { VideoTour } from "@/components/video-tour";
 import { getGallery } from "@/lib/content";
-import { createPageMetadata } from "@/lib/seo";
+import { createPageMetadata, getGalleryStructuredData } from "@/lib/seo";
+import { JsonLd } from "@/components/json-ld";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Venue Photos & Video Tour",
@@ -17,7 +18,8 @@ export default async function GalleryPage() {
   const items = await getGallery();
   return (
     <>
-      <PageIntro
+      <JsonLd data={getGalleryStructuredData(items)} />
+      <PageIntro breadcrumb={{ label: "Gallery", path: "/gallery" }}
         eyebrow="A glimpse of the good life"
         title={
           <>

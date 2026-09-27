@@ -55,6 +55,8 @@ export async function SiteFooter() {
             <Link href="/our-story">Our Story</Link>
             <Link href="/vendors">Vendors</Link>
             <Link href="/pricing">Pricing & FAQs</Link>
+            <Link href="/planning">Planning Guide</Link>
+            <Link href="/venue-info">Venue Details & Resources</Link>
             <Link href="/contact" prefetch={false}>
               Contact
             </Link>

@@ -1,0 +1,73 @@
+.guide { padding-bottom: 72px; }
+.tools { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 26px; }
+.jumpnav { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--line); }
+.jumpnav a { display: flex; align-items: center; gap: 12px; min-height: 58px; padding: 14px 18px 14px 0; border-bottom: 1px solid var(--line); font-size: 13px; }
+.jumpnav a:hover { color: var(--wine); }
+.jumpnav svg { margin-left: auto; flex-shrink: 0; }
+.number { color: var(--wine); font-size: 10px; letter-spacing: .06em; }
+.setting { margin: 32px 0 0; }
+.photo { position: relative; aspect-ratio: 3.1; overflow: hidden; }
+.setting figcaption { font-size: 12px; color: var(--muted); margin-top: 10px; }
+.guideSection { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); gap: clamp(32px, 6vw, 80px); padding-block: 58px; border-bottom: 1px solid var(--line); scroll-margin-top: 24px; }
+.sectionIntro h2 { font-size: clamp(36px, 3.7vw, 52px); margin-block: 17px 22px; }
+.sectionIntro > p:not(:first-child) { color: var(--muted); font-size: 14px; }
+.sectionIntro > a { margin-top: 16px; }
+.checklist { background: var(--paper); padding: 28px; }
+.checklist ol { list-style: none; margin: 0; padding: 0; }
+.checklist li { display: grid; grid-template-columns: 24px minmax(0, 1fr); gap: 14px; }
+.checklist li + li { margin-top: 22px; }
+.stepNumber { color: var(--wine); font-size: 11px; padding-top: 3px; }
+.checklist h3 { font-size: 23px; line-height: 1.18; }
+.checklist li p { font-size: 13px; color: var(--muted); margin-top: 7px; }
+.takeaway { border-top: 1px solid var(--line); padding-top: 18px; margin-top: 24px; color: var(--sage); font-size: 12px; }
+.takeaway strong { display: block; margin-bottom: 5px; color: var(--ink); }
+.travel { padding-top: 60px; }
+.travelHeading { display: flex; gap: 32px; align-items: flex-end; justify-content: space-between; }
+.travelHeading h2 { font-size: clamp(36px, 3.7vw, 52px); margin-top: 15px; max-width: 650px; }
+.travelHeading > a { flex-shrink: 0; }
+.resourceGrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; margin-top: 30px; }
+.resourceGrid article { border-top: 2px solid var(--sage); padding-top: 20px; }
+.resourceGrid h3 { font-size: 29px; margin-block: 12px; }
+.resourceGrid h3 a { display: flex; align-items: center; gap: 10px; width: fit-content; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 5px; }
+.resourceGrid h3 a:hover { color: var(--wine); }
+.resourceGrid h3 svg { flex-shrink: 0; }
+.resourceGrid article > p:last-child { color: var(--muted); font-size: 13px; }
+@media (max-width: 900px) {
+  .guideSection { gap: 30px; }
+  .travelHeading { display: block; }
+  .travelHeading > a { margin-top: 16px; }
+  .resourceGrid { gap: 20px; }
+}
+@media (max-width: 760px) {
+  .guide { padding-bottom: 48px; }
+  .jumpnav { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 18px; }
+  .jumpnav a { font-size: 12px; padding-right: 0; gap: 8px; }
+  .setting { margin-top: 24px; }
+  .photo { aspect-ratio: 1.7; }
+  .guideSection { grid-template-columns: 1fr; gap: 24px; padding-block: 40px; }
+  .checklist { padding: 24px 20px; }
+  .checklist li { gap: 8px; grid-template-columns: 20px minmax(0, 1fr); }
+  .checklist h3 { font-size: 24px; }
+  .checklist li p { font-size: 14px; }
+  .resourceGrid { grid-template-columns: 1fr; gap: 24px; }
+  .resourceGrid article > p:last-child { font-size: 14px; }
+  .travel { padding-top: 40px; }
+}
+@media print {
+  .jumpnav, .setting, .tools, .tourCta { display: none; }
+  .guide { width: 100%; padding: 0; }
+  .page :global(.page-intro) { display: block; width: 100%; padding-block: 16px; }
+  .page :global(.page-intro) h1 { font-size: 32px; }
+  .page :global(.page-intro) :global(.intro-copy) { max-width: none; margin-top: 10px; }
+  .guideSection { display: block; padding-block: 20px; }
+  .sectionIntro h2 { font-size: 26px; margin-block: 10px; }
+  .sectionIntro { break-inside: avoid; break-after: avoid; }
+  .checklist { break-before: avoid; }
+  .checklist { padding: 16px 0; background: transparent; }
+  .checklist li { break-inside: avoid; }
+  .checklist h3 { font-size: 19px; }
+  .sectionIntro > a { display: none; }
+  .takeaway { margin-top: 12px; }
+  .resourceGrid { display: block; }
+  .resourceGrid article { margin-top: 20px; break-inside: avoid; }
+}

@@ -6,6 +6,8 @@ import { VenueLocation } from "@/components/venue-location";
 import { site } from "@/lib/content";
 import { createPageMetadata, getBusinessStructuredData } from "@/lib/seo";
 import { JsonLd } from "@/components/json-ld";
+import Link from "next/link";
+import { ShareLink } from "@/components/share-link";
 
 export const metadata = createPageMetadata({
   title: "Contact & Venue Tours in Blooming Grove",
@@ -18,7 +20,7 @@ export default function ContactPage() {
   return (
     <>
       <JsonLd data={{ "@context": "https://schema.org", ...getBusinessStructuredData() }} />
-      <PageIntro
+      <PageIntro breadcrumb={{ label: "Contact", path: "/contact" }}
         eyebrow="Every good day starts with hello"
         title={
           <>
@@ -47,6 +49,11 @@ export default function ContactPage() {
           Map & Directions
         </a>
       </nav>
+      <div className="container referral-tools">
+        <a className="text-link" href="/downloads/happy-trails.vcf" download>Save venue contact ↗</a>
+        <Link className="text-link" href="/guest-guide">Guest arrival guide ↗</Link>
+        <ShareLink path="/contact#directions" title="Directions to Happy Trails" label="Share directions" />
+      </div>
       <div className="container contact-layout">
         <aside className="contact-aside" aria-label="Venue contact details">
           <div className="contact-detail">

@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import {
   useId,
+  useEffect,
   useMemo,
   useRef,
   useState,
@@ -27,6 +28,7 @@ import "yet-another-react-lightbox/styles.css";
 import "yet-another-react-lightbox/plugins/captions.css";
 import "yet-another-react-lightbox/plugins/thumbnails.css";
 import styles from "./photo-gallery.module.css";
+import { ShareLink } from "./share-link";
 
 const Lightbox = dynamic<LightboxExternalProps>(
   async () => {
@@ -94,6 +96,49 @@ export function PhotoGallery({ items }: { items: MediaItem[] }) {
   const [lightboxIndex, setLightboxIndex] = useState(-1);
   const [hasOpened, setHasOpened] = useState(false);
   const animationDuration = reducedMotion ? 0 : 250;
+
+  useEffect(() => {
+    let frame = 0;
+    function restoreSharedPhoto() {
+      cancelAnimationFrame(frame);
+      const item = items.find((photo) => window.location.hash === `#photo-${photo.id}`);
+      if (!item) {
+        if (window.location.hash.startsWith("#photo-")) {
+          setCategory("All photos");
+          setView("grid");
+          setLightboxIndex(-1);
+        }
+        return;
+      }
+      flushSync(() => {
+        setCategory("All photos");
+        setSelectedId(item.id);
+        setView("slideshow");
+        setLightboxIndex(-1);
+      });
+      // Native fragment navigation targets the server-rendered grid. Realign only
+      // after the shared photograph's slideshow layout has replaced that grid.
+      frame = requestAnimationFrame(() => {
+        if (!root.current) return;
+        const header = document.querySelector("header");
+        const headerHeight = header && ["fixed", "sticky"].includes(getComputedStyle(header).position)
+          ? header.getBoundingClientRect().height : 0;
+        window.scrollTo({ top: window.scrollY + root.current.getBoundingClientRect().top - headerHeight - 16, behavior: "instant" });
+        const strip = thumbnailStrip.current;
+        const button = thumbnailButtons.current.get(item.id);
+        if (strip && button) {
+          const offset = button.getBoundingClientRect().left - strip.getBoundingClientRect().left;
+          strip.scrollTo({ left: strip.scrollLeft + offset - (strip.clientWidth - button.clientWidth) / 2, behavior: "instant" });
+        }
+      });
+    }
+    frame = requestAnimationFrame(restoreSharedPhoto);
+    window.addEventListener("hashchange", restoreSharedPhoto);
+    return () => {
+      cancelAnimationFrame(frame);
+      window.removeEventListener("hashchange", restoreSharedPhoto);
+    };
+  }, [items]);
 
   const categories = categoryOrder.filter((value) => items.some((item) => item.category === value));
   const filtered = useMemo(
@@ -250,6 +295,8 @@ export function PhotoGallery({ items }: { items: MediaItem[] }) {
 
   return (
     <div className={styles.gallery} ref={root} onKeyDown={onKeyDown}>
+      {/* Keep native fragment targets stable while the grid becomes a slideshow. */}
+      {items.map((item) => <span key={item.id} id={`photo-${item.id}`} className={styles.photoAnchor} aria-hidden="true" />)}
       <div className={styles.galleryHeader}>
         <div className={styles.filters} role="group" aria-label="Filter photographs">
           {["All photos", ...categories].map((value) => (
@@ -297,6 +344,12 @@ export function PhotoGallery({ items }: { items: MediaItem[] }) {
         </p>
       </div>
 
+      {view === "slideshow" && selected && <ShareLink
+        key={selected.id}
+        path={`/gallery#photo-${selected.id}`}
+        title={`${selected.category} at Happy Trails`}
+        label="Share this photograph"
+      />}
       <div
         id={collectionId}
         role={view === "slideshow" ? "region" : undefined}

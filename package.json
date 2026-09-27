@@ -13,6 +13,7 @@
     "typecheck": "tsc --noEmit",
     "test": "tsx --test tests/*.test.ts",
     "seo:notify": "tsx scripts/submit-indexnow.ts",
+    "seo:audit": "tsx scripts/audit-live-site.ts",
     "test:e2e": "playwright test"
   },
   "dependencies": {

@@ -309,3 +309,11 @@ test("transport exceptions, provider errors, and missing provider IDs never beco
     assert.equal(response.headers.get("cache-control"), "no-store");
   }
 });
+
+
+test("referral answers are optional, bounded choices and appear in the owner email", () => {
+  const fields = inquiryFieldsSchema.parse({ ...validFields, referralSource: "Event vendor" });
+  assert.match(buildInquiryEmail(fields, "website@example.com", "owner@example.com").text, /How they found us: Event vendor/);
+  assert.equal(inquiryFieldsSchema.parse(validFields).referralSource, "");
+  assert.equal(inquiryFieldsSchema.safeParse({ ...validFields, referralSource: "Injected\\nHeader" }).success, false);
+});

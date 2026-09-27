@@ -277,10 +277,10 @@ test.describe("Responsive layout", () => {
 });
 
 test.describe("Inquiry experience", () => {
-  test("without JavaScript, inquiry details cannot be submitted into the URL", async ({ browser }) => {
-    const context = await browser.newContext({ javaScriptEnabled: false });
+  test("without JavaScript, inquiry details cannot be submitted into the URL", async ({ browser, baseURL }) => {
+    const context = await browser.newContext({ javaScriptEnabled: false, baseURL });
     const page = await context.newPage();
-    await page.goto("http://127.0.0.1:3000/contact");
+    await page.goto("/contact");
     const form = page.getByRole("form", { name: "Celebration inquiry" });
     await expect(form).toHaveAttribute("method", "post");
     await expect(form).toHaveAttribute("action", "/api/inquiries");

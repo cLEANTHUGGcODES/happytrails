@@ -16,7 +16,7 @@ export const metadata: Metadata = createPageMetadata({
 export default function PricingPage() {
   return (
     <>
-      <PageIntro
+      <PageIntro breadcrumb={{ label: "Pricing & FAQs", path: "/pricing" }}
         eyebrow="Make room for what matters"
         title={
           <>

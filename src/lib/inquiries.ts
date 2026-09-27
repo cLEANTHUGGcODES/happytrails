@@ -1,6 +1,7 @@
 import { z } from "zod";
 
 export const eventTypes = ["Wedding", "Birthday", "Family reunion", "Other celebration"] as const;
+export const referralSources = ["Google", "Yelp", "Nextdoor", "Wedding or event directory", "Local business directory", "Friend or family", "Event vendor", "Other"] as const;
 export const inquiryBodyLimit = 16_384;
 export const minimumFormTime = 1_500;
 const maximumFormAge = 24 * 60 * 60 * 1_000;
@@ -27,6 +28,7 @@ export const inquiryFieldsSchema = z.object({
     .refine(singleLine, "Please use a single line for your name."),
   email: z.string().trim().max(254).email("Please enter a valid email address."),
   eventType: z.enum(eventTypes, { error: "Please choose a celebration type." }),
+  referralSource: z.enum(["", ...referralSources]).optional().default(""),
   phone: optionalText(40).refine(
     (value) => !value || /^[+()\d\s.\-xext]+$/i.test(value),
     "Please enter a valid phone number.",
@@ -165,6 +167,7 @@ export function buildInquiryEmail(inquiry: InquiryFields, from: string, to: stri
       `Phone: ${inquiry.phone || "Not provided"}`,
       `Preferred event date: ${inquiry.eventDate || "Not decided"}`,
       `Estimated guests: ${inquiry.guestCount ?? "Not provided"}`,
+      ...(inquiry.referralSource ? [`How they found us: ${inquiry.referralSource}`] : []),
       "",
       "Message:",
       inquiry.message || "No additional message.",

@@ -13,7 +13,7 @@ export const metadata: Metadata = createPageMetadata({
 export default function StoryPage() {
   return (
     <>
-      <PageIntro
+      <PageIntro breadcrumb={{ label: "Our Story", path: "/our-story" }}
         eyebrow="The heart behind the place"
         title={
           <>
@@ -45,7 +45,7 @@ export default function StoryPage() {
         </div>
         <div className="story-prose" data-motion="reveal">
           <p className="lead">
-            Happy Trails began with a simple thing: a love of making people feel welcome.
+            Established in 2025, Happy Trails began with a simple thing: a love of making people feel welcome.
           </p>
           <p>
             In the summer of 1998, the Hebert family bought 22 acres in Blooming Grove. The rolling

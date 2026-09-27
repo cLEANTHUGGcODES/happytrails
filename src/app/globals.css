@@ -1610,3 +1610,13 @@ p {
     font-size: 27px;
   }
 }
+
+/* Small utility controls keep referral tools within the editorial design. */
+.breadcrumbs { display: flex; flex-wrap: wrap; gap: .6rem; align-items: center; margin-bottom: 1.4rem; font-size: .75rem; color: var(--color-muted, #6d645b); }
+.breadcrumbs a { text-decoration: underline; text-underline-offset: .2em; }
+.share-link-control { display: flex; flex-wrap: wrap; gap: .5rem 1rem; align-items: center; font-size: .8rem; }
+.share-link-control button { cursor: pointer; background: transparent; border: 0; padding: .5rem 0; font: inherit; color: inherit; }
+.share-link-fallback { display: grid; gap: .3rem; width: 100%; min-width: 0; }
+.share-link-fallback input { width: 100%; min-width: 0; border: 1px solid #b9aa9c; padding: .6rem; color: #382e25; background: #fffaf3; }
+.referral-tools { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.5rem; margin-block: 1.3rem; }
+@media print { html, body { background: white !important; } header, footer, .skip-link, .share-link-control, .print-control { display: none !important; } [data-motion] { opacity: 1 !important; visibility: visible !important; transform: none !important; } }

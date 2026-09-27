@@ -65,6 +65,7 @@ export function getBusinessStructuredData() {
     "@id": absoluteUrl("/#venue"),
     name: site.name,
     alternateName: site.shortName,
+    foundingDate: "2025",
     url: absoluteUrl("/"),
     description:
       "A wedding and event venue on 22 acres in Blooming Grove, Texas, with a renovated 1,800-square-foot barn and space for approximately 75 guests.",
@@ -140,4 +141,25 @@ export function getArticleStructuredData(post: NewsPost) {
 
 export function serializeJsonLd(data: unknown): string {
   return JSON.stringify(data).replace(/</g, "\\u003c");
+}
+
+export function getGalleryStructuredData(items: MediaItem[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ImageGallery",
+    "@id": absoluteUrl("/gallery#collection"),
+    url: absoluteUrl("/gallery"),
+    name: "Happy Trails venue photographs",
+    about: { "@id": absoluteUrl("/#venue") },
+    hasPart: items.map((item) => ({
+      "@type": "ImageObject",
+      "@id": absoluteUrl(`/gallery#photo-${item.id}`),
+      contentUrl: absoluteUrl(item.src),
+      url: absoluteUrl(`/gallery#photo-${item.id}`),
+      name: item.alt,
+      caption: item.caption,
+      width: item.width,
+      height: item.height,
+    })),
+  };
 }

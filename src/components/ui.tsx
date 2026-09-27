@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import type { ReactNode } from "react";
+import { Breadcrumbs } from "./breadcrumbs";
 
 export function ButtonLink({
   href,
@@ -27,13 +28,16 @@ export function PageIntro({
   eyebrow,
   title,
   children,
+  breadcrumb,
 }: {
   eyebrow: string;
   title: ReactNode;
   children?: ReactNode;
+  breadcrumb?: { label: string; path: string };
 }) {
   return (
     <div className="page-intro container" data-motion="reveal">
+      {breadcrumb && <Breadcrumbs {...breadcrumb} />}
       <p className="eyebrow">
         <span className="tiny-line" />
         {eyebrow}

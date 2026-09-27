@@ -23,7 +23,7 @@ export default async function NewsPage() {
   const posts = await getUpdates();
   return (
     <>
-      <PageIntro
+      <PageIntro breadcrumb={{ label: "News & Updates", path: "/news" }}
         eyebrow="Notes from Happy Trails"
         title={
           <>

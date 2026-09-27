@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState, useSyncExternalStore } from "react";
 import type { FormEvent } from "react";
 import { ArrowUpRight } from "lucide-react";
-import { eventTypes, fieldErrorsFromIssues, inquiryFieldsSchema } from "@/lib/inquiries";
+import { eventTypes, referralSources, fieldErrorsFromIssues, inquiryFieldsSchema } from "@/lib/inquiries";
 import type { InquiryFieldErrors, InquiryResponse } from "@/lib/inquiries";
 import { InquirySending, InquirySuccess } from "./inquiry-feedback";
 import styles from "./inquiry-form.module.css";
@@ -304,6 +304,15 @@ export function InquiryForm({ guestCapacityEstimate }: { guestCapacityEstimate: 
             aria-describedby={describedBy("message")}
           />
           {fieldError("message")}
+        </div>
+        <div className={styles.field}>
+          <label htmlFor="inquiry-referralSource">How did you hear about us? <span>(optional)</span></label>
+          <select id="inquiry-referralSource" name="referralSource" defaultValue=""
+            aria-invalid={!!errors.referralSource} aria-describedby={describedBy("referralSource")}>
+            <option value="">Choose an option</option>
+            {referralSources.map((source) => <option key={source} value={source}>{source}</option>)}
+          </select>
+          {fieldError("referralSource")}
         </div>
         <div className={styles.honeypot} aria-hidden="true">
           <label htmlFor="inquiry-website">Leave this field empty</label>
