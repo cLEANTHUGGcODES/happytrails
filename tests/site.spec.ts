@@ -127,7 +127,12 @@ test.describe("Gallery and property tour", () => {
     ).toHaveCount(filteredCount);
 
     const firstPhoto = photographs.first();
+    const secondPhotoName = await photographs.nth(1).getAttribute("aria-label");
     await firstPhoto.click();
+    const slideshow = page.getByRole("region", { name: "Happy Trails photo slideshow" });
+    await expect(slideshow).toBeVisible();
+    const enlarge = slideshow.getByRole("button", { name: /^Enlarge photograph:/ });
+    await enlarge.click();
     const dialog = page.getByRole("dialog");
     await expect(dialog).toBeVisible();
     await expect(dialog.getByRole("button", { name: "Previous", exact: true })).toBeDisabled();
@@ -143,7 +148,17 @@ test.describe("Gallery and property tour", () => {
     await expect(dialog.getByRole("button", { name: "Previous", exact: true })).toBeEnabled();
     await page.keyboard.press("Escape");
     await expect(dialog).not.toBeVisible();
-    await expect(firstPhoto).toBeFocused();
+    await expect(enlarge).toBeFocused();
+    await expect(slideshow).toBeVisible();
+    await expect(enlarge).toHaveAttribute(
+      "aria-label",
+      secondPhotoName!.replace("Open photograph:", "Enlarge photograph:"),
+    );
+    await page
+      .getByRole("group", { name: "Gallery view" })
+      .getByRole("button", { name: "Grid", exact: true })
+      .click();
+    await expect(page.getByRole("button", { name: secondPhotoName!, exact: true })).toBeFocused();
     await page.getByRole("button", { name: "All photos", exact: true }).click();
     await expect(photographs).toHaveCount(allCount);
   });
@@ -311,6 +326,7 @@ test.describe("Automated accessibility", () => {
       .getByRole("button", { name: /^Open photograph:/ })
       .first()
       .click();
+    await page.getByRole("button", { name: /^Enlarge photograph:/ }).click();
     await expect(page.getByRole("dialog")).toBeVisible();
     await assertAccessible(page);
   });

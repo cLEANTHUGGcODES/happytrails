@@ -25,7 +25,7 @@ npm run start
 ## What is included
 
 - Responsive Home, Venue, Gallery, Vendors, Pricing & FAQs, Our Story, News, Contact, and Privacy pages.
-- Twenty-one gallery images: all 18 original venue/event photographs plus three property-tour stills, with category filters, captions, swipe/keyboard navigation, zoom, thumbnails, and fullscreen viewing.
+- Twenty-one gallery images: all 18 original venue/event photographs plus three property-tour stills, with category filters, a GSAP grid-to-slideshow transition, thumbnails, and swipe/keyboard navigation. Enlarged viewing retains zoom and fullscreen; see [gallery interaction](docs/gallery-motion.md).
 - Two optimized, on-demand property tours; originals remain untouched in the workspace root.
 - A dedicated Vendors page in desktop, mobile, and footer navigation, offering help finding local vendors.
 - The supplied address, 5281 FM 55, Blooming Grove, TX 76626, with an illustrated location map, downloadable map, and Google Maps, Apple Maps, and Waze driving directions on Contact.
