@@ -2,26 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { getUpdates, site } from "@/lib/content";
+import { Horseshoe } from "@/components/horseshoe";
 import styles from "./site-footer.module.css";
-
-function Horseshoe() {
-  return (
-    <svg viewBox="0 0 40 44" fill="none" aria-hidden="true" focusable="false">
-      <path
-        d="M8 3 4.5 17C1 31 8.5 40 20 40S39 31 35.5 17L32 3l-7 2 3.5 14C30.5 27 27 32 20 32s-10.5-5-8.5-13L15 5 8 3Z"
-        stroke="currentColor"
-        strokeWidth="1.7"
-        strokeLinejoin="round"
-      />
-      <path
-        d="m9 12 2 .5m-4 9h2m-.5 9 1.7-1M31 12l-2 .5m4 9h-2m.5 9-1.7-1M19 36h2"
-        stroke="currentColor"
-        strokeWidth="1.7"
-        strokeLinecap="round"
-      />
-    </svg>
-  );
-}
 
 function TexasFlag() {
   return (

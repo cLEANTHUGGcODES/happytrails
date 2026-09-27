@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Flower2, Plus, Sun } from "lucide-react";
+import { Flower2, Plus } from "lucide-react";
 import { ButtonLink, PageIntro, ContactCta } from "@/components/ui";
+import { Horseshoe } from "@/components/horseshoe";
 import { faqs } from "@/lib/content";
 import { createPageMetadata } from "@/lib/seo";
 
@@ -32,7 +33,11 @@ export default function PricingPage() {
       </PageIntro>
       <section className="container pricing-section" aria-label="Event pricing">
         <article className="pricing-card featured" data-motion="reveal">
-          <Flower2 size={37} strokeWidth={1} aria-hidden="true" />
+          <div className="pricing-ornament pricing-flowers" aria-hidden="true">
+            <Flower2 className="pricing-flower-small" size={22} strokeWidth={1.25} />
+            <Flower2 size={37} strokeWidth={1} />
+            <Flower2 className="pricing-flower-small" size={24} strokeWidth={1.25} />
+          </div>
           <p className="eyebrow">For your next chapter</p>
           <h2>Weddings</h2>
           <p className="pricing-price">
@@ -47,7 +52,7 @@ export default function PricingPage() {
           </Link>
         </article>
         <article className="pricing-card" data-motion="reveal">
-          <Sun size={37} strokeWidth={1} aria-hidden="true" />
+          <Horseshoe className="pricing-ornament" width={37} height={37} />
           <p className="eyebrow">For all the good things in life</p>
           <h2>Other celebrations</h2>
           <p className="pricing-price pricing-quote">

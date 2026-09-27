@@ -674,8 +674,27 @@ p {
 .pricing-card .button {
   margin-top: 30px;
 }
-.pricing-card > svg {
+.pricing-ornament {
+  flex: none;
   margin-bottom: 22px;
+}
+.pricing-flowers {
+  display: flex;
+  align-items: flex-end;
+  gap: 6px;
+  height: 37px;
+}
+.pricing-flowers svg {
+  flex: none;
+}
+.pricing-flower-small {
+  opacity: 0.85;
+}
+.pricing-flower-small:first-child {
+  transform: rotate(-18deg) translateY(-1px);
+}
+.pricing-flower-small:last-child {
+  transform: rotate(14deg) translateY(-2px);
 }
 .faq-section {
   display: grid;
