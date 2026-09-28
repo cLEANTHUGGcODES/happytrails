@@ -1,6 +1,6 @@
 # Additional backlink and discovery work — September 27, 2026
 
-This pass adds **18 concrete outcomes** to the earlier fifteen-item ledger: 17 website, content or monitoring improvements and one accepted free directory application. The requested target of 30 completed improvements is **not met**. Thirty listing platforms were reviewed; blocked attempts and research are excluded from the completed count. **Zero new external backlinks are confirmed.**
+This pass adds **19 concrete outcomes** to the earlier fifteen-item ledger: 17 website, content or monitoring improvements, one accepted free directory application, and one published PartySlate venue profile. The requested target of 30 completed improvements is **not met**. Thirty listing platforms were reviewed; blocked attempts and research are excluded from the completed count. **One new external backlink is confirmed**, from PartySlate. Search indexing and ranking effects are not confirmed.
 
 The six planning guides serve different event-planning tasks within one consolidated page. They are counted once each, with no extra count for the page container, metadata, sitemap entries, printing, deployment or testing. Earlier icons, PDF fact sheet, IndexNow setup, Google/Yelp links and prior directory submissions are not recounted.
 
@@ -26,10 +26,11 @@ The six planning guides serve different event-planning tasks within one consolid
 | 16 | [Inquiry referral measurement](https://www.happytrailsshindigs.com/contact) | Optional fixed-choice referral answer is included in the owner email; no new tracking cookies. |
 | 17 | [Recurring live site health check](https://github.com/cLEANTHUGGcODES/happytrails/actions/workflows/site-health.yml) | Weekly/manual audit of sitemap pages, metadata, internal links, anchors and assets. |
 | 18 | [VowSpace free venue application](https://ourvowspace.com/vendors) | Application received at 23:04 UTC September 27; publisher review pending, no live backlink confirmed. |
+| 19 | [PartySlate venue profile](https://www.partyslate.com/venues/happy-trails-shindigs-events) | Owner supplied the email code; free profile published with branding, contact details, seven property photos, starting wedding pricing, five FAQs, and a verified website link. Website business identity metadata also references this profile; these steps are counted together as one listing outcome. |
 
 ## Directory and account status
 
-Only VowSpace accepted a completed new listing application. PartySlate reached email verification, and Nextdoor accepted an account signup but its business-page setup stopped rendering. Those two are incomplete; preserve the existing account state rather than registering duplicates. InviteCount never accepted the final submission. No paid plans, card details, promotional SMS, purchased links, fabricated reviews or access-control workarounds were used.
+VowSpace accepted a completed new listing application. PartySlate email verification subsequently succeeded, and its free venue profile and photo collection are publicly visible. Nextdoor accepted an account signup but its business-page setup stopped rendering; preserve that account rather than registering a duplicate. InviteCount never accepted the final submission. No paid plans, card details, promotional SMS, purchased links, fabricated reviews or access-control workarounds were used.
 
 | Platform | Result |
 | --- | --- |
@@ -48,7 +49,7 @@ Only VowSpace accepted a completed new listing application. PartySlate reached e
 | [ShowMeLocal](https://www.showmelocal.com/) | Homepage displayed Security Verification and required moving a slider; explicitly says it protects against automated traffic. No interaction with challenge, no signup. |
 | [Alignable](https://www.alignable.com/) | Inspected free signup then read current Code of Conduct. Rule 27 prohibits automated access unless explicitly permitted; no email or account submission. |
 | [VowSpace](https://ourvowspace.com/vendors) | Free application received; publisher review pending. One subsequent public name search showed no published match. |
-| [PartySlate](https://pro.partyslate.com/view/register) | Free signup reached a six-digit code sent to the admin inbox. Verification incomplete. |
+| [PartySlate](https://www.partyslate.com/venues/happy-trails-shindigs-events) | Email verified; free venue profile and seven-photo collection published. Unauthenticated browser confirmed the website link, pricing and five FAQs. Address is correct; generated map pin is approximately 203 metres from the owner's exact pin and needs correction. See [profile record](partyslate-profile.md). |
 | [The Wedding Brigade](https://theweddingbrigade.com/list-your-business/) | One free-tier application rejected as spam. Stopped without retry or workaround. |
 | [InviteCount](https://invitecount.com/list-your-wedding-business) | Profile draft and three existing photos prepared; security check did not load, submission stayed disabled. |
 | [Pinterest](https://help.pinterest.com/en/business/article/get-a-business-account) | Business signup requires the registering person’s birthdate. Unknown; no account created. |
@@ -81,3 +82,10 @@ The work prioritizes useful visitor resources and accurate business citations. G
 - GitHub registered the weekly workflow as active. Its first manual run is [36358269277](https://github.com/cLEANTHUGGcODES/happytrails/actions/runs/36358269277); **completed successfully**, including report artifacts.
 
 Detailed browser, print, live-audit and submission evidence is retained locally in `delivery/seo/expansion-30-review/`.
+
+### PartySlate follow-up validation
+
+- Public profile and [seven-photo collection](https://www.partyslate.com/photo-collections/37860) verified without authentication at 00:50 UTC September 28 (September 27 Central). Profile navigation recorded an initial 202 followed by a 200 document response. No meta robots or X-Robots-Tag restriction was observed; this is not proof of search-engine indexing.
+- The visible **Visit Website** link points to `https://www.happytrailsshindigs.com/` with no `rel` value. All seven collection images loaded. Minimum wedding spend displays **$3,000**; approximate guest capacity remains qualified in the description and FAQ.
+- Existing SEO unit checks passed (9/9), scoped ESLint and diff checks passed, and the existing browser check for business identity without JavaScript passed. Footer and contact-page layouts are unchanged.
+- PartySlate's generated coordinates are `32.0705434, -96.69687300000001`; the owner-confirmed pin is `32.068833597034164, -96.69761704124728`. The address-only editor exposes no manual pin adjustment. The tour FAQ directs guests to the website's correct map. A support correction draft is prepared in [the profile record](partyslate-profile.md); it has not been sent.

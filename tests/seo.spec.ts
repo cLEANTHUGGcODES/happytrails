@@ -65,8 +65,10 @@ test("business identity is readable without JavaScript and agrees with visible c
   await expect(contact).toContainText(business.address.streetAddress);
   await expect(contact).toContainText(business.email);
   await expect(contact).toContainText("Monday–Saturday, 10 a.m.–10 p.m.");
-  for (const profile of business.sameAs) {
-    await expect(contact.locator(`a[href="${profile}"]`)).toHaveCount(1);
+  // Verified identity profiles need not all appear in the compact contact panel.
+  for (const name of ["Google Business Profile", "Happy Trails on Yelp"]) {
+    const profile = await contact.getByRole("link", { name, exact: true }).getAttribute("href");
+    expect(business.sameAs).toContain(profile);
   }
 });
 

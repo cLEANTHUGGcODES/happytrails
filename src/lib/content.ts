@@ -48,10 +48,11 @@ export const site = {
     opens: "10:00",
     closes: "22:00",
   },
-  // Public profiles supplied by the owner; directory applications are not published profiles.
+  // Owner-supplied or publicly verified profiles; directory applications are not published profiles.
   profiles: {
     google: "https://share.google/9rQF96KgYlFHWrYcA",
     yelp: "https://www.yelp.com/biz/happy-trails-shindigs-and-events-blooming-grove",
+    partyslate: "https://www.partyslate.com/venues/happy-trails-shindigs-events",
   },
 } as const;
 
