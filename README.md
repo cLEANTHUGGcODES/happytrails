@@ -48,6 +48,12 @@ See [the inquiry guide](docs/inquiries.md) for domain verification, preview envi
 
 ## Deploy to Vercel
 
+Google Analytics uses measurement ID `G-D3WXJME0K1` across the site through
+`src/components/google-analytics.tsx`. The tag runs in production builds and is disabled
+in development and Vercel preview deployments. Local production previews also include it.
+Keep Enhanced Measurement's browser-history page changes enabled in the Google Analytics
+web stream to track client-side navigation; the site does not send duplicate manual page views.
+
 1. Import `cLEANTHUGGcODES/happytrails` into a Vercel Pro project, using `main` as the production branch. Select the Next.js framework, repository root (`./`), and Node.js 22.x. Keep the default output directory; use `npm ci` to install and `npm run build` to build.
 2. Set the email variables from `.env.example` in production. Use separate test email credentials or leave delivery unconfigured in preview environments.
 3. Set `NEXT_PUBLIC_SITE_URL` to `https://www.happytrailsshindigs.com` for inquiry-origin validation. Public canonical, sitemap, social, and structured-data URLs use `src/lib/site-url.ts`. Vercel supplies the allowed deployment URL variables automatically.

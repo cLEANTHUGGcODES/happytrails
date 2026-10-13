@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { ScrollAnimations } from "@/components/scroll-animations";
+import { GoogleAnalytics } from "@/components/google-analytics";
 import { SITE_URL } from "@/lib/site-url";
 import { createPageMetadata } from "@/lib/seo";
 import "./globals.css";
@@ -55,6 +56,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <SiteHeader />
         <ScrollAnimations>{children}</ScrollAnimations>
         <SiteFooter />
+        <GoogleAnalytics />
       </body>
     </html>
   );

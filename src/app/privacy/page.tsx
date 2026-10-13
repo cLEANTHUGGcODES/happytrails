@@ -40,6 +40,15 @@ export default function PrivacyPage() {
           information, such as request details and delivery status, to operate and protect the
           website. This website does not have customer accounts or collect payment information.
         </p>
+        <h2>Website analytics</h2>
+        <p>
+          We use Google Analytics to understand how visitors find and use our website. It uses
+          cookies and collects information such as pages visited, referring websites, and device
+          and browser details. Learn more about{" "}
+          <a href="https://policies.google.com/technologies/partner-sites">
+            how Google uses information from websites that use its services
+          </a>.
+        </p>
         <h2>Getting in touch</h2>
         <p>
           For questions about information you have shared, or to request its correction or deletion,
