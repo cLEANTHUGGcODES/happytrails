@@ -1,0 +1,183 @@
+{
+  "checkedAt": "2026-10-17T18:40:25.124Z",
+  "base": "https://www.happytrailsshindigs.com",
+  "report": [
+    {
+      "path": "/planning",
+      "width": 390,
+      "status": 200,
+      "overflow": 0,
+      "title": "Wedding & Event Planning Guide in Blooming Grove | Happy Trails",
+      "h1": "Start with what matters.",
+      "canonical": "https://www.happytrailsshindigs.com/planning",
+      "brokenImages": [],
+      "errors": []
+    },
+    {
+      "path": "/planning/small-wedding-layout-checklist",
+      "width": 390,
+      "status": 200,
+      "overflow": 0,
+      "title": "Small wedding layout checklist | Happy Trails",
+      "h1": "Small wedding layout checklist",
+      "canonical": "https://www.happytrailsshindigs.com/planning/small-wedding-layout-checklist",
+      "brokenImages": [],
+      "errors": []
+    },
+    {
+      "path": "/planning/wedding-day-timeline",
+      "width": 390,
+      "status": 200,
+      "overflow": 0,
+      "title": "Wedding day timeline worksheet | Happy Trails",
+      "h1": "Wedding day timeline worksheet",
+      "canonical": "https://www.happytrailsshindigs.com/planning/wedding-day-timeline",
+      "brokenImages": [],
+      "errors": []
+    },
+    {
+      "path": "/planning/outdoor-ceremony-weather-plan",
+      "width": 390,
+      "status": 200,
+      "overflow": 0,
+      "title": "Outdoor ceremony weather planning checklist | Happy Trails",
+      "h1": "Outdoor ceremony weather planning checklist",
+      "canonical": "https://www.happytrailsshindigs.com/planning/outdoor-ceremony-weather-plan",
+      "brokenImages": [],
+      "errors": []
+    },
+    {
+      "path": "/planning/vendor-coordination-checklist",
+      "width": 390,
+      "status": 200,
+      "overflow": 0,
+      "title": "Wedding vendor coordination checklist | Happy Trails",
+      "h1": "Wedding vendor coordination checklist",
+      "canonical": "https://www.happytrailsshindigs.com/planning/vendor-coordination-checklist",
+      "brokenImages": [],
+      "errors": []
+    },
+    {
+      "path": "/tour",
+      "width": 390,
+      "status": 200,
+      "overflow": 0,
+      "title": "Property Video Tour in Blooming Grove, TX | Happy Trails",
+      "h1": "A look around Happy Trails.",
+      "canonical": "https://www.happytrailsshindigs.com/tour",
+      "brokenImages": [],
+      "errors": []
+    },
+    {
+      "path": "/venue-info",
+      "width": 390,
+      "status": 200,
+      "overflow": 0,
+      "title": "Venue Information & Referral Resources | Happy Trails",
+      "h1": "Happy Trails, at a glance.",
+      "canonical": "https://www.happytrailsshindigs.com/venue-info",
+      "brokenImages": [],
+      "errors": []
+    },
+    {
+      "path": "/pricing#faq-guest-count",
+      "width": 390,
+      "status": 200,
+      "overflow": 0,
+      "title": "Wedding Venue Pricing & FAQs | Happy Trails",
+      "h1": "Wedding pricing& celebrations.",
+      "canonical": "https://www.happytrailsshindigs.com/pricing",
+      "brokenImages": [],
+      "errors": []
+    },
+    {
+      "path": "/planning",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0,
+      "title": "Wedding & Event Planning Guide in Blooming Grove | Happy Trails",
+      "h1": "Start with what matters.",
+      "canonical": "https://www.happytrailsshindigs.com/planning",
+      "brokenImages": [],
+      "errors": []
+    },
+    {
+      "path": "/planning/small-wedding-layout-checklist",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0,
+      "title": "Small wedding layout checklist | Happy Trails",
+      "h1": "Small wedding layout checklist",
+      "canonical": "https://www.happytrailsshindigs.com/planning/small-wedding-layout-checklist",
+      "brokenImages": [],
+      "errors": []
+    },
+    {
+      "path": "/planning/wedding-day-timeline",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0,
+      "title": "Wedding day timeline worksheet | Happy Trails",
+      "h1": "Wedding day timeline worksheet",
+      "canonical": "https://www.happytrailsshindigs.com/planning/wedding-day-timeline",
+      "brokenImages": [],
+      "errors": []
+    },
+    {
+      "path": "/planning/outdoor-ceremony-weather-plan",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0,
+      "title": "Outdoor ceremony weather planning checklist | Happy Trails",
+      "h1": "Outdoor ceremony weather planning checklist",
+      "canonical": "https://www.happytrailsshindigs.com/planning/outdoor-ceremony-weather-plan",
+      "brokenImages": [],
+      "errors": []
+    },
+    {
+      "path": "/planning/vendor-coordination-checklist",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0,
+      "title": "Wedding vendor coordination checklist | Happy Trails",
+      "h1": "Wedding vendor coordination checklist",
+      "canonical": "https://www.happytrailsshindigs.com/planning/vendor-coordination-checklist",
+      "brokenImages": [],
+      "errors": []
+    },
+    {
+      "path": "/tour",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0,
+      "title": "Property Video Tour in Blooming Grove, TX | Happy Trails",
+      "h1": "A look around Happy Trails.",
+      "canonical": "https://www.happytrailsshindigs.com/tour",
+      "brokenImages": [],
+      "errors": []
+    },
+    {
+      "path": "/venue-info",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0,
+      "title": "Venue Information & Referral Resources | Happy Trails",
+      "h1": "Happy Trails, at a glance.",
+      "canonical": "https://www.happytrailsshindigs.com/venue-info",
+      "brokenImages": [],
+      "errors": []
+    },
+    {
+      "path": "/pricing#faq-guest-count",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0,
+      "title": "Wedding Venue Pricing & FAQs | Happy Trails",
+      "h1": "Wedding pricing& celebrations.",
+      "canonical": "https://www.happytrailsshindigs.com/pricing",
+      "brokenImages": [],
+      "errors": []
+    }
+  ],
+  "failed": []
+}

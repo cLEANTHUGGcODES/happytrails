@@ -1,0 +1,232 @@
+{
+  "checked_at_utc": "2026-10-17T18:31:16.552822+00:00",
+  "business": "Happy Trails Shindigs & Events",
+  "canonical_website": "https://www.happytrailsshindigs.com",
+  "scope": "Read-only research. No messages sent, forms submitted, accounts created, public data changed, paid services selected or new backlinks claimed.",
+  "prior_work_reviewed": [
+    "delivery/local-listings/TRACKER.md",
+    "docs/backlink-audit-2026-09-27.md",
+    "docs/backlink-expansion-2026-09-27.md",
+    "delivery/local-listings/expansion-30/general/status.json",
+    "delivery/local-listings/expansion-30/wedding/status.json"
+  ],
+  "admin_email": {
+    "status": "Exact Gmail admin identity not established in reviewed files. Existing historical submissions used the public domain admin address; do not substitute it for the Gmail the user now requests.",
+    "needed": "User-supplied exact Gmail address and sign-in or verification assistance when a service requests it. Never ask them to disclose their password in chat."
+  },
+  "verified_existing": [
+    {
+      "provider": "Blooming Grove / Blackland TX",
+      "url": "https://bloominggrovetx.com/businesses/happy-trails-shindigs-events/",
+      "status": "Direct GET HTTP 200; page title identifies Happy Trails; website hyperlink present",
+      "target": "https://www.happytrailsshindigs.com",
+      "rel": [
+        "nofollow"
+      ],
+      "evidence_file": "/tmp/happy-blooming-profile.html",
+      "new_backlink": false
+    },
+    {
+      "provider": "GitHub",
+      "url": "https://github.com/cLEANTHUGGcODES/happytrails",
+      "status": "Direct GET HTTP 200; homepage, venue, pricing and contact hyperlinks present",
+      "rel": [
+        "nofollow"
+      ],
+      "evidence_file": "/tmp/happy-github.html",
+      "new_backlink": false
+    },
+    {
+      "provider": "PartySlate",
+      "url": "https://www.partyslate.com/venues/happy-trails-shindigs-events",
+      "status": "Direct fetch returned a CloudFront 403 body; public search source still shows the venue in category results with matching address, 22 acres, approximate 75 guests and $3000 wedding start. Current profile backlink not reverified.",
+      "search_source": "https://www.partyslate.com/find-venues/product-launch-venues/near/dallas-tx-usa?page=19",
+      "evidence_file": "/tmp/happy-partyslate-profile.html",
+      "new_backlink": false
+    },
+    {
+      "provider": "Visit Corsicana",
+      "url": "https://visitcorsicana.com/event-venues/",
+      "status": "Direct GET HTTP 200; no Happy Trails name/domain in this page. Existing inquiry remains pending; do not resubmit or infer whole-site absence.",
+      "evidence_file": "/tmp/happy-visit-venues.html",
+      "new_backlink": false
+    }
+  ],
+  "new_opportunities": [
+    {
+      "priority": 1,
+      "provider": "Pearl Connect by David's Bridal",
+      "kind": "Free venue discovery profile and website referral",
+      "sources": [
+        "https://pearl.davidsbridal.com/pearl-help/webstore-vendor",
+        "https://pearl.davidsbridal.com/vendor-categories",
+        "https://www.davidsbridal.com/content/wedding-planning/pearl-planner-the-ai-wedding-planning-tool-helping-vendors-book-smarter"
+      ],
+      "verified_status": "Official current help/pricing content states $0 free membership includes a published profile/public portfolio; free listings direct couples to the business website. Venue category explicitly supported. Pearl Planner uses venue details for matching. No Happy Trails listing or backlink verified.",
+      "account_or_owner_needed": [
+        "Exact chosen Gmail admin address",
+        "Business account signup and any email verification",
+        "Check for existing listing during signup before creating a new one"
+      ],
+      "next_action": "Open the free claim/signup flow, find Happy Trails by exact business name/address, choose Free only, then populate verified venue details and original photos. Do not connect email/calendar or select a paid tier to publish a basic profile.",
+      "submission_done": false,
+      "public_url": null,
+      "backlink_confirmed": false,
+      "new_vs_prior_30": true
+    },
+    {
+      "priority": 2,
+      "provider": "ReceptionHalls",
+      "kind": "Free venue directory profile",
+      "sources": [
+        "https://www.receptionhalls.com/venue-advertising",
+        "https://www.receptionhalls.com/register",
+        "https://www.receptionhalls.com/claim"
+      ],
+      "verified_status": "Official free listing offer and live registration form verified. Form requests name, email, company and password. Free profile includes photos, promos and videos. Exact free outbound-link behavior requires profile inspection after publication; not established by marketing page.",
+      "account_or_owner_needed": [
+        "Exact Gmail admin address",
+        "Account creation and any requested email verification",
+        "Existing-listing check before creating a duplicate"
+      ],
+      "next_action": "Search by venue name/address, then register and publish the free profile. Avoid optional paid upgrades.",
+      "submission_done": false,
+      "public_url": null,
+      "backlink_confirmed": false,
+      "new_vs_prior_30": true
+    },
+    {
+      "priority": 3,
+      "provider": "OpenStreetMap",
+      "kind": "Accurate geographic point of interest, not a guaranteed SEO backlink",
+      "sources": [
+        "https://wiki.openstreetmap.org/wiki/Tag:amenity=events_venue",
+        "https://wiki.openstreetmap.org/wiki/Key:website",
+        "https://api.openstreetmap.org/api/0.6/map?bbox=-96.702,32.065,-96.693,32.073"
+      ],
+      "verified_status": "Official event-venue tag supports name, address, phone and website. One bounded map-data GET returned HTTP 200 with 352 child elements, no Happy Trails/Shindigs/domain match and no events_venue tag. This is a local-area snapshot, not a global duplicate guarantee.",
+      "account_or_owner_needed": [
+        "OpenStreetMap account and contributor terms",
+        "Owner/local knowledge confirming exact physical venue point and public-facing name",
+        "Inspect map objects before editing"
+      ],
+      "next_action": "A mapper should add or correct one factual events_venue object using owner knowledge, website, phone and address. Do not add promotional keywords, reviews or guessed accessibility/hours.",
+      "evidence_file": "/tmp/happy-osm-area.xml",
+      "submission_done": false,
+      "public_url": null,
+      "backlink_confirmed": false,
+      "new_vs_prior_30": true
+    },
+    {
+      "priority": 4,
+      "provider": "Wed Society North Texas",
+      "kind": "Regional editorial real-wedding feature",
+      "sources": [
+        "https://www.bridesofnorthtexas.com/article/submit-your-wedding-for-publication/",
+        "https://www.bridesofnorthtexas.com/vows-that-wow/",
+        "https://www.bridesofnorthtexas.com/"
+      ],
+      "verified_status": "Official editorial instructions invite couple/vendor submissions with wedding date, vendor information and distinguishing details; current homepage still links Submit My Wedding. Publication is editorially selected. Submission form itself was unavailable to the web reader. No fee stated on inspected editorial instructions; do not assume vendor advertising is free.",
+      "account_or_owner_needed": [
+        "One genuine wedding at Happy Trails",
+        "Couple permission and photographer publication rights",
+        "Names/date, story, complete accurate vendor credits and high-quality gallery",
+        "Submission inbox address; form requirements must be checked live"
+      ],
+      "next_action": "Choose one real event with photographer cooperation and prepare an editorial pitch that credits Happy Trails with the canonical website.",
+      "submission_done": false,
+      "public_url": null,
+      "backlink_confirmed": false,
+      "new_vs_prior_30": true
+    },
+    {
+      "priority": 5,
+      "provider": "Green Wedding Shoes",
+      "kind": "Editorial real-wedding, styled-shoot or celebration feature",
+      "sources": [
+        "https://greenweddingshoes.com/submissions/",
+        "https://greenweddingshoes.com/submissions/submit-a-wedding/"
+      ],
+      "verified_status": "Live guidelines and form accept wedding professionals; website/credit fields are present. Wedding/styled-shoot submission requests 50-250 photos at least 2200px wide. No submission fee displayed. Selection is not guaranteed.",
+      "account_or_owner_needed": [
+        "Couple and photographer permission plus complete credits",
+        "Original event story and downloadable high-resolution gallery",
+        "Confirmation no conflicting submission/publication and acceptance of 60-day exclusivity if published",
+        "Contact name and Gmail admin inbox"
+      ],
+      "next_action": "Prepare one licensed real-event package; submit to this publisher only when no competing editorial submission is pending and all rights attestations are true.",
+      "submission_done": false,
+      "public_url": null,
+      "backlink_confirmed": false,
+      "new_vs_prior_30": true
+    },
+    {
+      "priority": 6,
+      "provider": "Ruffled",
+      "kind": "Editorial real-wedding feature",
+      "sources": [
+        "https://www.ruffledblog.com/submit-a-wedding/"
+      ],
+      "verified_status": "Official guidelines welcome real weddings and currently mention micro weddings; request 50-100 photos at least 1000px wide, vendor website links, social handles and story. No submission fee displayed. Publisher prefers real weddings; styled-shoot preference can depend on directory membership.",
+      "account_or_owner_needed": [
+        "Real-event permission from couple and photographer",
+        "Full credit/link list and original story",
+        "No pending competing submission; 60-day exclusivity after publication",
+        "Authorized submission sender/inbox"
+      ],
+      "next_action": "Use a genuine small-wedding story and high-quality licensed gallery. Select this as an alternative editorial target; do not mass-submit the same exclusive story.",
+      "submission_done": false,
+      "public_url": null,
+      "backlink_confirmed": false,
+      "new_vs_prior_30": true
+    },
+    {
+      "priority": 7,
+      "provider": "Style Me Pretty",
+      "kind": "Editorial feature with venue credit and possible story-page link",
+      "sources": [
+        "https://www.stylemepretty.com/submissions",
+        "https://www.stylemepretty.com/contact"
+      ],
+      "verified_status": "Current official guide accepts submissions, requests company URLs and complete credits, 80-150 images at least 900px wide and no more than 5MB each. Guide says an own-site story permalink can be included in a coordinated feature. No submission fee displayed; selected publication is not guaranteed.",
+      "account_or_owner_needed": [
+        "Submission account with Gmail admin address",
+        "Couple permission and photographer publication rights",
+        "Real event details and complete vendor credit URLs",
+        "Current exclusivity/publication status"
+      ],
+      "next_action": "Package one real wedding with an authentic venue story. If accepted, coordinate a useful own-site event feature and provide its canonical permalink.",
+      "submission_done": false,
+      "public_url": null,
+      "backlink_confirmed": false,
+      "new_vs_prior_30": true
+    }
+  ],
+  "deferred_or_excluded": [
+    {
+      "provider": "Rustic Wedding Guide",
+      "source": "https://guide.rusticweddingchic.com/about",
+      "reason": "Official indexed content offers free Basic listing, but direct HTTPS fetch failed hostname certificate verification and submission path could not be read. Defer until publisher resolves this; do not bypass TLS. Pearl is the stronger current alternative."
+    },
+    {
+      "provider": "Junebug Weddings",
+      "source": "https://junebugweddings.com/submission-guidelines",
+      "reason": "Current editorial guideline limits submissions to Junebug Vendors. Not treated as a new free self-service editorial opportunity."
+    },
+    {
+      "provider": "Previously reviewed platforms",
+      "reason": "Prior 30-platform attempts, paid tiers, security blocks, unsupported geography and unfinished accounts were not recounted as new improvements."
+    }
+  ],
+  "counts": {
+    "new_researched_opportunities": 7,
+    "new_submissions": 0,
+    "new_public_listings": 0,
+    "new_backlinks": 0
+  },
+  "limits": [
+    "Search-result absence does not prove absence from a directory or search index.",
+    "Publisher acceptance, inbound link attributes, indexing, rankings and AI-answer inclusion require later verification.",
+    "Editorial targets are alternatives for a real event with rights clearance, not a mass-submission list."
+  ]
+}

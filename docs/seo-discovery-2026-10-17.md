@@ -1,6 +1,6 @@
 # Twenty new search and referral improvements
 
-October 17, 2026. Scope: changes beyond the existing September SEO and referral passes. This record distinguishes completed website functionality from external publication, indexing, and traffic outcomes. Validation and deployment receipts are recorded below after execution.
+October 17, 2026. Scope: changes beyond the existing September SEO and referral passes. This record distinguishes completed website functionality from external publication, indexing, and traffic outcomes. All twenty actions are complete; validation and deployment receipts are recorded below.
 
 | # | New improvement | Public destination / purpose |
 | --- | --- | --- |
@@ -23,7 +23,7 @@ October 17, 2026. Scope: changes beyond the existing September SEO and referral 
 | 17 | Structured descriptions of the venue spaces | `/venue` connects the barn, grounds, bridal suite and bunkhouse to the venue, matching visible descriptions and real section links. |
 | 18 | Subject-specific sharing photographs | Venue, Pricing, Planning and Venue Information use relevant barn/reception photographs instead of all reusing the default sunset; Tour uses its actual poster. |
 | 19 | Sitemap discovery for all five new pages | Four guides and the watch page join the curated canonical sitemap; no fabricated modification dates or download duplicates. |
-| 20 | Notify IndexNow of the published changes | Execute only after production validation; record the actual service response below. Acceptance is distinct from indexing. |
+| 20 | Notify IndexNow of the published changes | Twelve new or changed production page URLs submitted once at 18:41:11 UTC; HTTP 200 acceptance. Acceptance is distinct from indexing. |
 
 The CSV/JSON downloads are referral resources with `noindex, follow`, not independently indexed landing pages. Related fields are kept in the same row of this record rather than counted as separate improvements. Existing generic metadata, robots rules, Google Analytics, photos, PDF, vCard, profiles and old planning checklists are not counted as new work. Research, testing and deployment are not counted as extra improvements.
 
@@ -47,4 +47,8 @@ Local checks passed: ESLint, TypeScript through the production build, 69 unit te
 
 The local site audit passed for 16 sitemap pages, 640 internal references, 56 unique HTML fragments and 294 additional destinations. Separate XML parsing confirms 16 pages and two video entries. Mobile/desktop visual checks covered eight pages at 390 and 1440 pixels with no overflow, broken images or browser errors. The three-page timeline print PDF preserves typed notes. No real inquiry was sent.
 
-Production deployment and IndexNow notification are pending. Completion will be recorded after live validation.
+Production source commit `b927668` deployed successfully through both existing Vercel projects. The canonical domain passed its live audit with the same 16 pages, 640 link references, 56 fragments and 294 additional destinations, with zero errors and zero redirect warnings. Sixteen live browser page/viewport checks passed at 390 and 1440 pixels. The live sitemap parses as valid XML and contains 16 pages, 21 images and two videos.
+
+One IndexNow request for 12 new or meaningfully changed URLs returned **HTTP 200** at **2026-10-17 18:41:11 UTC**. No duplicate request was sent. This confirms acceptance of the notification, not crawling, indexing, rankings or AI citations. No new third-party backlinks are confirmed in this pass.
+
+Evidence: [validation summary](../delivery/seo/discovery-2026-10-17/validation-summary.json), [deployment](../delivery/seo/discovery-2026-10-17/deployment.json), [live site audit](../delivery/seo/discovery-2026-10-17/live-site-audit.json), [live browser checks](../delivery/seo/discovery-2026-10-17/live-browser.json), [sitemap validation](../delivery/seo/discovery-2026-10-17/live-sitemap-validation.json), and [IndexNow receipt](../delivery/seo/discovery-2026-10-17/indexnow-submission.json).

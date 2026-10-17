@@ -1,0 +1,44 @@
+{
+  "source_commit": "b927668",
+  "local": {
+    "lint": "passed",
+    "production_build": "passed",
+    "unit_tests": {
+      "passed": 69,
+      "failed": 0
+    },
+    "browser_checks": {
+      "unique_checks": 48,
+      "initial_passed": 46,
+      "targeted_rerun_passed": 3,
+      "final_unresolved": 0,
+      "note": "Rerun includes two original failures plus the video sitemap test after XML escaping fix."
+    },
+    "responsive_visual_checks": 16,
+    "sitemap_pages": 16,
+    "sitemap_videos": 2,
+    "internal_link_references": 640,
+    "internal_fragments": 56,
+    "additional_resources": 294,
+    "real_inquiries_sent": 0
+  },
+  "external": {
+    "gmail_connected": "admin@happytrailsshindigs.com",
+    "pearl": "skipped by owner",
+    "receptionhalls": "not submitted; unconfirmed per-person price and event capacity fields",
+    "new_backlinks_confirmed": 0
+  },
+  "production": {
+    "deployment_status": "success",
+    "source_commit": "b927668",
+    "live_audit_passed": true,
+    "live_responsive_checks": 16,
+    "live_sitemap_pages": 16,
+    "live_sitemap_videos": 2,
+    "live_sitemap_images": 21,
+    "indexnow_http_status": 200,
+    "indexnow_urls": 12,
+    "indexnow_checked_at": "2026-10-17T18:41:11.598Z",
+    "indexing_or_ranking_change_confirmed": false
+  }
+}
