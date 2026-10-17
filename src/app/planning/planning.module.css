@@ -1,4 +1,16 @@
 .guide { padding-bottom: 72px; }
+.library { margin-block: 38px 50px; }
+.library h2, .checklistTitle { font-size: clamp(34px, 4vw, 52px); margin-block: 14px 20px; }
+.library > p:not(:first-child) { max-width: 760px; font-size: 14px; color: var(--muted); }
+.guideCards, .downloadCards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; margin-top: 26px; }
+.downloadCards { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.guideCards article, .downloadCards article { background: var(--paper); padding: 26px; border-top: 2px solid var(--sage); }
+.guideCards h3, .downloadCards h3 { font-size: 28px; }
+.guideCards h3 a:hover { text-decoration: underline; text-underline-offset: 4px; }
+.guideCards p, .downloadCards p { font-size: 13px; color: var(--muted); margin-top: 14px; }
+.downloadCards a { font-size: 12px; margin-top: 18px; }
+@media (max-width: 760px) { .guideCards, .downloadCards { grid-template-columns: 1fr; } }
+@media print { .library { break-inside: auto; } .guideCards, .downloadCards { display: block; } .guideCards article, .downloadCards article { break-inside: avoid; background: transparent; margin-top: 14px; padding: 16px 0; } }
 .tools { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 26px; }
 .jumpnav { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--line); }
 .jumpnav a { display: flex; align-items: center; gap: 12px; min-height: 58px; padding: 14px 18px 14px 0; border-bottom: 1px solid var(--line); font-size: 13px; }

@@ -1,0 +1,101 @@
+.breadcrumbWrap { padding-top: 32px; }
+.breadcrumbWrap :global(.breadcrumbs) { margin-bottom: 0; }
+.page :global(.page-intro) { padding-top: 36px; }
+.page :global(.page-intro) h1 { font-size: clamp(46px, 5.6vw, 78px); }
+.article { padding-bottom: 80px; }
+.tools { display: flex; justify-content: space-between; align-items: center; gap: 18px; padding-block: 18px 26px; border-bottom: 1px solid var(--line); }
+.tools > p { font-size: 12px; color: var(--muted); }
+.tools > div { display: flex; align-items: center; flex-wrap: wrap; gap: 20px; }
+.tools :global(.button) { min-height: 44px; font-size: 11px; padding: 12px 18px; }
+.layout { display: grid; grid-template-columns: minmax(0, .34fr) minmax(0, 1fr); gap: clamp(30px, 6vw, 86px); padding-top: 42px; }
+.sidebar nav { position: sticky; top: 28px; }
+.sidebar ol { list-style: none; margin: 18px 0 24px; padding: 0; }
+.sidebar li { border-bottom: 1px solid var(--line); }
+.sidebar li a { display: grid; grid-template-columns: 20px 1fr; gap: 12px; padding-block: 15px; font-size: 13px; line-height: 1.5; }
+.sidebar li a:hover, .worksheetJump:hover { color: var(--wine); }
+.sidebar li span { color: var(--wine); font-size: 10px; padding-top: 3px; }
+.worksheetJump { display: flex; justify-content: space-between; gap: 12px; align-items: center; font-size: 12px; }
+.worksheetJump svg { flex-shrink: 0; }
+.content { min-width: 0; max-width: 790px; }
+.introduction { color: var(--sage); font-size: 18px; line-height: 1.8; padding-bottom: 8px; }
+.section { padding-block: 28px 34px; border-bottom: 1px solid var(--line); scroll-margin-top: 28px; }
+.sectionNumber { color: var(--wine); font-size: 11px; letter-spacing: .1em; margin-bottom: 10px; }
+.section h2, .worksheet h2 { font-size: clamp(31px, 3.1vw, 42px); line-height: 1.12; }
+.section > p:not(.sectionNumber), .worksheet > p:not(:first-child) { font-size: 15px; line-height: 1.85; color: var(--muted); margin-top: 19px; }
+.checklist { padding: 19px 24px 19px 42px; background: var(--paper); margin-top: 22px; }
+.checklist li { padding-left: 5px; font-size: 14px; line-height: 1.7; }
+.checklist li + li { margin-top: 11px; }
+.checklist li::marker { color: var(--sage); }
+.source a { display: inline; text-decoration: underline; text-underline-offset: 4px; font-size: 12px; color: var(--sage); }
+.source svg { display: inline; margin-left: 5px; vertical-align: middle; }
+.worksheet { margin-top: 36px; padding: 28px; background: var(--paper); border-top: 2px solid var(--sage); scroll-margin-top: 28px; }
+.worksheet h2 { margin-top: 14px; }
+.schedule { margin-top: 24px; }
+.scheduleRow { display: grid; grid-template-columns: minmax(0, 1fr) 120px; gap: 22px; padding-block: 20px; border-top: 1px solid var(--line); }
+.exampleTime { font-size: 11px; color: var(--wine); }
+.scheduleRow h3 { font-size: 25px; margin-top: 7px; line-height: 1.15; }
+.scheduleRow p { font-size: 12px; color: var(--muted); margin-top: 8px; }
+.noteFields { margin-top: 24px; display: grid; gap: 20px; }
+.download a { flex-wrap: wrap; }
+.worksheet label { display: block; font-size: 12px; color: var(--sage); }
+.worksheet input { display: block; width: 100%; min-width: 0; min-height: 44px; background: transparent; border: 0; border-bottom: 1px solid var(--line); border-radius: 0; font: inherit; font-size: 16px; color: var(--ink); padding: 10px 2px 6px; margin-top: 4px; }
+.worksheet input:focus-visible { outline: 2px solid var(--sage); outline-offset: 3px; }
+.worksheet input::placeholder { color: var(--muted); }
+.takeaway { border-left: 2px solid var(--wine); padding-left: 22px; margin-top: 36px; font-size: 18px; color: var(--sage); line-height: 1.7; }
+.printUrl { display: none; }
+.nextSteps { display: flex; flex-direction: column; align-items: flex-start; gap: 16px; margin-top: 40px; }
+.nextSteps :global(.text-link) { flex-wrap: wrap; }
+@media (max-width: 900px) {
+  .layout { grid-template-columns: minmax(0, .4fr) minmax(0, 1fr); gap: 30px; }
+  .tools { align-items: flex-start; flex-direction: column; }
+  .worksheet { padding: 24px 20px; }
+}
+@media (max-width: 760px) {
+  .breadcrumbWrap { padding-top: 24px; }
+  .page :global(.page-intro) { padding-top: 28px; padding-bottom: 24px; }
+  .page :global(.page-intro) h1 { font-size: clamp(42px, 9vw, 62px); }
+  .tools > div { gap: 16px; }
+  .article { padding-bottom: 48px; }
+  .layout { display: block; padding-top: 28px; }
+  .sidebar nav { position: static; }
+  .sidebar ol { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 18px; margin-block: 10px 16px; }
+  .sidebar li a { grid-template-columns: 16px 1fr; gap: 8px; font-size: 12px; }
+  .worksheetJump { justify-content: flex-start; }
+  .content { margin-top: 32px; }
+  .introduction { font-size: 16px; }
+  .section { padding-block: 25px 28px; }
+  .scheduleRow { grid-template-columns: minmax(0, 1fr); gap: 12px; }
+  .scheduleRow label { max-width: 180px; }
+  .worksheet { margin-top: 28px; }
+  .takeaway { padding-left: 16px; font-size: 16px; }
+}
+@media print {
+  .breadcrumbWrap, .tools, .sidebar, .nextSteps, .cta, .download { display: none; }
+  .page :global(.page-intro) { display: block; width: 100%; padding: 12px 0; }
+  .page :global(.page-intro) h1 { font-size: 30px; }
+  .page :global(.page-intro) :global(.intro-copy) { max-width: none; margin-top: 12px; font-size: 12px; }
+  .article { width: 100%; padding: 0; }
+  .layout { display: block; padding-top: 14px; }
+  .content { max-width: none; margin: 0; }
+  .introduction { font-size: 12px; line-height: 1.6; }
+  .section { padding-block: 14px; }
+  .sectionNumber { font-size: 9px; margin-bottom: 6px; }
+  .section h2, .worksheet h2 { font-size: 23px; break-after: avoid; }
+  .section > p:not(.sectionNumber), .worksheet > p:not(:first-child) { font-size: 11px; line-height: 1.6; margin-top: 10px; }
+  .section p { orphans: 3; widows: 3; }
+  .checklist { padding-block: 10px; margin-top: 12px; }
+  .checklist li { font-size: 11px; break-inside: avoid; }
+  .source a { font-size: 10px; }
+  .worksheet { background: transparent; padding: 16px 0; margin-top: 18px; }
+  .worksheet label { font-size: 10px; }
+  .worksheet input { min-height: 30px; font-size: 11px; }
+  .worksheet input::placeholder { color: transparent; }
+  .schedule { margin-top: 14px; }
+  .scheduleRow { grid-template-columns: minmax(0, 1fr) 120px; padding-block: 11px; gap: 20px; break-inside: avoid; }
+  .scheduleRow h3 { font-size: 18px; }
+  .scheduleRow p { font-size: 10px; }
+  .noteFields { gap: 12px; }
+  .noteFields label { break-inside: avoid; }
+  .takeaway { font-size: 12px; margin-top: 18px; break-inside: avoid; }
+  .printUrl { display: block; font-size: 9px; margin-top: 20px; overflow-wrap: anywhere; }
+}

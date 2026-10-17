@@ -1,3 +1,4 @@
+import { PlanningLinks } from "@/components/planning-links";
 import type { Metadata } from "next";
 import { ContentImage } from "@/components/content-image";
 import { ButtonLink, ContactCta, PageIntro } from "@/components/ui";
@@ -80,6 +81,7 @@ export default function VendorsPage() {
           <ButtonLink href="/contact">Ask About Local Vendors</ButtonLink>
         </div>
       </section>
+      <PlanningLinks slugs={["vendor-coordination-checklist", "wedding-day-timeline"]} />
       <ContactCta />
     </>
   );

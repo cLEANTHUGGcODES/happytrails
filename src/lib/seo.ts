@@ -11,6 +11,14 @@ export const defaultSocialImage: SocialImage = {
   alt: "An outdoor ceremony arbor and benches beneath a Texas sunset at Happy Trails",
 };
 
+// Match the subject of the shared page to a photograph actually shown there.
+const pageSocialImages: Record<string, SocialImage> = {
+  "/venue": { src: "/images/barn-wide.webp", width: 2400, height: 1800, alt: "The renovated barn at Happy Trails in Blooming Grove, Texas" },
+  "/pricing": { src: "/images/barn-tables.webp", width: 2400, height: 1800, alt: "Reception tables inside the Happy Trails barn" },
+  "/planning": { src: "/images/barn-wide.webp", width: 2400, height: 1800, alt: "The Happy Trails barn, ready for a venue planning visit" },
+  "/venue-info": { src: "/images/barn-wide.webp", width: 2400, height: 1800, alt: "Happy Trails barn wedding and event venue" },
+};
+
 type PageMetadata = {
   title: string;
   description: string;
@@ -25,10 +33,11 @@ export function createPageMetadata({
   title,
   description,
   path,
-  image = defaultSocialImage,
+  image,
   type = "website",
   publishedTime,
 }: PageMetadata): Metadata {
+  image ??= pageSocialImages[path] ?? defaultSocialImage;
   const fullTitle = `${title} | ${site.shortName}`;
   const socialImage = {
     url: absoluteUrl(image.src),
@@ -56,6 +65,42 @@ export function createPageMetadata({
       description,
       images: [socialImage],
     },
+  };
+}
+
+export function getWebPageStructuredData(name: string, path: string) {
+  const type = path === "/contact" ? "ContactPage" : path === "/our-story" ? "AboutPage"
+    : ["/planning", "/gallery", "/venue-info"].includes(path) ? "CollectionPage" : "WebPage";
+  return {
+    "@context": "https://schema.org",
+    "@type": type,
+    "@id": absoluteUrl(`${path}#webpage`),
+    url: absoluteUrl(path),
+    name: `${name} | ${site.name}`,
+    inLanguage: "en-US",
+    isPartOf: { "@id": absoluteUrl("/#website") },
+    about: { "@id": absoluteUrl("/#venue") },
+    publisher: { "@id": absoluteUrl("/#venue") },
+  };
+}
+
+export function getVenueSpacesStructuredData() {
+  const spaces = [
+    { id: "the-barn", name: "The Barn", description: "A renovated 1,800-square-foot horse barn with a dance floor, custom wet bar, and covered outdoor seating.", image: "barn-wide" },
+    { id: "the-grounds", name: "The Grounds", description: "22 acres of countryside with a portable arbor and benches for an outdoor ceremony.", image: "exterior-wide" },
+    { id: "getting-ready", name: "Grain-bin Bridal Suite", description: "A 400-square-foot getting-ready space with air conditioning, a bathroom, and a loft with views.", image: "bridal-suite" },
+    { id: "the-bunkhouse", name: "Western-inspired Bunkhouse", description: "A 400-square-foot getting-ready space with air conditioning, a mini kitchen, a bathroom, and a large porch.", image: "bunkhouse" },
+  ];
+  return {
+    "@context": "https://schema.org",
+    "@type": "EventVenue",
+    "@id": absoluteUrl("/#venue"),
+    containsPlace: spaces.map(({ id, name, description, image }) => ({
+      "@type": "Place", "@id": absoluteUrl(`/venue#${id}`),
+      url: absoluteUrl(`/venue#${id}`), name, description,
+      image: absoluteUrl(`/images/${image}.webp`),
+      containedInPlace: { "@id": absoluteUrl("/#venue") },
+    })),
   };
 }
 

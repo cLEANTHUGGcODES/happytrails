@@ -1,9 +1,11 @@
+import { PlanningLinks } from "@/components/planning-links";
 import type { Metadata } from "next";
 import { ContentImage } from "@/components/content-image";
 import { Check, Download } from "lucide-react";
 import { PageIntro, ContactCta, ButtonLink } from "@/components/ui";
 import { site } from "@/lib/content";
-import { createPageMetadata } from "@/lib/seo";
+import { createPageMetadata, getVenueSpacesStructuredData } from "@/lib/seo";
+import { JsonLd } from "@/components/json-ld";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Barn Wedding & Event Venue in Blooming Grove",
@@ -28,6 +30,7 @@ function Amenities({ items }: { items: string[] }) {
 export default function VenuePage() {
   return (
     <>
+      <JsonLd data={getVenueSpacesStructuredData()} />
       <PageIntro breadcrumb={{ label: "The Venue", path: "/venue" }}
         eyebrow="Welcome to our little corner of Texas"
         title={
@@ -202,6 +205,7 @@ export default function VenuePage() {
           </div>
         </div>
       </section>
+      <PlanningLinks slugs={["small-wedding-layout-checklist", "outdoor-ceremony-weather-plan"]} />
       <ContactCta />
     </>
   );

@@ -43,6 +43,7 @@ export default async function GalleryPage() {
         <h2>
           Come along <em>for a tour.</em>
         </h2>
+        <p><a className="text-link" href="/tour">Open the property video tour page ↗</a></p>
         <VideoTour full />
       </section>
       <ContactCta />

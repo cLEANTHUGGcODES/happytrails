@@ -3,6 +3,7 @@ import { ArrowUpRight, Download } from "lucide-react";
 import { ContentImage } from "@/components/content-image";
 import { PageIntro } from "@/components/ui";
 import { ShareLink } from "@/components/share-link";
+import { CopyReference } from "@/components/copy-reference";
 import { site } from "@/lib/content";
 import { createPageMetadata } from "@/lib/seo";
 import styles from "./venue-info.module.css";
@@ -116,6 +117,19 @@ export default function VenueInfoPage() {
               <div key={label}><dt>{label}</dt><dd>{value}</dd></div>
             ))}
           </dl>
+        </section>
+        <section className={styles.section} id="link-to-happy-trails" aria-labelledby="referral-links-title">
+          <div className={styles.sectionHeading}>
+            <p className="eyebrow">For a helpful introduction</p>
+            <h2 id="referral-links-title">Share a link <em>to the venue.</em></h2>
+            <p>Writing a vendor portfolio, local venue roundup, or invitation website? Copy the format that fits your page and give readers a direct route to the details.</p>
+            <a className="text-link" href="/downloads/venue-reference.json" download>Download business details (JSON) <Download size={16} aria-hidden="true" /></a>
+          </div>
+          <div className={styles.descriptions}>
+            <CopyReference label="Website link" value={`${site.name} — wedding and event venue in Blooming Grove, Texas. ${site.url}/`} />
+            <CopyReference label="HTML link" value={`<a href="${site.url}/">Happy Trails Shindigs &amp; Events</a> — a wedding and event venue in Blooming Grove, Texas.`} />
+            <CopyReference label="Planning resource link" value={`Wedding and event planning checklists from Happy Trails: ${site.url}/planning`} />
+          </div>
         </section>
         <section className={styles.section} id="official-links" aria-labelledby="official-links-title">
           <div className={styles.sectionHeading}>

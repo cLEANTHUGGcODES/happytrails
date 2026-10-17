@@ -69,26 +69,31 @@ export const directions = {
 // Guest capacity is approximate; package inclusions are not inferred.
 export const faqs = [
   {
+    id: "location",
     question: "Where is Happy Trails?",
     answer:
       "Find us at 5281 FM 55, Blooming Grove, TX 76626, on 22 acres in rural Navarro County. The property is south of Blooming Grove, between I-35E and I-45, near State Highways 22 and 31. Get in touch to arrange a visit.",
     relatedLink: { href: "/contact#directions", label: "Map & driving directions" },
   },
   {
+    id: "wedding-price",
     question: "What does a wedding at Happy Trails cost?",
     answer:
       "Weddings start at $3,000. Contact Jennifer and Randy to talk through your plans and receive pricing for your celebration.",
   },
   {
+    id: "guest-count",
     question: "How many guests can Happy Trails accommodate?",
     answer: `Happy Trails can accommodate approximately ${site.guestCapacityEstimate} guests. Tell Jennifer and Randy about your guest list and plans when you get in touch.`,
   },
   {
+    id: "celebrations",
     question: "Can we host something other than a wedding?",
     answer:
       "Yes. Happy Trails welcomes birthday parties, family reunions, and other gatherings. Pricing for parties and functions is based on your needs; contact us to discuss your event.",
   },
   {
+    id: "getting-ready",
     question: "Are there places to get ready?",
     answer:
       "The property has a 400-square-foot, Western-inspired bunkhouse for groomsmen, with air conditioning, a mini kitchen, a bathroom, and a large porch. The 400-square-foot grain-bin bridal suite has air conditioning, a bathroom, and a loft with views.",
@@ -98,11 +103,13 @@ export const faqs = [
     },
   },
   {
+    id: "amenities",
     question: "What amenities are available?",
     answer:
       "The venue has a renovated 1,800-square-foot barn, covered outdoor seating, a dance floor with lighting, Wi-Fi, a custom double-tier wet bar with over 30 linear feet of bar top and countertop, a large-screen TV with a soundbar, tables, chairs, linens, ample parking, and a portable arbor with benches. We will help you understand how the spaces can work for your event.",
   },
   {
+    id: "vendors",
     question: "Can you help us find local vendors?",
     answer:
       "Depending on what your event needs, Jennifer and Randy can assist you with locating local vendors.",

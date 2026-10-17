@@ -4,7 +4,7 @@ import { ArrowUpRight, MapPin } from "lucide-react";
 import { ButtonLink, ContactCta } from "@/components/ui";
 import { VideoTour } from "@/components/video-tour";
 import { getUpdates, site, type MediaSlot } from "@/lib/content";
-import { createPageMetadata, getSiteStructuredData } from "@/lib/seo";
+import { createPageMetadata, getWebPageStructuredData } from "@/lib/seo";
 import { JsonLd } from "@/components/json-ld";
 
 export const metadata = createPageMetadata({
@@ -45,7 +45,7 @@ export default async function HomePage() {
   const updates = await getUpdates();
   return (
     <>
-      <JsonLd data={getSiteStructuredData()} />
+      <JsonLd data={getWebPageStructuredData("Wedding & Event Venue in Blooming Grove, TX", "/")} />
       <section className="hero" aria-labelledby="hero-title" data-motion-hero>
         <div className="hero-photo">
           <ContentImage

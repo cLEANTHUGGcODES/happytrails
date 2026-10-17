@@ -5,7 +5,8 @@ import { SiteFooter } from "@/components/site-footer";
 import { ScrollAnimations } from "@/components/scroll-animations";
 import { GoogleAnalytics } from "@/components/google-analytics";
 import { SITE_URL } from "@/lib/site-url";
-import { createPageMetadata } from "@/lib/seo";
+import { createPageMetadata, getSiteStructuredData } from "@/lib/seo";
+import { JsonLd } from "@/components/json-ld";
 import "./globals.css";
 
 const display = localFont({
@@ -50,6 +51,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       className={`${display.variable} ${body.variable}`}
     >
       <body>
+        <JsonLd data={getSiteStructuredData()} />
         <a href="#main-content" className="skip-link">
           Skip to content
         </a>

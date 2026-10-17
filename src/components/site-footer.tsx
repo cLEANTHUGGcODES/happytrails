@@ -52,6 +52,7 @@ export async function SiteFooter() {
           <nav className={styles.links} aria-label="Footer navigation">
             <Link href="/venue">The Venue</Link>
             <Link href="/gallery">Gallery</Link>
+            <Link href="/tour">Video Tour</Link>
             <Link href="/our-story">Our Story</Link>
             <Link href="/vendors">Vendors</Link>
             <Link href="/pricing">Pricing & FAQs</Link>

@@ -1620,3 +1620,10 @@ p {
 .share-link-fallback input { width: 100%; min-width: 0; border: 1px solid #b9aa9c; padding: .6rem; color: #382e25; background: #fffaf3; }
 .referral-tools { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.5rem; margin-block: 1.3rem; }
 @media print { html, body { background: white !important; } header, footer, .skip-link, .share-link-control, .print-control { display: none !important; } [data-motion] { opacity: 1 !important; visibility: visible !important; transform: none !important; } }
+
+/* Individual venue answers can be cited and shared directly. */
+.faq-topics { display: grid; gap: 8px; padding-bottom: 26px; }
+.faq-topics a { font-size: 13px; text-decoration: underline; text-underline-offset: 4px; }
+.faq-list details { scroll-margin-top: 28px; }
+.faq-list details:target { outline: 2px solid var(--sage); outline-offset: 8px; }
+.faq-permalink { display: inline-block; font-size: 12px; margin: 12px 14px 14px 0; text-decoration: underline; text-underline-offset: 4px; }

@@ -1,8 +1,10 @@
+import { PlanningLinks } from "@/components/planning-links";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Download, Flower2, Plus } from "lucide-react";
 import { ButtonLink, PageIntro, ContactCta } from "@/components/ui";
 import { Horseshoe } from "@/components/horseshoe";
+import { FaqDeepLinks } from "@/components/faq-deep-links";
 import { faqs } from "@/lib/content";
 import { createPageMetadata } from "@/lib/seo";
 
@@ -16,6 +18,7 @@ export const metadata: Metadata = createPageMetadata({
 export default function PricingPage() {
   return (
     <>
+      <FaqDeepLinks />
       <PageIntro breadcrumb={{ label: "Pricing & FAQs", path: "/pricing" }}
         eyebrow="Make room for what matters"
         title={
@@ -85,13 +88,17 @@ export default function PricingPage() {
             </h2>
           </div>
           <div className="faq-list">
+            <nav className="faq-topics" aria-label="Find a venue answer">
+              {faqs.map((faq) => <a key={faq.id} href={`#faq-${faq.id}`}>{faq.question}</a>)}
+            </nav>
             {faqs.map((faq) => (
-              <details key={faq.question}>
+              <details key={faq.id} id={`faq-${faq.id}`}>
                 <summary>
                   {faq.question}
                   <Plus size={17} aria-hidden="true" />
                 </summary>
                 <p>{faq.answer}</p>
+                <a className="faq-permalink" href={`#faq-${faq.id}`}>Link to this answer</a>
                 {"relatedLink" in faq && (
                   <Link className="text-link" href={faq.relatedLink.href} prefetch={false}>
                     {faq.relatedLink.label}
@@ -102,6 +109,7 @@ export default function PricingPage() {
           </div>
         </section>
       </div>
+      <PlanningLinks slugs={["small-wedding-layout-checklist", "wedding-day-timeline"]} />
       <ContactCta />
     </>
   );

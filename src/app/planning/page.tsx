@@ -6,6 +6,10 @@ import { PrintButton } from "@/components/print-button";
 import { ShareLink } from "@/components/share-link";
 import { planningGuides, visitorResources } from "@/lib/planning-content";
 import { createPageMetadata } from "@/lib/seo";
+import { planningResources } from "@/lib/planning-resources";
+import { planningDownloads } from "@/lib/planning-downloads";
+import { JsonLd } from "@/components/json-ld";
+import { absoluteUrl } from "@/lib/site-url";
 import styles from "./planning.module.css";
 
 export const metadata = createPageMetadata({
@@ -18,6 +22,14 @@ export const metadata = createPageMetadata({
 export default function PlanningPage() {
   return (
     <div className={styles.page}>
+      <JsonLd data={{
+        "@context": "https://schema.org", "@type": "ItemList",
+        "@id": absoluteUrl("/planning#guides"), name: "Happy Trails planning resources",
+        itemListElement: planningResources.map((resource, index) => ({
+          "@type": "ListItem", position: index + 1, name: resource.title,
+          url: absoluteUrl(`/planning/${resource.slug}`),
+        })),
+      }} />
       <PageIntro
         eyebrow="A few plans. A lot to look forward to."
         title={<>Start with <em>what matters.</em></>}
@@ -33,6 +45,29 @@ export default function PlanningPage() {
           <ShareLink path="/planning" title="Planning your celebration at Happy Trails" label="Share the planning guide" />
           <PrintButton label="Print the checklists" />
         </div>
+        <section className={styles.library} aria-labelledby="planning-library-title" id="guides">
+          <p className="eyebrow">Work through the details</p>
+          <h2 id="planning-library-title">Guides for <em>your kind of day.</em></h2>
+          <p>Start with the part you’re working on. Each guide has practical questions and a worksheet to bring to your planning conversation.</p>
+          <div className={styles.guideCards}>
+            {planningResources.map((resource) => <article key={resource.slug}>
+              <h3><Link href={`/planning/${resource.slug}`}>{resource.title} <span aria-hidden="true">↗</span></Link></h3>
+              <p>{resource.summary}</p>
+            </article>)}
+          </div>
+        </section>
+        <section className={styles.library} aria-labelledby="planning-downloads-title" id="worksheets">
+          <p className="eyebrow">Make a copy. Make it yours.</p>
+          <h2 id="planning-downloads-title">Planning sheets <em>to keep.</em></h2>
+          <p>Download a blank worksheet for Excel, Google Sheets, or Numbers. Fill in confirmed details with your team; these files contain no package quotes or booked times.</p>
+          <div className={styles.downloadCards}>
+            {planningDownloads.map((download) => <article key={download.slug}>
+              <h3>{download.title}</h3><p>{download.description}</p>
+              <a className="text-link" href={`/downloads/planning/${download.slug}`} download>Download {download.title.toLowerCase()} (CSV) ↗</a>
+            </article>)}
+          </div>
+        </section>
+        <h2 className={styles.checklistTitle}>Your venue visit <em>checklists.</em></h2>
         <nav className={styles.jumpnav} aria-label="Planning guide sections">
           {planningGuides.map((guide, index) => (
             <a href={`#${guide.id}`} key={guide.id}>

@@ -4,8 +4,7 @@ import { PageIntro } from "@/components/ui";
 import { InquiryForm } from "@/components/inquiry-form";
 import { VenueLocation } from "@/components/venue-location";
 import { site } from "@/lib/content";
-import { createPageMetadata, getBusinessStructuredData } from "@/lib/seo";
-import { JsonLd } from "@/components/json-ld";
+import { createPageMetadata } from "@/lib/seo";
 import Link from "next/link";
 import { ShareLink } from "@/components/share-link";
 
@@ -19,7 +18,6 @@ export const metadata = createPageMetadata({
 export default function ContactPage() {
   return (
     <>
-      <JsonLd data={{ "@context": "https://schema.org", ...getBusinessStructuredData() }} />
       <PageIntro breadcrumb={{ label: "Contact", path: "/contact" }}
         eyebrow="Every good day starts with hello"
         title={

@@ -1,0 +1,8 @@
+.related { padding-block: 42px 58px; }
+.related h2 { font-size: clamp(32px, 3.5vw, 48px); margin-block: 14px 24px; }
+.links { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 26px; }
+.links a { display: grid; gap: 10px; border-top: 1px solid var(--line); padding-top: 20px; }
+.links strong { font-size: 16px; font-weight: 500; }
+.links a > span { font-size: 13px; color: var(--muted); }
+.links a:hover strong { text-decoration: underline; text-underline-offset: 4px; }
+@media (max-width: 760px) { .links { grid-template-columns: 1fr; } }

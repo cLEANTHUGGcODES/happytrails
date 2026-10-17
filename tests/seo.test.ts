@@ -36,7 +36,7 @@ test("public URLs consistently use the HTTPS www domain", () => {
 
 test("each page carries its own canonical and complete nested sharing metadata", () => {
   const description = "Explore the barn and grounds in Blooming Grove, Texas.";
-  const metadata = createPageMetadata({ title: "The Venue", description, path: "/venue" });
+  const metadata = createPageMetadata({ title: "The Venue", description, path: "/venue", image: defaultSocialImage });
   const image = {
     url: `${publicOrigin}${defaultSocialImage.src}`,
     width: defaultSocialImage.width,

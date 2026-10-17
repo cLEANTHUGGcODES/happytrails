@@ -2,6 +2,7 @@ import { expect, test } from "@playwright/test";
 
 const origin = "https://www.happytrailsshindigs.com";
 const pages = ["/", "/venue", "/gallery", "/vendors", "/pricing", "/our-story", "/contact", "/privacy", "/planning", "/venue-info", "/guest-guide"];
+pages.push("/tour", "/planning/small-wedding-layout-checklist", "/planning/wedding-day-timeline", "/planning/outdoor-ceremony-weather-plan", "/planning/vendor-coordination-checklist");
 
 test("public pages expose unique metadata and consistent canonical and sharing URLs in server HTML", async ({ request, page }) => {
   const titles = new Set<string>();
