@@ -5,8 +5,10 @@ import { Download, Flower2, Plus } from "lucide-react";
 import { ButtonLink, PageIntro, ContactCta } from "@/components/ui";
 import { Horseshoe } from "@/components/horseshoe";
 import { FaqDeepLinks } from "@/components/faq-deep-links";
+import { JsonLd } from "@/components/json-ld";
 import { faqs } from "@/lib/content";
 import { createPageMetadata } from "@/lib/seo";
+import { getWeddingPricingStructuredData } from "@/lib/pricing-seo";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Wedding Venue Pricing & FAQs",
@@ -18,6 +20,7 @@ export const metadata: Metadata = createPageMetadata({
 export default function PricingPage() {
   return (
     <>
+      <JsonLd data={getWeddingPricingStructuredData()} />
       <FaqDeepLinks />
       <PageIntro breadcrumb={{ label: "Pricing & FAQs", path: "/pricing" }}
         eyebrow="Make room for what matters"

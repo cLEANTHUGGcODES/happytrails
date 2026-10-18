@@ -1,5 +1,6 @@
 import { basename } from "node:path";
 import { SITE_URL } from "../src/lib/site-url";
+import { parseSitemapPageLocations } from "./parse-sitemap";
 
 // Public ownership token, deliberately served at /<key>.txt. It grants no account access.
 export const INDEXNOW_KEY = "970656216a8295b8f73c67f37c081a89";
@@ -34,17 +35,7 @@ export function normalizePublicUrl(input: string): string {
 
 /** Reads our Next-generated URL sitemap; image:loc entries are deliberately excluded. */
 export function sitemapPageUrls(xml: string): string[] {
-  const source = xml.replace(/<!--[\s\S]*?-->/g, "");
-  if (!/<urlset\b/.test(source) || !/<\/urlset>\s*$/.test(source)) {
-    throw new Error("The live sitemap is not a URL sitemap.");
-  }
-  const urls = Array.from(source.matchAll(/<url(?:\s[^>]*)?>([\s\S]*?)<\/url>/g), (entry) => {
-    const locations = Array.from(entry[1].matchAll(/<loc(?:\s[^>]*)?>([\s\S]*?)<\/loc>/g));
-    if (locations.length !== 1) throw new Error("Each sitemap page must have exactly one loc.");
-    return normalizePublicUrl(decodeEntities(locations[0][1].trim()));
-  });
-  if (!urls.length) throw new Error("The live sitemap contains no page URLs.");
-  return [...new Set(urls)];
+  return [...new Set(parseSitemapPageLocations(xml).map(normalizePublicUrl))];
 }
 
 function attributes(tag: string): Record<string, string> {

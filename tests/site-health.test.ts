@@ -5,14 +5,14 @@ import { SITE_URL } from "../src/lib/site-url";
 
 const home = `${SITE_URL}/`;
 const venue = `${SITE_URL}/venue`;
-const sitemap = `<urlset xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+const sitemap = `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url><loc>${SITE_URL}</loc><image:image><image:loc>${SITE_URL}/images/barn.webp</image:loc></image:image></url>
   <url><loc>${venue}</loc></url>
 </urlset>`;
 
 function page(url: string, title: string, content = "", head = "") {
   return `<html><head><title>${title}</title><meta name="description" content="${title} description">
-    <link rel="canonical" href="${url}">${head}</head><body><h1>${title}</h1>${content}</body></html>`;
+    <link rel="canonical" href="${url}"><script type="application/ld+json">${JSON.stringify({ "@context": "https://schema.org", "@type": "WebPage", url })}</script>${head}</head><body><h1>${title}</h1>${content}</body></html>`;
 }
 
 type Reply = { body?: string; status?: number; type?: string; headers?: Record<string, string> };
@@ -60,12 +60,32 @@ test("audits sitemap pages, internal anchors and assets without external request
   assert.equal(result.passed, true);
   assert.equal(result.sitemapPages, 2, "Image sitemap locs must not be treated as pages.");
   assert.equal(result.pages.length, 2);
+  assert.ok(result.pages.every((entry) => entry.structuredDataBlocks === 1));
   assert.equal(result.fragmentsChecked, 2);
   assert.equal(result.skippedExternal, 1);
   assert.equal(mock.calls.filter((call) => call.url.endsWith("/images/barn.webp")).length, 1, "Repeated resources are fetched once.");
   assert.equal(mock.calls.find((call) => call.url.endsWith(".mp4"))?.method, "HEAD");
   assert.equal(mock.calls.find((call) => call.url.endsWith(".pdf"))?.method, "HEAD");
   assert.match(formatSummary(result), /site health: PASS/);
+});
+
+test("missing or broken server-rendered structured data fails the live audit", async () => {
+  const valid = page(venue, "The venue", '<section id="the barn">Venue</section>');
+  for (const body of [
+    valid.replace(/<script type="application\/ld\+json">.*?<\/script>/, ""),
+    valid.replace('"@type":"WebPage"', '"@type":'),
+    valid.replace(/<script type="application\/ld\+json">.*?<\/script>/, '<script type="application/ld+json">null</script>'),
+    valid.replace('type="application/ld+json"', 'data-type="application/ld+json" type="application/json"'),
+    valid.replace('type="application/ld+json"', `data-note='type="application/ld+json"' type="application/json"`),
+    valid.replace(/<script type="application\/ld\+json">.*?<\/script>/, '<script type="application/ld+json">{"name":"<!--" INVALID "-->"}</script>'),
+    valid + '<script type="application/ld+json">{</script>',
+  ]) {
+    const result = await auditSite({}, fixture({ "/venue": { body } }).fetcher);
+    assert.equal(result.passed, false);
+    assert.ok(result.errors.some((error) => /JSON-LD/.test(error.message)));
+  }
+  const result = await auditSite({}, fixture({ "/venue": { body: valid + '<!-- <script type="application/ld+json">broken</script> -->' } }).fetcher);
+  assert.equal(result.passed, true);
 });
 
 test("broken destinations and missing server anchors fail with the referring page", async () => {

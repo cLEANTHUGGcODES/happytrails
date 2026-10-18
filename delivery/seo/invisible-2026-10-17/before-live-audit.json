@@ -1,0 +1,1630 @@
+{
+  "checkedAt": "2026-10-18T00:00:00.692Z",
+  "site": "https://www.happytrailsshindigs.com",
+  "fetchedFrom": "https://www.happytrailsshindigs.com",
+  "sitemapPages": 16,
+  "pages": [
+    {
+      "url": "https://www.happytrailsshindigs.com/",
+      "kind": "page",
+      "status": 200,
+      "title": "Wedding & Event Venue in Blooming Grove, TX | Happy Trails",
+      "description": "Celebrate at Happy Trails, a barn wedding and event venue on 22 acres in Blooming Grove, Texas. Space for approximately 75 guests. Request a tour.",
+      "h1": "Big skies.Full hearts.Happy trails.",
+      "structuredDataBlocks": 2
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/contact",
+      "kind": "page",
+      "status": 200,
+      "title": "Contact & Venue Tours in Blooming Grove | Happy Trails",
+      "description": "Visit Happy Trails in Blooming Grove, Texas. Request a venue tour or tell Jennifer and Randy about your wedding, party, or family gathering.",
+      "h1": "Let’s makesomething memorable.",
+      "structuredDataBlocks": 3
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/gallery",
+      "kind": "page",
+      "status": 200,
+      "title": "Venue Photos & Video Tour | Happy Trails",
+      "description": "Browse photos and a video tour of Happy Trails in Blooming Grove, Texas: the rustic barn, sunset ceremony setting, bridal suite, and real celebrations.",
+      "h1": "Picture yourself here.",
+      "structuredDataBlocks": 4
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/guest-guide",
+      "kind": "page",
+      "status": 200,
+      "title": "Guest Arrival Guide & Directions | Happy Trails",
+      "description": "Share directions to Happy Trails at 5281 FM 55 in Blooming Grove, Texas. Save the venue contact, open the correct map pin, or print a guest arrival guide.",
+      "h1": "We’ll see youout our way.",
+      "structuredDataBlocks": 3
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/our-story",
+      "kind": "page",
+      "status": 200,
+      "title": "Jennifer & Randy’s Story | Happy Trails",
+      "description": "Meet Jennifer and Randy, the hosts behind Happy Trails, and discover how their family property in Blooming Grove became a place for celebrations.",
+      "h1": "Some trails leadback to each other.",
+      "structuredDataBlocks": 3
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/planning",
+      "kind": "page",
+      "status": 200,
+      "title": "Wedding & Event Planning Guide in Blooming Grove | Happy Trails",
+      "description": "Plan your Happy Trails visit with practical tour, guest-list, getting-ready, vendor, budget, and family gathering checklists, plus guest travel resources.",
+      "h1": "Start with what matters.",
+      "structuredDataBlocks": 4
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/planning/outdoor-ceremony-weather-plan",
+      "kind": "page",
+      "status": 200,
+      "title": "Outdoor ceremony weather planning checklist | Happy Trails",
+      "description": "Questions for an outdoor wedding weather plan: confirm alternate layouts, decision timing, vendor responsibilities, guest updates, and appropriate shelter arrangements.",
+      "h1": "Outdoor ceremony weather planning checklist",
+      "structuredDataBlocks": 2
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/planning/small-wedding-layout-checklist",
+      "kind": "page",
+      "status": 200,
+      "title": "Small wedding layout checklist | Happy Trails",
+      "description": "Plan a small wedding layout at Happy Trails in Blooming Grove: guest counts, table placement, service routes, ceremony transitions, and a printable worksheet.",
+      "h1": "Small wedding layout checklist",
+      "structuredDataBlocks": 2
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/planning/vendor-coordination-checklist",
+      "kind": "page",
+      "status": 200,
+      "title": "Wedding vendor coordination checklist | Happy Trails",
+      "description": "Keep wedding vendors working from one plan: written scope, venue requirements, delivery details, setup handoffs, contact lists, and a printable coordination worksheet.",
+      "h1": "Wedding vendor coordination checklist",
+      "structuredDataBlocks": 2
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/planning/wedding-day-timeline",
+      "kind": "page",
+      "status": 200,
+      "title": "Wedding day timeline worksheet | Happy Trails",
+      "description": "Build your wedding day timeline with a clearly labeled example, editable time fields, vendor handoffs, and a printable planning worksheet from Happy Trails.",
+      "h1": "Wedding day timeline worksheet",
+      "structuredDataBlocks": 2
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/pricing",
+      "kind": "page",
+      "status": 200,
+      "title": "Wedding Venue Pricing & FAQs | Happy Trails",
+      "description": "Weddings at Happy Trails in Blooming Grove, Texas, start at $3,000. Find venue answers and ask about pricing for birthdays, reunions, and other events.",
+      "h1": "Wedding pricing& celebrations.",
+      "structuredDataBlocks": 3
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/privacy",
+      "kind": "page",
+      "status": 200,
+      "title": "Privacy & Inquiry Information | Happy Trails",
+      "description": "Learn how Happy Trails uses your contact and event inquiry details, which services support the website, and how to ask about your information.",
+      "h1": "A note on privacy.",
+      "structuredDataBlocks": 3
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/tour",
+      "kind": "page",
+      "status": 200,
+      "title": "Property Video Tour in Blooming Grove, TX | Happy Trails",
+      "description": "Watch a video tour of Happy Trails in Blooming Grove, Texas. Explore the barn, grounds, bridal suite, and bunkhouse, then arrange an in-person venue visit.",
+      "h1": "A look around Happy Trails.",
+      "structuredDataBlocks": 3
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/vendors",
+      "kind": "page",
+      "status": 200,
+      "title": "Help Finding Local Event Vendors | Happy Trails",
+      "description": "Planning a celebration at Happy Trails? Jennifer and Randy can help you find local vendors in the Blooming Grove area based on your event’s needs.",
+      "h1": "Your vision.A little local help.",
+      "structuredDataBlocks": 3
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/venue",
+      "kind": "page",
+      "status": 200,
+      "title": "Barn Wedding & Event Venue in Blooming Grove | Happy Trails",
+      "description": "Explore our 1,800-square-foot barn, grain-bin bridal suite, and 22 acres in Blooming Grove, Texas, for celebrations with approximately 75 guests.",
+      "h1": "A place to gather.Room to make it yours.",
+      "structuredDataBlocks": 4
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/venue-info",
+      "kind": "page",
+      "status": 200,
+      "title": "Venue Information & Referral Resources | Happy Trails",
+      "description": "Find Happy Trails venue facts, ready-to-use descriptions, official links, and the downloadable fact sheet for referrals and event planning in Blooming Grove.",
+      "h1": "Happy Trails, at a glance.",
+      "structuredDataBlocks": 3
+    }
+  ],
+  "resources": [
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fbarn-bar-view.webp&w=1080&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fbarn-bar-view.webp&w=1200&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fbarn-bar-view.webp&w=1920&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fbarn-bar-view.webp&w=2048&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fbarn-bar-view.webp&w=256&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fbarn-bar-view.webp&w=384&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fbarn-bar-view.webp&w=3840&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fbarn-bar-view.webp&w=640&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fbarn-bar-view.webp&w=750&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fbarn-bar-view.webp&w=828&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fbarn-bar.webp&w=1080&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fbarn-bar.webp&w=1200&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fbarn-bar.webp&w=1920&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fbarn-bar.webp&w=2048&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fbarn-bar.webp&w=256&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fbarn-bar.webp&w=384&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fbarn-bar.webp&w=3840&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fbarn-bar.webp&w=640&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fbarn-bar.webp&w=750&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fbarn-bar.webp&w=828&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fbarn-dance-floor.webp&w=1080&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fbarn-dance-floor.webp&w=1200&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fbarn-dance-floor.webp&w=1920&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fbarn-dance-floor.webp&w=2048&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fbarn-dance-floor.webp&w=256&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fbarn-dance-floor.webp&w=384&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fbarn-dance-floor.webp&w=3840&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fbarn-dance-floor.webp&w=640&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fbarn-dance-floor.webp&w=750&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fbarn-dance-floor.webp&w=828&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fbarn-details.webp&w=1080&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fbarn-details.webp&w=1200&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fbarn-details.webp&w=1920&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fbarn-details.webp&w=2048&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fbarn-details.webp&w=256&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fbarn-details.webp&w=384&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fbarn-details.webp&w=3840&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fbarn-details.webp&w=640&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fbarn-details.webp&w=750&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fbarn-details.webp&w=828&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fbarn-reception-tables.webp&w=1080&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fbarn-reception-tables.webp&w=1200&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fbarn-reception-tables.webp&w=1920&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fbarn-reception-tables.webp&w=2048&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fbarn-reception-tables.webp&w=256&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fbarn-reception-tables.webp&w=384&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fbarn-reception-tables.webp&w=3840&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fbarn-reception-tables.webp&w=640&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fbarn-reception-tables.webp&w=750&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fbarn-reception-tables.webp&w=828&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fbarn-reception-view.webp&w=1080&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fbarn-reception-view.webp&w=1200&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fbarn-reception-view.webp&w=1920&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fbarn-reception-view.webp&w=2048&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fbarn-reception-view.webp&w=256&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fbarn-reception-view.webp&w=384&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fbarn-reception-view.webp&w=3840&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fbarn-reception-view.webp&w=640&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fbarn-reception-view.webp&w=750&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fbarn-reception-view.webp&w=828&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fbarn-tables.webp&w=1080&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fbarn-tables.webp&w=1200&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fbarn-tables.webp&w=1920&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fbarn-tables.webp&w=2048&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fbarn-tables.webp&w=256&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fbarn-tables.webp&w=384&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fbarn-tables.webp&w=3840&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fbarn-tables.webp&w=640&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fbarn-tables.webp&w=750&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fbarn-tables.webp&w=828&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fbarn-wide.webp&w=1080&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fbarn-wide.webp&w=1200&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fbarn-wide.webp&w=1920&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fbarn-wide.webp&w=2048&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fbarn-wide.webp&w=256&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fbarn-wide.webp&w=384&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fbarn-wide.webp&w=3840&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fbarn-wide.webp&w=640&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fbarn-wide.webp&w=750&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fbarn-wide.webp&w=828&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fbridal-suite.webp&w=1080&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fbridal-suite.webp&w=1200&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fbridal-suite.webp&w=1920&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fbridal-suite.webp&w=2048&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fbridal-suite.webp&w=256&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fbridal-suite.webp&w=384&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fbridal-suite.webp&w=3840&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fbridal-suite.webp&w=640&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fbridal-suite.webp&w=750&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fbridal-suite.webp&w=828&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fbunkhouse.webp&w=1080&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fbunkhouse.webp&w=1200&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fbunkhouse.webp&w=1920&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fbunkhouse.webp&w=2048&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fbunkhouse.webp&w=256&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fbunkhouse.webp&w=384&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fbunkhouse.webp&w=3840&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fbunkhouse.webp&w=640&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fbunkhouse.webp&w=750&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fbunkhouse.webp&w=828&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fcelebration.webp&w=1080&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fcelebration.webp&w=1200&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fcelebration.webp&w=1920&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fcelebration.webp&w=2048&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fcelebration.webp&w=256&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fcelebration.webp&w=384&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fcelebration.webp&w=3840&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fcelebration.webp&w=640&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fcelebration.webp&w=750&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fcelebration.webp&w=828&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fceremony-sunset.webp&w=1080&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fceremony-sunset.webp&w=1200&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fceremony-sunset.webp&w=1920&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fceremony-sunset.webp&w=2048&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fceremony-sunset.webp&w=256&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fceremony-sunset.webp&w=384&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fceremony-sunset.webp&w=3840&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fceremony-sunset.webp&w=640&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fceremony-sunset.webp&w=750&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fceremony-sunset.webp&w=828&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fevening-dance.webp&w=1080&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fevening-dance.webp&w=1200&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fevening-dance.webp&w=1920&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fevening-dance.webp&w=2048&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fevening-dance.webp&w=256&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fevening-dance.webp&w=384&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fevening-dance.webp&w=3840&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fevening-dance.webp&w=640&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fevening-dance.webp&w=750&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fevening-dance.webp&w=828&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fexterior-wide.webp&w=1080&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fexterior-wide.webp&w=1200&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fexterior-wide.webp&w=1920&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fexterior-wide.webp&w=2048&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fexterior-wide.webp&w=256&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fexterior-wide.webp&w=384&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fexterior-wide.webp&w=3840&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fexterior-wide.webp&w=640&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fexterior-wide.webp&w=750&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fexterior-wide.webp&w=828&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Ffirst-dance.webp&w=1080&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Ffirst-dance.webp&w=1200&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Ffirst-dance.webp&w=128&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Ffirst-dance.webp&w=1920&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Ffirst-dance.webp&w=2048&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Ffirst-dance.webp&w=256&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Ffirst-dance.webp&w=384&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Ffirst-dance.webp&w=3840&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Ffirst-dance.webp&w=640&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Ffirst-dance.webp&w=750&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Ffirst-dance.webp&w=828&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Ffood-and-friends.webp&w=1080&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Ffood-and-friends.webp&w=1200&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Ffood-and-friends.webp&w=1920&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Ffood-and-friends.webp&w=2048&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Ffood-and-friends.webp&w=256&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Ffood-and-friends.webp&w=384&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Ffood-and-friends.webp&w=3840&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Ffood-and-friends.webp&w=640&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Ffood-and-friends.webp&w=750&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Ffood-and-friends.webp&w=828&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fhappy-trails-map.webp&w=1080&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fhappy-trails-map.webp&w=1200&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fhappy-trails-map.webp&w=1920&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fhappy-trails-map.webp&w=2048&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fhappy-trails-map.webp&w=384&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fhappy-trails-map.webp&w=3840&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fhappy-trails-map.webp&w=640&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fhappy-trails-map.webp&w=750&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fhappy-trails-map.webp&w=828&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fhospitality.webp&w=1080&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fhospitality.webp&w=1200&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fhospitality.webp&w=1920&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fhospitality.webp&w=2048&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fhospitality.webp&w=256&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fhospitality.webp&w=384&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fhospitality.webp&w=3840&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fhospitality.webp&w=640&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fhospitality.webp&w=750&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fhospitality.webp&w=828&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Flogo.png&w=256&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Flogo.png&w=384&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Flogo.png&w=640&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fparking.webp&w=1080&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fparking.webp&w=1200&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fparking.webp&w=1920&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fparking.webp&w=2048&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fparking.webp&w=256&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fparking.webp&w=384&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fparking.webp&w=3840&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fparking.webp&w=640&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fparking.webp&w=750&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fparking.webp&w=828&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Freception-bar-guests.webp&w=1080&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Freception-bar-guests.webp&w=1200&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Freception-bar-guests.webp&w=1920&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Freception-bar-guests.webp&w=2048&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Freception-bar-guests.webp&w=256&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Freception-bar-guests.webp&w=384&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Freception-bar-guests.webp&w=3840&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Freception-bar-guests.webp&w=640&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Freception-bar-guests.webp&w=750&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Freception-bar-guests.webp&w=828&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fthe-hosts.webp&w=1080&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fthe-hosts.webp&w=1200&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fthe-hosts.webp&w=1920&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fthe-hosts.webp&w=2048&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fthe-hosts.webp&w=256&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fthe-hosts.webp&w=384&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fthe-hosts.webp&w=3840&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fthe-hosts.webp&w=640&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fthe-hosts.webp&w=750&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fthe-hosts.webp&w=828&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Ftour-poster.webp&w=1080&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Ftour-poster.webp&w=1200&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Ftour-poster.webp&w=1920&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Ftour-poster.webp&w=2048&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Ftour-poster.webp&w=3840&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Ftour-poster.webp&w=640&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Ftour-poster.webp&w=750&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Ftour-poster.webp&w=828&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fwedding-dance-floor.webp&w=1080&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fwedding-dance-floor.webp&w=1200&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fwedding-dance-floor.webp&w=1920&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fwedding-dance-floor.webp&w=2048&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fwedding-dance-floor.webp&w=256&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fwedding-dance-floor.webp&w=384&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fwedding-dance-floor.webp&w=3840&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fwedding-dance-floor.webp&w=640&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fwedding-dance-floor.webp&w=750&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/image?url=%2Fimages%2Fwedding-dance-floor.webp&w=828&q=75",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/static/immutable/chunks/00quu_9szz920.css",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/static/immutable/chunks/023re24j275ot.js",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/static/immutable/chunks/03t6kv2fefx8o.css",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/static/immutable/chunks/073czbad9-0ti.css",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/static/immutable/chunks/08vdaf9x0zzzt.js",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/static/immutable/chunks/0c0hxoamwjsbw.js",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/static/immutable/chunks/0jrox7kxngwmd.js",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/static/immutable/chunks/0p185i6_va3sy.css",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/static/immutable/chunks/14edw40uoc8ng.css",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/static/immutable/chunks/1q66nvdlgk3xb.css",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/static/immutable/chunks/1wo8yk8y2sogd.css",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/static/immutable/chunks/2_lgl9wqfzibv.js",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/static/immutable/chunks/22sc33xqo245_.js",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/static/immutable/chunks/232e-glpj9rf8.js",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/static/immutable/chunks/2cn1h7-ori9vm.css",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/static/immutable/chunks/2cr55s101qcb1.js",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/static/immutable/chunks/2hue7_979v147.css",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/static/immutable/chunks/2t4yal2y6qtfr.js",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/static/immutable/chunks/2tegluoxg9ia3.js",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/static/immutable/chunks/2yvx77qah4ntb.css",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/static/immutable/chunks/2z00udyriwne3.js",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/static/immutable/chunks/32arypo6xylsx.js",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/static/immutable/chunks/35v_9pxub7jx7.js",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/static/immutable/chunks/36k8in9a291ok.js",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/static/immutable/chunks/3byjtgykzfhsr.js",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/static/immutable/chunks/3fr-kk6amz9_e.js",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/static/immutable/chunks/3g7rgtxg97ho8.js",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/static/immutable/chunks/41a51jw6n6n49.js",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/static/immutable/chunks/turbopack-0vgr3pklypz9l.js",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/static/immutable/media/cormorant_italic-s.p.369iaql9n6a6a.woff2",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/static/immutable/media/cormorant_roman-s.p.1wfvpvbbo3vam.woff2",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/_next/static/immutable/media/manrope-s.p.2xs28az5j2efm.woff2",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/downloads/happy-trails-venue-fact-sheet.pdf",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/downloads/happy-trails.vcf",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/downloads/planning/event-timeline.csv",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/downloads/planning/vendor-contacts.csv",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/downloads/planning/wedding-budget.csv",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/downloads/venue-reference.json",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/favicon.png",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/images/barn-bar-view.webp",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/images/barn-bar.webp",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/images/barn-dance-floor.webp",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/images/barn-details.webp",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/images/barn-reception-tables.webp",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/images/barn-reception-view.webp",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/images/barn-tables.webp",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/images/barn-wide.webp",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/images/bridal-suite.webp",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/images/bunkhouse.webp",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/images/celebration.webp",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/images/ceremony-sunset.webp",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/images/evening-dance.webp",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/images/exterior-wide.webp",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/images/first-dance.webp",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/images/food-and-friends.webp",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/images/happy-trails-map.png",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/images/hospitality.webp",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/images/parking.webp",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/images/reception-bar-guests.webp",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/images/the-hosts.webp",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/images/wedding-dance-floor.webp",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/videos/full-property-tour.mp4",
+      "kind": "asset",
+      "status": 200
+    },
+    {
+      "url": "https://www.happytrailsshindigs.com/videos/property-tour.mp4",
+      "kind": "asset",
+      "status": 200
+    }
+  ],
+  "internalLinks": 640,
+  "fragmentsChecked": 56,
+  "skippedExternal": 65,
+  "errors": [],
+  "warnings": [],
+  "passed": true
+}

@@ -142,6 +142,7 @@ test("business structured data preserves the owner-confirmed address, coordinate
     "https://share.google/9rQF96KgYlFHWrYcA",
     "https://www.yelp.com/biz/happy-trails-shindigs-and-events-blooming-grove",
     "https://www.partyslate.com/venues/happy-trails-shindigs-events",
+    "https://bloominggrovetx.com/businesses/happy-trails-shindigs-events/",
   ]);
   assert.deepEqual(business.sameAs, Object.values(site.profiles));
 });

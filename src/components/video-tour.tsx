@@ -1,23 +1,15 @@
 "use client";
 
-import Image, { getImageProps } from "next/image";
+import Image from "next/image";
 import { Play } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import styles from "./video-tour.module.css";
 
-// Browsers fetch native video posters even with preload="none". Use a compact
-// optimized fallback; the visible play overlay keeps its responsive photograph.
-const videoPoster = getImageProps({
-  src: "/images/tour-poster.webp",
-  alt: "",
-  width: 480,
-  height: 270,
-}).props.src;
-
-export function VideoTour({ full = false }: { full?: boolean }) {
+export function VideoTour({ full = false, posterSizes }: { full?: boolean; posterSizes: string }) {
   const [playing, setPlaying] = useState(false);
   const [playbackError, setPlaybackError] = useState(false);
   const video = useRef<HTMLVideoElement>(null);
+  const poster = useRef<HTMLImageElement>(null);
   const playButton = useRef<HTMLButtonElement>(null);
   const source = full ? "/videos/full-property-tour.mp4" : "/videos/property-tour.mp4";
 
@@ -34,6 +26,10 @@ export function VideoTour({ full = false }: { full?: boolean }) {
   async function playTour() {
     const element = video.current;
     if (!element) return;
+    // The responsive overlay is already visible, including without JavaScript.
+    // Reuse its selected image before revealing the video instead of making the
+    // browser download a second, hidden native poster on every page load.
+    element.poster = poster.current?.currentSrc || poster.current?.src || "/images/tour-poster.webp";
     setPlaybackError(false);
     setPlaying(true);
     try {
@@ -53,7 +49,6 @@ export function VideoTour({ full = false }: { full?: boolean }) {
           controls={playing}
           playsInline
           preload="none"
-          poster={videoPoster}
           aria-label={full ? "Full Happy Trails property tour" : "Happy Trails property tour"}
           aria-hidden={!playing}
           tabIndex={playing ? 0 : -1}
@@ -80,9 +75,10 @@ export function VideoTour({ full = false }: { full?: boolean }) {
           >
             <Image
               src="/images/tour-poster.webp"
+              ref={poster}
               alt="A preview of the Happy Trails property tour"
               fill
-              sizes="(max-width: 767px) calc(100vw - 40px), 90vw"
+              sizes={posterSizes}
               className={styles.poster}
             />
             <span className={styles.shade} aria-hidden="true" />

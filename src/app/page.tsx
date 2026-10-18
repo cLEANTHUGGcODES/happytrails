@@ -257,7 +257,7 @@ export default async function HomePage() {
           </Link>
         </div>
         <div className="story-tour">
-          <VideoTour />
+          <VideoTour posterSizes="(max-width: 760px) calc(100vw - 40px), (max-width: 1100px) calc(56.09756vw - 63.95122px), (max-width: 1440px) calc(56.09756vw - 98.73171px), 710px" />
         </div>
       </section>
       {updates.length > 0 && (

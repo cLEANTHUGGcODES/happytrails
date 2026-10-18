@@ -172,7 +172,7 @@ test.describe("Gallery and property tour", () => {
     const serverVideo = (await response!.text()).match(/<video\b[^>]*>/)?.[0];
     expect(serverVideo).toBeDefined();
     expect(serverVideo).toContain('src="/videos/full-property-tour.mp4"');
-    expect(serverVideo).toContain('poster="/_next/image?url=%2Fimages%2Ftour-poster.webp');
+    expect(serverVideo).not.toContain("poster=");
     expect(serverVideo).toContain('preload="none"');
     expect(serverVideo).not.toContain("autoplay");
     const play = page.getByRole("button", {
@@ -181,6 +181,7 @@ test.describe("Gallery and property tour", () => {
     });
     await play.scrollIntoViewIfNeeded();
     await expect(play).toBeVisible();
+    const visiblePoster = await play.locator("img").evaluate((image: HTMLImageElement) => image.currentSrc);
     const video = page.locator("video");
     await expect(video).toHaveCount(1);
     await expect(video).toBeVisible();
@@ -202,6 +203,7 @@ test.describe("Gallery and property tour", () => {
     await play.click();
     const playbackAlert = page.getByRole("alert").filter({ hasText: "This video could not play." });
     await expect(playbackAlert).toBeVisible();
+    await expect(video).toHaveAttribute("poster", visiblePoster);
     await expect(play).toBeVisible();
     await expect(play).toBeFocused();
     await expect(video).toHaveAttribute("aria-hidden", "true");

@@ -6,7 +6,7 @@ import { assertIndexablePage, sitemapPageUrls } from "./submit-indexnow";
 type Fetcher = typeof fetch;
 type Finding = { url: string; message: string; source?: string };
 type Resource = { url: string; kind: "page" | "asset"; status: number | null; redirectedTo?: string };
-type Page = Resource & { title: string; description: string; h1: string };
+type Page = Resource & { title: string; description: string; h1: string; structuredDataBlocks: number };
 type Link = { source: string; url: string; fragment: string };
 export type AuditReport = {
   checkedAt: string;
@@ -32,15 +32,34 @@ function decode(value: string): string {
   });
 }
 
+function htmlAttributes(source: string): Record<string, string> {
+  return Object.fromEntries(Array.from(source.matchAll(/([\w:-]+)\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s>]+))/g), (attr) => [
+    attr[1].toLowerCase(), decode(attr[2] ?? attr[3] ?? attr[4]),
+  ]));
+}
+
 /** Inspect server HTML, excluding raw script/style text and comments, without a browser install. */
 function inspectHtml(html: string) {
+  const structuredData: unknown[] = [];
+  const structuredDataErrors: string[] = [];
+  // Read JSON-LD before removing scripts from the ordinary HTML inspection.
+  for (const match of html.matchAll(/<!--[\s\S]*?-->|<script\b((?:"[^"]*"|'[^']*'|[^'">])*)>([\s\S]*?)<\/script\s*>/gi)) {
+    if (match[1] === undefined || htmlAttributes(match[1]).type?.toLowerCase() !== "application/ld+json") continue;
+    try {
+      const value: unknown = JSON.parse(match[2]);
+      if (!value || typeof value !== "object" || (Array.isArray(value) && !value.length)) {
+        throw new Error("JSON-LD must contain an object or a nonempty array.");
+      }
+      structuredData.push(value);
+    } catch (error) {
+      structuredDataErrors.push(`Invalid JSON-LD: ${error instanceof Error ? error.message : String(error)}`);
+    }
+  }
   const markup = html.replace(/<!--[\s\S]*?-->|<(script|style)\b((?:"[^"]*"|'[^']*'|[^'">])*)>[\s\S]*?<\/\1\s*>/gi,
     (tag, name: string, attrs: string) => name ? `<${name}${attrs}></${name}>` : "");
   const tags = Array.from(markup.matchAll(/<([a-z][\w:-]*)\b((?:"[^"]*"|'[^']*'|[^'">])*)>/gi), (match) => ({
     name: match[1].toLowerCase(),
-    attrs: Object.fromEntries(Array.from(match[2].matchAll(/([\w:-]+)\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s>]+))/g), (attr) => [
-      attr[1].toLowerCase(), decode(attr[2] ?? attr[3] ?? attr[4]),
-    ])),
+    attrs: htmlAttributes(match[2]),
   }));
   const textOf = (tag: string) => Array.from(markup.matchAll(new RegExp(`<${tag}\\b[^>]*>([\\s\\S]*?)<\\/${tag}\\s*>`, "gi")),
     (match) => decode(match[1].replace(/<[^>]+>/g, "")).replace(/\s+/g, " ").trim());
@@ -56,7 +75,7 @@ function inspectHtml(html: string) {
     if (name === "link" && /(^|\s)(stylesheet|icon|preload|modulepreload)(\s|$)/i.test(attrs.rel ?? "") && attrs.href) assets.push(attrs.href);
   }
   return {
-    ids, links, assets,
+    ids, links, assets, structuredData, structuredDataErrors,
     titles: textOf("title"), headings: textOf("h1"),
     descriptions: tags.filter(({ name, attrs }) => name === "meta" && attrs.name?.toLowerCase() === "description").map(({ attrs }) => attrs.content?.trim() ?? ""),
   };
@@ -142,7 +161,7 @@ export async function auditSite(options: { baseUrl?: string } = {}, fetcher: Fet
   }
 
   await limitedMap([...pageUrls], async (url) => {
-    const page: Page = { url, kind: "page", status: null, title: "", description: "", h1: "" };
+    const page: Page = { url, kind: "page", status: null, title: "", description: "", h1: "", structuredDataBlocks: 0 };
     report.pages.push(page);
     try {
       const response = await request(url);
@@ -159,6 +178,9 @@ export async function auditSite(options: { baseUrl?: string } = {}, fetcher: Fet
       page.title = parsed.titles[0] ?? "";
       page.description = parsed.descriptions[0] ?? "";
       page.h1 = parsed.headings[0] ?? "";
+      page.structuredDataBlocks = parsed.structuredData.length;
+      for (const message of parsed.structuredDataErrors) fail(url, message);
+      if (!parsed.structuredData.length && !parsed.structuredDataErrors.length) fail(url, "No server-rendered JSON-LD found.");
       for (const [label, values] of [["title", parsed.titles], ["description", parsed.descriptions], ["H1", parsed.headings]] as const) {
         if (values.length !== 1 || !values[0]) fail(url, `Expected one nonempty ${label}; found ${values.length}.`);
       }

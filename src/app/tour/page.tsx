@@ -43,7 +43,7 @@ export default function TourPage() {
             <h2 id="full-tour-heading">The full property tour</h2>
             <p>{fullTour.durationLabel}</p>
           </div>
-          <VideoTour full />
+          <VideoTour full posterSizes="(max-width: 760px) calc(100vw - 40px), (max-width: 1100px) calc(100vw - 64px), (max-width: 1162px) calc(100vw - 112px), 1050px" />
           <p className={styles.summary}>{fullTour.description}</p>
           <div className={styles.tourLinks}>
             <a className="text-link" href={fullTour.src}>Open the full video ↗</a>
@@ -97,7 +97,7 @@ export default function TourPage() {
             <p className={styles.duration}>{shortTour.durationLabel}</p>
             <a className="text-link" href={shortTour.src}>Open the short video ↗</a>
           </div>
-          <VideoTour />
+          <VideoTour posterSizes="(max-width: 760px) calc(100vw - 40px), (max-width: 1100px) calc(59.375vw - 40px), (max-width: 1440px) calc(59.375vw - 70px), 785px" />
         </section>
       </div>
       <ContactCta />

@@ -44,7 +44,7 @@ export default async function GalleryPage() {
           Come along <em>for a tour.</em>
         </h2>
         <p><a className="text-link" href="/tour">Open the property video tour page ↗</a></p>
-        <VideoTour full />
+        <VideoTour full posterSizes="(max-width: 760px) calc(100vw - 40px), (max-width: 964px) calc(100vw - 64px), 900px" />
       </section>
       <ContactCta />
     </>

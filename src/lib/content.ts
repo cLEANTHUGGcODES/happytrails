@@ -53,6 +53,7 @@ export const site = {
     google: "https://share.google/9rQF96KgYlFHWrYcA",
     yelp: "https://www.yelp.com/biz/happy-trails-shindigs-and-events-blooming-grove",
     partyslate: "https://www.partyslate.com/venues/happy-trails-shindigs-events",
+    bloomingGrove: "https://bloominggrovetx.com/businesses/happy-trails-shindigs-events/",
   },
 } as const;
 

@@ -73,6 +73,28 @@ test("sitemap selection includes page locs only and rejects empty or foreign URL
   assert.throws(() => sitemapPageUrls(sitemap.replace(venue, "https://example.com/venue")));
 });
 
+test("invalid XML anywhere in a sitemap prevents submission, including video descriptions", async () => {
+  const videoSitemap = sitemap.replace('xmlns:image=', 'xmlns:video="http://www.google.com/schemas/sitemap-video/1.1" xmlns:image=')
+    .replace(`<loc>${venue}</loc>`, `<loc>${venue}</loc><video:video><video:description>Barn &amp; grounds</video:description></video:video>`);
+  assert.deepEqual(sitemapPageUrls(videoSitemap), [home, venue]);
+  for (const broken of [
+    videoSitemap.replace("Barn &amp; grounds", "Barn & grounds"),
+    videoSitemap.replace("</video:description>", "</video:title>"),
+    videoSitemap.replace("Barn &amp; grounds", "Barn &unknown; grounds"),
+    sitemap.replace(`<loc>${venue}</loc>`, `<loc>${venue}</loc><loc>${home}</loc>`),
+    sitemap.replace("http://www.sitemaps.org/schemas/sitemap/0.9", "https://example.com/wrong-namespace"),
+  ]) {
+    const mock = fixture({ [`${SITE_URL}/sitemap.xml`]: { body: broken } });
+    await assert.rejects(submitIndexNow({ paths: ["/venue"], submit: true }, mock.fetcher));
+    assert.equal(mock.posts().length, 0);
+  }
+});
+
+test("sitemap parsing understands namespaces and CDATA without following doctypes", () => {
+  assert.deepEqual(sitemapPageUrls(`<s:urlset xmlns:s="http://www.sitemaps.org/schemas/sitemap/0.9"><s:url><s:loc><![CDATA[${venue}]]></s:loc></s:url></s:urlset>`), [venue]);
+  assert.throws(() => sitemapPageUrls(`<!DOCTYPE urlset SYSTEM "https://example.com/remote.dtd">${sitemap.replace(/<\?xml[^>]+>/, "")}`), /DOCTYPE/);
+});
+
 test("default dry run validates the live key and all selected pages without posting", async () => {
   const mock = fixture();
   const result = await submitIndexNow({ paths: [], all: true }, mock.fetcher);
