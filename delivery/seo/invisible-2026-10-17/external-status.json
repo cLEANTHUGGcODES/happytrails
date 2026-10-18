@@ -12,12 +12,14 @@
     "status": "Application approved September 30; invitation now expired",
     "accountCreated": false,
     "profilePublished": false,
-    "nextStep": "Unsent reply draft asks vendors@ourvowspace.com for a new invitation for the existing application; send approval pending."
+    "supportEmail": "Sent to vendors@ourvowspace.com after explicit owner approval on October 17 Central; Gmail confirmed SENT.",
+    "nextStep": "Await a fresh invitation for the existing approved application, then complete the venue profile."
   },
   "partySlate": {
     "publicProfile": "https://www.partyslate.com/venues/happy-trails-shindigs-events",
     "status": "Existing published profile; previously observed map discrepancy not freshly verified",
-    "nextStep": "Unsent support@partyslate.com draft requests confirmation/correction to owner-confirmed coordinates; send approval pending."
+    "supportEmail": "Sent to support@partyslate.com after explicit owner approval on October 17 Central; Gmail confirmed SENT.",
+    "nextStep": "Await confirmation/correction to owner-confirmed coordinates; the map change itself is not yet confirmed."
   },
   "bloomingGrove": {
     "publicProfile": "https://bloominggrovetx.com/businesses/happy-trails-shindigs-events/",
@@ -32,5 +34,6 @@
   },
   "pearl": { "status": "Skipped at owner's explicit request" },
   "bingPlaces": { "status": "Prior owner pause retained" },
-  "outboundSupportEmailsSent": 0
+  "outboundSupportEmailsSent": 2,
+  "sendStatusRecordedAtUtc": "2026-10-18T00:30:48Z"
 }
