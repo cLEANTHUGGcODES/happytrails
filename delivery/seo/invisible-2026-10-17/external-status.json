@@ -1,0 +1,36 @@
+{
+  "checkedDateLocal": "2026-10-17",
+  "adminEmail": "admin@happytrailsshindigs.com",
+  "newPublishedBacklinks": 0,
+  "googleSearchConsole": {
+    "status": "Owner sign-in and property status required",
+    "domain": "happytrailsshindigs.com",
+    "nextStep": "Owner selects/adds Domain property and supplies exact Google-issued TXT value if not already verified.",
+    "limitation": "Connected Gmail does not provide Search Console authorization. Absence of public TXT/meta token does not prove absence of another verification method."
+  },
+  "vowSpace": {
+    "status": "Application approved September 30; invitation now expired",
+    "accountCreated": false,
+    "profilePublished": false,
+    "nextStep": "Unsent reply draft asks vendors@ourvowspace.com for a new invitation for the existing application; send approval pending."
+  },
+  "partySlate": {
+    "publicProfile": "https://www.partyslate.com/venues/happy-trails-shindigs-events",
+    "status": "Existing published profile; previously observed map discrepancy not freshly verified",
+    "nextStep": "Unsent support@partyslate.com draft requests confirmation/correction to owner-confirmed coordinates; send approval pending."
+  },
+  "bloomingGrove": {
+    "publicProfile": "https://bloominggrovetx.com/businesses/happy-trails-shindigs-events/",
+    "status": "Existing independent Blackland TX publisher profile reverified HTTP 200 with correct identity and nofollow website link",
+    "change": "Referenced in site business identity metadata; no visible website link added and no new backlink counted."
+  },
+  "eventective": {
+    "status": "Prior submission/account uncertain; scoped Gmail search found no messages. No duplicate signup attempted."
+  },
+  "visitCorsicana": {
+    "status": "Prior eligibility inquiry unresolved; scoped Gmail search found no reply and checked event-venue page lacked venue."
+  },
+  "pearl": { "status": "Skipped at owner's explicit request" },
+  "bingPlaces": { "status": "Prior owner pause retained" },
+  "outboundSupportEmailsSent": 0
+}

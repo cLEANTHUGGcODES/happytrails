@@ -1,0 +1,93 @@
+{
+  "checkedAt": "2026-10-18T00:06:20.942Z",
+  "sourceCommit": "775e0c3",
+  "productionUrl": "https://www.happytrailsshindigs.com",
+  "build": "passed",
+  "lint": "passed",
+  "unitTestsPassed": 75,
+  "selectedBrowserCasesPassed": 42,
+  "comparisons": [
+    {
+      "path": "/",
+      "width": 390,
+      "textUnchanged": true,
+      "geometryUnchanged": true,
+      "posterBytesBefore": 25648,
+      "posterBytesAfter": 25648,
+      "posterByteReductionPercent": 0,
+      "passed": true
+    },
+    {
+      "path": "/gallery",
+      "width": 390,
+      "textUnchanged": true,
+      "geometryUnchanged": true,
+      "posterBytesBefore": 25648,
+      "posterBytesAfter": 25648,
+      "posterByteReductionPercent": 0,
+      "passed": true
+    },
+    {
+      "path": "/tour",
+      "width": 390,
+      "textUnchanged": true,
+      "geometryUnchanged": true,
+      "posterBytesBefore": 25648,
+      "posterBytesAfter": 25648,
+      "posterByteReductionPercent": 0,
+      "passed": true
+    },
+    {
+      "path": "/pricing",
+      "width": 390,
+      "textUnchanged": true,
+      "geometryUnchanged": true,
+      "posterBytesBefore": 0,
+      "posterBytesAfter": 0,
+      "posterByteReductionPercent": null,
+      "passed": true
+    },
+    {
+      "path": "/",
+      "width": 1440,
+      "textUnchanged": true,
+      "geometryUnchanged": true,
+      "posterBytesBefore": 86677,
+      "posterBytesAfter": 14057,
+      "posterByteReductionPercent": 84,
+      "passed": true
+    },
+    {
+      "path": "/gallery",
+      "width": 1440,
+      "textUnchanged": true,
+      "geometryUnchanged": true,
+      "posterBytesBefore": 86677,
+      "posterBytesAfter": 25648,
+      "posterByteReductionPercent": 70,
+      "passed": true
+    },
+    {
+      "path": "/tour",
+      "width": 1440,
+      "textUnchanged": true,
+      "geometryUnchanged": true,
+      "posterBytesBefore": 86677,
+      "posterBytesAfter": 42419,
+      "posterByteReductionPercent": 51,
+      "passed": true
+    },
+    {
+      "path": "/pricing",
+      "width": 1440,
+      "textUnchanged": true,
+      "geometryUnchanged": true,
+      "posterBytesBefore": 0,
+      "posterBytesAfter": 0,
+      "posterByteReductionPercent": null,
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "limitations": "Poster image bytes are not total-page bytes or field Core Web Vitals. High-density mobile uses the same image bytes. No new external backlink, ranking change or AI citation is established."
+}
