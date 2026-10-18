@@ -29,6 +29,23 @@
   "eventective": {
     "status": "Prior submission/account uncertain; scoped Gmail search found no messages. No duplicate signup attempted."
   },
+  "nextdoor": {
+    "status": "Existing account email verified successfully through a fresh authentic verification email; public business page remains unconfirmed.",
+    "emailVerified": true,
+    "profilePublished": null,
+    "nextStep": "Sign into existing account. Owner permission requested before replacing its current password through email recovery.",
+    "duplicateSignupAttempted": false,
+    "passwordResetAttempted": false
+  },
+  "bbb": {
+    "status": "One ordinary free-profile submission rejected with HTTP 401 Unauthorized; no acceptance or public profile confirmed.",
+    "formUrl": "https://www.bbb.org/get-listed/business",
+    "existingMatch": "No exact-name match found in correctly scoped Blooming Grove search.",
+    "category": "Wedding Venue",
+    "accreditationInterestSelected": false,
+    "nextStep": "Owner can complete the free profile form using the prepared fields; do not count the rejected attempt as a backlink.",
+    "evidence": "bbb-profile-attempt.json"
+  },
   "visitCorsicana": {
     "status": "Prior eligibility inquiry unresolved; scoped Gmail search found no reply and checked event-venue page lacked venue."
   },

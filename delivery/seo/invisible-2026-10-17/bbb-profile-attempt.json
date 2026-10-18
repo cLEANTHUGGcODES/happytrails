@@ -1,0 +1,39 @@
+{
+  "observedAt": "2026-10-18T00:37:46.275Z",
+  "formUrl": "https://www.bbb.org/get-listed/business",
+  "existingBusinessSearch": {
+    "name": "Happy Trails Shindigs & Events",
+    "location": "Blooming Grove, TX",
+    "result": "No matching listing found"
+  },
+  "submittedFields": {
+    "businessContactFirstName": "Randy",
+    "businessContactLastName": "Shaw",
+    "businessContactTitle": "Owner",
+    "businessName": "Happy Trails Shindigs & Events",
+    "address": "5281 FM 55",
+    "city": "Blooming Grove",
+    "postalCode": "76626",
+    "phoneNumber": "9035524248",
+    "email": "admin@happytrailsshindigs.com",
+    "url": "https://www.happytrailsshindigs.com",
+    "state": "TX"
+  },
+  "category": "Wedding Venue",
+  "accreditationInterest": false,
+  "normalUiSubmissionAttempts": 1,
+  "responses": [
+    {
+      "url": "https://www.bbb.org/api/validateaddress/getsuggestedaddresses",
+      "status": 200
+    },
+    {
+      "url": "https://www.bbb.org/api/lead/storebusiness",
+      "status": 401
+    }
+  ],
+  "visibleResult": "Unauthorized. Please contact the BBB if you have any questions.",
+  "acceptanceConfirmed": false,
+  "newPublishedBacklinks": 0,
+  "retryOrBypassAttempted": false
+}
